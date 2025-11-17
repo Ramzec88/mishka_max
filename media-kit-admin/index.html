@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Медиа-кит - Реклама на детских каналах</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+    </button>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-icons">
+                <span class="icon-badge">📱</span>
+                <span class="icon-badge">🎯</span>
+                <span class="icon-badge">👶</span>
+            </div>
+            <h1 class="hero-title">Реклама на детских каналах 🎯</h1>
+            <p class="hero-subtitle">181K подписчиков • 94% аудитория - родители • Высокая вовлечённость</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="downloadMediaKit()">📄 Скачать медиа-кит PDF</button>
+                <a href="https://t.me/yourusername" target="_blank" class="btn btn-secondary">💬 Написать в Telegram</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Metrics -->
+    <section class="metrics" id="metrics">
+        <div class="container">
+            <div class="metrics-grid">
+                <div class="metric-card" data-platform="instagram">
+                    <div class="metric-icon">📸</div>
+                    <div class="metric-number">115K</div>
+                    <div class="metric-label">Instagram</div>
+                    <div class="metric-detail">@детский_канал</div>
+                </div>
+                <div class="metric-card" data-platform="tiktok">
+                    <div class="metric-icon">🎵</div>
+                    <div class="metric-number">66K</div>
+                    <div class="metric-label">TikTok</div>
+                    <div class="metric-detail">@детский_канал</div>
+                </div>
+                <div class="metric-card" data-platform="engagement">
+                    <div class="metric-icon">❤️</div>
+                    <div class="metric-number">8-12%</div>
+                    <div class="metric-label">Вовлечённость</div>
+                    <div class="metric-detail">Выше среднего</div>
+                </div>
+                <div class="metric-card" data-platform="reach">
+                    <div class="metric-icon">👀</div>
+                    <div class="metric-number">200K-400K</div>
+                    <div class="metric-label">Месячный охват</div>
+                    <div class="metric-detail">Органический</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audience Demographics -->
+    <section class="audience" id="audience">
+        <div class="container">
+            <h2 class="section-title">Наша аудитория</h2>
+            <p class="section-subtitle">Родители - это основные ЛПР (лица, принимающие решения)</p>
+            <div class="audience-grid">
+                <div class="audience-card">
+                    <h3>👨‍👩‍👧‍👦 Возраст родителей</h3>
+                    <div class="age-chart">
+                        <div class="age-bar" style="height: 60%">
+                            <span>25-30</span>
+                        </div>
+                        <div class="age-bar" style="height: 85%">
+                            <span>31-35</span>
+                        </div>
+                        <div class="age-bar" style="height: 70%">
+                            <span>36-40</span>
+                        </div>
+                    </div>
+                    <p class="age-range">Основной диапазон: 25-40 лет</p>
+                </div>
+                <div class="audience-card">
+                    <h3>🌍 География</h3>
+                    <ul class="geo-list">
+                        <li><span class="flag">🇷🇺</span> Россия <span class="percentage">62%</span></li>
+                        <li><span class="flag">🇰🇿</span> Казахстан <span class="percentage">15%</span></li>
+                        <li><span class="flag">🇧🇾</span> Беларусь <span class="percentage">10%</span></li>
+                        <li><span class="flag">🇺🇦</span> Украина <span class="percentage">8%</span></li>
+                        <li><span class="flag">🌐</span> Другие СНГ <span class="percentage">5%</span></li>
+                    </ul>
+                </div>
+                <div class="audience-card">
+                    <h3>💡 Интересы</h3>
+                    <div class="interests-cloud">
+                        <span class="interest-tag" style="font-size: 1.2em;">📚 Образование</span>
+                        <span class="interest-tag" style="font-size: 1.4em;">🎨 Развитие</span>
+                        <span class="interest-tag" style="font-size: 1.1em;">🎉 Развлечение</span>
+                        <span class="interest-tag" style="font-size: 1.3em;">👨‍👩‍👧 Семья</span>
+                        <span class="interest-tag" style="font-size: 1em;">✂️ Творчество</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Placement Formats -->
+    <section class="formats" id="formats">
+        <div class="container">
+            <h2 class="section-title">Форматы размещения</h2>
+            <p class="section-subtitle">Выберите формат, который подходит вашему бренду</p>
+            <div class="formats-grid">
+                <div class="format-card" onclick="toggleFormatDetails(this)">
+                    <div class="format-icon">📷</div>
+                    <h3>Пост в ленте Instagram</h3>
+                    <p>Классическое размещение с максимальным охватом</p>
+                    <div class="format-details">
+                        <p><strong>Длительность:</strong> 24-48 часов</p>
+                        <p><strong>Характеристики:</strong> 1080x1080px, 1-5 видео</p>
+                        <p><strong>Охват:</strong> 50K-80K</p>
+                    </div>
+                </div>
+                <div class="format-card" onclick="toggleFormatDetails(this)">
+                    <div class="format-icon">📲</div>
+                    <h3>Stories Instagram</h3>
+                    <p>Динамичный контент с высокой вовлечённостью</p>
+                    <div class="format-details">
+                        <p><strong>Длительность:</strong> 24 часа</p>
+                        <p><strong>Характеристики:</strong> 1080x1920px, 3-5 слайдов</p>
+                        <p><strong>Охват:</strong> 30K-50K</p>
+                    </div>
+                </div>
+                <div class="format-card" onclick="toggleFormatDetails(this)">
+                    <div class="format-icon">🎬</div>
+                    <h3>TikTok видео</h3>
+                    <p>Быстрое размещение с прямой ссылкой</p>
+                    <div class="format-details">
+                        <p><strong>Длительность:</strong> 15-60 секунд</p>
+                        <p><strong>Характеристики:</strong> Вертикальный формат</p>
+                        <p><strong>Охват:</strong> 40K-70K</p>
+                    </div>
+                </div>
+                <div class="format-card" onclick="toggleFormatDetails(this)">
+                    <div class="format-icon">🎥</div>
+                    <h3>Встроенный контент</h3>
+                    <p>Органичное упоминание в контексте видео</p>
+                    <div class="format-details">
+                        <p><strong>Длительность:</strong> 2-3 дня</p>
+                        <p><strong>Характеристики:</strong> Неявная реклама</p>
+                        <p><strong>Охват:</strong> 80K-120K</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Examples -->
+    <section class="examples" id="examples">
+        <div class="container">
+            <h2 class="section-title">Примеры нашего контента</h2>
+            <p class="section-subtitle">Лучшие видео с высоким вовлечением</p>
+            <div class="carousel">
+                <button class="carousel-btn carousel-prev" onclick="moveCarousel(-1)">‹</button>
+                <div class="carousel-container">
+                    <div class="carousel-track" id="carouselTrack">
+                        <div class="example-card">
+                            <div class="example-thumbnail">
+                                <div class="play-button">▶️</div>
+                                <div class="example-overlay">Алфавит для детей</div>
+                            </div>
+                            <div class="example-stats">
+                                <span>👁️ 150K</span>
+                                <span>❤️ 8.5K</span>
+                                <span>💬 1.2K</span>
+                            </div>
+                            <p class="example-description">Учим буквы с веселыми песенками</p>
+                        </div>
+                        <div class="example-card">
+                            <div class="example-thumbnail">
+                                <div class="play-button">▶️</div>
+                                <div class="example-overlay">Цвета радуги</div>
+                            </div>
+                            <div class="example-stats">
+                                <span>👁️ 200K</span>
+                                <span>❤️ 12K</span>
+                                <span>💬 1.8K</span>
+                            </div>
+                            <p class="example-description">Изучаем цвета через музыку</p>
+                        </div>
+                        <div class="example-card">
+                            <div class="example-thumbnail">
+                                <div class="play-button">▶️</div>
+                                <div class="example-overlay">Животные и звуки</div>
+                            </div>
+                            <div class="example-stats">
+                                <span>👁️ 120K</span>
+                                <span>❤️ 7.2K</span>
+                                <span>💬 950</span>
+                            </div>
+                            <p class="example-description">Знакомимся с животными</p>
+                        </div>
+                        <div class="example-card">
+                            <div class="example-thumbnail">
+                                <div class="play-button">▶️</div>
+                                <div class="example-overlay">Счёт до 10</div>
+                            </div>
+                            <div class="example-stats">
+                                <span>👁️ 135K</span>
+                                <span>❤️ 8K</span>
+                                <span>💬 1.1K</span>
+                            </div>
+                            <p class="example-description">Учимся считать весело</p>
+                        </div>
+                        <div class="example-card">
+                            <div class="example-thumbnail">
+                                <div class="play-button">▶️</div>
+                                <div class="example-overlay">Формы и фигуры</div>
+                            </div>
+                            <div class="example-stats">
+                                <span>👁️ 110K</span>
+                                <span>❤️ 6.8K</span>
+                                <span>💬 890</span>
+                            </div>
+                            <p class="example-description">Геометрия для малышей</p>
+                        </div>
+                        <div class="example-card">
+                            <div class="example-thumbnail">
+                                <div class="play-button">▶️</div>
+                                <div class="example-overlay">Времена года</div>
+                            </div>
+                            <div class="example-stats">
+                                <span>👁️ 145K</span>
+                                <span>❤️ 9.2K</span>
+                                <span>💬 1.3K</span>
+                            </div>
+                            <p class="example-description">Познаём окружающий мир</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn carousel-next" onclick="moveCarousel(1)">›</button>
+            </div>
+            <div class="carousel-dots" id="carouselDots"></div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Прайс-лист</h2>
+            <p class="section-subtitle">Выберите пакет, который подходит вашему бюджету</p>
+            
+            <!-- Pricing Calculator -->
+            <div class="calculator">
+                <h3>💰 Калькулятор стоимости</h3>
+                <div class="calculator-controls">
+                    <div class="calculator-input">
+                        <label for="packageSelect">Выберите пакет:</label>
+                        <select id="packageSelect" class="form-control" onchange="calculatePrice()">
+                            <option value="15000">Стандарт - 15,000₽</option>
+                            <option value="25000" selected>Премиум - 25,000₽</option>
+                            <option value="40000">VIP/Интеграция - 40,000₽</option>
+                        </select>
+                    </div>
+                    <div class="calculator-input">
+                        <label for="quantityInput">Количество размещений:</label>
+                        <input type="number" id="quantityInput" class="form-control" min="1" max="10" value="1" onchange="calculatePrice()">
+                    </div>
+                </div>
+                <div class="calculator-result" id="calculatorResult">
+                    <div class="result-breakdown">
+                        <span>Базовая цена:</span>
+                        <span id="basePrice">25,000₽</span>
+                    </div>
+                    <div class="result-breakdown discount-line" id="discountLine" style="display: none;">
+                        <span>Скидка 15%:</span>
+                        <span id="discountAmount">-3,750₽</span>
+                    </div>
+                    <div class="result-total">
+                        <span>Итого:</span>
+                        <span id="totalPrice">25,000₽</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Стандарт</h3>
+                        <div class="pricing-price">15,000₽</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ 1 пост в ленте</li>
+                        <li>✓ 24-часовой прямой эфир</li>
+                        <li>✓ Базовая статистика</li>
+                        <li>✓ Минимальный охват: 50K</li>
+                    </ul>
+                    <p class="pricing-best-for">Лучше для: Новые бренды, тестирование</p>
+                    <button class="btn btn-outline" onclick="selectPackage('Стандарт', 15000)">Выбрать</button>
+                </div>
+                <div class="pricing-card pricing-featured">
+                    <div class="pricing-badge">Рекомендуем</div>
+                    <div class="pricing-header">
+                        <h3>Премиум</h3>
+                        <div class="pricing-price">25,000₽</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ 1 пост + 3-4 stories</li>
+                        <li>✓ Прямой эфир с демонстрацией</li>
+                        <li>✓ Полная статистика</li>
+                        <li>✓ Ожидаемый охват: 100K+</li>
+                        <li>✓ Упоминание в stories 3 дня</li>
+                    </ul>
+                    <p class="pricing-best-for">Лучше для: Рекомендуемый пакет</p>
+                    <button class="btn btn-primary" onclick="selectPackage('Премиум', 25000)">Выбрать</button>
+                </div>
+                <div class="pricing-card pricing-vip">
+                    <div class="pricing-header">
+                        <h3>VIP/Интеграция</h3>
+                        <div class="pricing-price">40,000₽</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Созданное видео с упоминанием</li>
+                        <li>✓ 3 дня публикации</li>
+                        <li>✓ Углубленная аналитика</li>
+                        <li>✓ Гарантированный охват: 150K+</li>
+                        <li>✓ Бонус-посты в Stories</li>
+                    </ul>
+                    <p class="pricing-best-for">Лучше для: Премиум-бренды, долгосрочное сотрудничество</p>
+                    <button class="btn btn-outline" onclick="selectPackage('VIP', 40000)">Выбрать</button>
+                </div>
+            </div>
+            <div class="pricing-discount">
+                <span class="discount-icon">✓</span>
+                <span>Скидка 15% при 3+ размещениях</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section class="cases" id="cases">
+        <div class="container">
+            <h2 class="section-title">Результаты и достижения</h2>
+            <p class="section-subtitle">Наши показатели говорят сами за себя</p>
+            <div class="cases-grid">
+                <div class="case-card">
+                    <div class="case-stat">8-12%</div>
+                    <div class="case-label">Среднее вовлечение</div>
+                    <p class="case-description">На 40% выше индустрии (3-4%)</p>
+                </div>
+                <div class="case-card">
+                    <div class="case-stat">94%</div>
+                    <div class="case-label">Родители в аудитории</div>
+                    <p class="case-description">Основные ЛПР для покупок</p>
+                </div>
+                <div class="case-card">
+                    <div class="case-stat">100%</div>
+                    <div class="case-label">Органическая аудитория</div>
+                    <p class="case-description">Без ботов и накруток</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Creator -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-avatar">
+                    <div class="avatar-circle">🐻</div>
+                </div>
+                <div class="about-text">
+                    <h2>О создателе</h2>
+                    <h3>Мишка Макс</h3>
+                    <p class="about-bio">Создатель образовательного контента для детей с фокусом на раннее развитие и творчество. Наша миссия — создавать качественный, безопасный контент для развития детей.</p>
+                    <div class="about-advantages">
+                        <div class="advantage-item">
+                            <span class="advantage-icon">✓</span>
+                            <span>5+ лет опыта в создании качественного детского контента</span>
+                        </div>
+                        <div class="advantage-item">
+                            <span class="advantage-icon">✓</span>
+                            <span>Все видео соответствуют стандартам безопасности (COPPA, FTC)</span>
+                        </div>
+                        <div class="advantage-item">
+                            <span class="advantage-icon">✓</span>
+                            <span>100% органическая аудитория без ботов и фейков</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Links -->
+    <section class="social-links">
+        <div class="container">
+            <h3>Подписывайтесь на наши каналы</h3>
+            <div class="social-icons">
+                <a href="https://instagram.com/yourusername" target="_blank" class="social-icon" aria-label="Instagram">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+                <a href="https://tiktok.com/@yourusername" target="_blank" class="social-icon" aria-label="TikTok">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                    </svg>
+                </a>
+                <a href="https://t.me/yourusername" target="_blank" class="social-icon" aria-label="Telegram">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                    </svg>
+                </a>
+                <a href="mailto:your@email.com" class="social-icon" aria-label="Email">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Часто задаваемые вопросы</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Как долго держится реклама после публикации?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Пост остается в профиле постоянно, но максимальный охват достигается в первые 24-48 часов. Stories доступны 24 часа. Для TikTok видео - 48-72 часа активной жизни.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Вы гарантируете определённое количество просмотров?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Мы гарантируем минимальный охват в зависимости от пакета (50K для Стандарта, 100K+ для Премиума). Фактический охват часто бывает выше благодаря органическому распространению.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Какие требования к рекламируемому продукту?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Продукт должен быть безопасным для детей, соответствовать всем законодательным требованиям. Мы не публикуем рекламу алкоголя, табака, опасных товаров.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Как вы считаете вовлечение и показатели?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Все метрики берутся непосредственно из Instagram и TikTok Analytics. После публикации вы получаете подробный отчет с screenshot-ами метрик.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Что входит в пакет статистики?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Охват, impressions, сохранения, репосты, комментарии, количество переходов по ссылке (если была CTA). Для Премиума+ - дополнительно демография аудитории.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Могу ли я заключить долгосрочное партнерство?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Да, мы приветствуем долгосрочное сотрудничество. При партнерствах от 3 месяцев предоставляется скидка до 20% и гибкий график размещений.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Готовы начать сотрудничество?</h2>
+            <p class="section-subtitle">Свяжитесь с нами удобным способом</p>
+            <div class="contact-buttons">
+                <a href="https://t.me/yourusername" target="_blank" class="btn btn-primary btn-lg">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                    </svg>
+                    Написать в Telegram
+                </a>
+                <a href="mailto:your@email.com" class="btn btn-secondary btn-lg">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                    Написать Email
+                </a>
+            </div>
+            <p class="contact-response-time">⏱️ Ответ в течение 24 часов</p>
+            
+            <div class="contact-form">
+                <h3>Или заполните форму</h3>
+                <form id="contactForm" onsubmit="submitContactForm(event)">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Ваше имя</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Сообщение</label>
+                        <textarea id="message" class="form-control" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full-width">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-icon">🐻</span>
+                    <span class="logo-text">Мишка Макс</span>
+                </div>
+                <div class="footer-links">
+                    <a href="https://instagram.com/yourusername" target="_blank">Instagram</a>
+                    <a href="https://tiktok.com/@yourusername" target="_blank">TikTok</a>
+                    <a href="https://t.me/yourusername" target="_blank">Telegram</a>
+                </div>
+                <div class="footer-copyright">
+                    © 2025 Мишка Макс. Все права защищены.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
