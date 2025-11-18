@@ -336,6 +336,7 @@ a:hover {
   text-align: center;
   overflow: hidden;
   margin-top: 60px;
+  background: var(--gradient-dark);
 }
 
 .hero-bg {
