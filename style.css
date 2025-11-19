@@ -269,7 +269,9 @@ a:hover {
 }
 
 .logo-icon {
-  font-size: 32px;
+  height: 40px;
+  width: auto;
+  display: block;
 }
 
 .logo-text {
@@ -1305,7 +1307,7 @@ textarea.form-control {
   }
 
   .logo-icon {
-    font-size: 24px;
+    height: 32px;
   }
 
   section {
