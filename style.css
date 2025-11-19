@@ -215,8 +215,9 @@ a:hover {
 }
 
 .btn-lg {
-  padding: var(--space-18) var(--space-40);
+  padding: var(--space-20) var(--space-48);
   font-size: var(--font-size-lg);
+  min-width: 280px;
 }
 
 .btn-full {
