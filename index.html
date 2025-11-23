@@ -238,71 +238,317 @@
         </div>
     </section>
 
-    <!-- Pricing/Formats Section -->
+    <!-- Campaign Builder Section -->
     <section class="formats" id="formats">
         <div class="container">
-            <h2 class="section-title">Выберите ваш пакет</h2>
-            <p class="section-subtitle">От стартапов до федеральных брендов</p>
-            
-            <div class="formats-grid">
-                <div class="format-card">
-                    <div class="format-header">
-                        <h3>Стартер</h3>
-                        <p class="format-desc">Для первого теста</p>
+            <h2 class="section-title">Соберите свою кампанию</h2>
+            <p class="section-subtitle">Выберите платформу и формат — увидьте результат в реальном времени</p>
+
+            <div class="builder-container">
+                <!-- Левая колонка: Контрольная панель -->
+                <div class="builder-controls">
+                    <!-- Платформа -->
+                    <div class="builder-group">
+                        <h3 class="builder-group-title">Платформа</h3>
+                        <div class="builder-options">
+                            <label class="builder-radio active" data-platform="instagram">
+                                <input type="radio" name="platform" value="instagram" checked>
+                                <span class="builder-radio-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                                        <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" fill="none"/>
+                                        <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
+                                    </svg>
+                                </span>
+                                <span class="builder-radio-text">Instagram</span>
+                            </label>
+                            <label class="builder-radio" data-platform="tiktok">
+                                <input type="radio" name="platform" value="tiktok">
+                                <span class="builder-radio-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.66 0 2.89 2.89 0 0 1 5.66-.03v-3.4a6.29 6.29 0 0 0-5.66 3.43 6.29 6.29 0 0 0 5.66 9.17 6.3 6.3 0 0 0 5.66-3.43v-3.4a9.13 9.13 0 0 0 3.77 1.04V9.45a4.83 4.83 0 0 1-.92-.76z"/>
+                                    </svg>
+                                </span>
+                                <span class="builder-radio-text">TikTok</span>
+                            </label>
+                            <label class="builder-radio" data-platform="telegram">
+                                <input type="radio" name="platform" value="telegram">
+                                <span class="builder-radio-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                                    </svg>
+                                </span>
+                                <span class="builder-radio-text">Telegram</span>
+                            </label>
+                        </div>
                     </div>
-                    <div class="format-price">
-                        <span class="price-amount">1 000₽</span>
-                        <span class="price-info">за пост</span>
+
+                    <!-- Формат -->
+                    <div class="builder-group">
+                        <h3 class="builder-group-title">Формат</h3>
+                        <div class="builder-options" id="formatOptions">
+                            <label class="builder-radio active" data-format="post">
+                                <input type="radio" name="format" value="post" checked>
+                                <span class="builder-radio-text">Post</span>
+                                <span class="builder-radio-price">1 000₽</span>
+                            </label>
+                            <label class="builder-radio" data-format="stories">
+                                <input type="radio" name="format" value="stories">
+                                <span class="builder-radio-text">Stories</span>
+                                <span class="builder-radio-price">800₽</span>
+                            </label>
+                            <label class="builder-radio" data-format="reels">
+                                <input type="radio" name="format" value="reels">
+                                <span class="builder-radio-text">Reels</span>
+                                <span class="builder-radio-price">1 500₽</span>
+                            </label>
+                        </div>
                     </div>
-                    <ul class="format-features">
-                        <li><span class="check">✓</span> 1 пост Instagram</li>
-                        <li><span class="check">✓</span> 50K-80K охват</li>
-                        <li><span class="check">✓</span> 24-48 часов в ленте</li>
-                        <li><span class="check">✓</span> Базовая статистика</li>
-                    </ul>
-                    <button class="btn btn-secondary btn-full" onclick="scrollToContact()">Выбрать</button>
+
+                    <!-- Дополнительные опции -->
+                    <div class="builder-group">
+                        <h3 class="builder-group-title">Дополнительно</h3>
+                        <div class="builder-addons">
+                            <label class="builder-checkbox">
+                                <input type="checkbox" name="addon" value="500" data-addon="link">
+                                <span class="builder-checkbox-mark"></span>
+                                <span class="builder-checkbox-text">Ссылка в шапке</span>
+                                <span class="builder-checkbox-price">+500₽</span>
+                            </label>
+                            <label class="builder-checkbox">
+                                <input type="checkbox" name="addon" value="1000" data-addon="permanent">
+                                <span class="builder-checkbox-mark"></span>
+                                <span class="builder-checkbox-text">Вечное сохранение</span>
+                                <span class="builder-checkbox-price">+1 000₽</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Итоговая цена -->
+                    <div class="builder-total">
+                        <div class="builder-total-label">Итого:</div>
+                        <div class="builder-total-price" id="builderTotalPrice">1 000₽</div>
+                    </div>
+
+                    <!-- CTA кнопка -->
+                    <button class="btn btn-primary btn-full builder-cta" onclick="orderCampaign()">
+                        Заказать этот микс
+                    </button>
+
+                    <div class="builder-hint">
+                        <p>При заказе от 3 форматов — скидка 10%</p>
+                    </div>
                 </div>
 
-                <div class="format-card format-card-featured">
-                    <div class="format-badge">⭐ Популярно</div>
-                    <div class="format-header">
-                        <h3>Премиум</h3>
-                        <p class="format-desc">Лучшее соотношение</p>
-                    </div>
-                    <div class="format-price">
-                        <span class="price-amount">2 500₽</span>
-                        <span class="price-info">за кампанию</span>
-                    </div>
-                    <ul class="format-features">
-                        <li><span class="check">✓</span> 2 поста Instagram</li>
-                        <li><span class="check">✓</span> 5-7 Stories</li>
-                        <li><span class="check">✓</span> 100K+ гарантированный охват</li>
-                        <li><span class="check">✓</span> Подробная аналитика</li>
-                    </ul>
-                    <button class="btn btn-primary btn-full" onclick="scrollToContact()">Начать кампанию</button>
-                </div>
+                <!-- Правая колонка: Визуализация смартфона -->
+                <div class="builder-preview">
+                    <div class="phone-mockup">
+                        <div class="phone-frame">
+                            <div class="phone-notch"></div>
+                            <div class="phone-screen" id="phoneScreen">
+                                <!-- Instagram Profile View (default) -->
+                                <div class="screen-content screen-profile" id="screenProfile">
+                                    <div class="profile-header">
+                                        <div class="profile-avatar">
+                                            <img src="images/logo.png" alt="Мишка Макс">
+                                        </div>
+                                        <div class="profile-stats">
+                                            <div class="profile-stat">
+                                                <span class="profile-stat-value">119K</span>
+                                                <span class="profile-stat-label">подписчиков</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="profile-name">Мишка Макс</div>
+                                    <div class="profile-bio">Детский блог для умных родителей</div>
 
-                <div class="format-card">
-                    <div class="format-header">
-                        <h3>Премиум+</h3>
-                        <p class="format-desc">Максимальный результат</p>
+                                    <!-- Пост-превью -->
+                                    <div class="profile-posts">
+                                        <div class="profile-post ad-placeholder" id="adPlaceholder">
+                                            <div class="ad-overlay">
+                                                <span class="ad-badge">Реклама</span>
+                                                <span class="ad-text">Место под ваш продукт</span>
+                                            </div>
+                                            <div class="ad-tooltip" id="adTooltip">
+                                                <div class="tooltip-stat">
+                                                    <span class="tooltip-icon">👁</span>
+                                                    <span>Охват ~50K</span>
+                                                </div>
+                                                <div class="tooltip-stat">
+                                                    <span class="tooltip-icon">👆</span>
+                                                    <span>Переходов ~2K</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="profile-post"></div>
+                                        <div class="profile-post"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Stories View -->
+                                <div class="screen-content screen-stories hidden" id="screenStories">
+                                    <div class="stories-header">
+                                        <div class="stories-progress">
+                                            <div class="stories-progress-bar"></div>
+                                        </div>
+                                        <div class="stories-user">
+                                            <div class="stories-avatar">
+                                                <img src="images/logo.png" alt="Мишка Макс">
+                                            </div>
+                                            <span class="stories-username">mishka_max_</span>
+                                        </div>
+                                    </div>
+                                    <div class="stories-content">
+                                        <div class="stories-ad-placeholder">
+                                            <span class="stories-ad-badge">Реклама</span>
+                                            <span class="stories-ad-text">Место под вашу рекламу</span>
+                                            <div class="stories-swipe">
+                                                <span>Свайп вверх</span>
+                                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                                    <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="stories-tooltip" id="storiesTooltip">
+                                        <div class="tooltip-stat">
+                                            <span class="tooltip-icon">👁</span>
+                                            <span>Охват ~15K</span>
+                                        </div>
+                                        <div class="tooltip-stat">
+                                            <span class="tooltip-icon">👆</span>
+                                            <span>Переходов ~800</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Reels View -->
+                                <div class="screen-content screen-reels hidden" id="screenReels">
+                                    <div class="reels-content">
+                                        <div class="reels-ad-placeholder">
+                                            <div class="reels-play-icon">▶</div>
+                                            <span class="reels-ad-badge">Реклама</span>
+                                            <span class="reels-ad-text">Ваш Reels здесь</span>
+                                        </div>
+                                        <div class="reels-sidebar">
+                                            <div class="reels-action">
+                                                <span class="reels-icon">❤️</span>
+                                                <span class="reels-count">12K</span>
+                                            </div>
+                                            <div class="reels-action">
+                                                <span class="reels-icon">💬</span>
+                                                <span class="reels-count">843</span>
+                                            </div>
+                                            <div class="reels-action">
+                                                <span class="reels-icon">📤</span>
+                                                <span class="reels-count">2.1K</span>
+                                            </div>
+                                        </div>
+                                        <div class="reels-info">
+                                            <div class="reels-user">
+                                                <img src="images/logo.png" alt="Мишка Макс">
+                                                <span>mishka_max_</span>
+                                            </div>
+                                            <div class="reels-desc">Интеграция вашего продукта...</div>
+                                        </div>
+                                    </div>
+                                    <div class="reels-tooltip" id="reelsTooltip">
+                                        <div class="tooltip-stat">
+                                            <span class="tooltip-icon">👁</span>
+                                            <span>Охват ~80K</span>
+                                        </div>
+                                        <div class="tooltip-stat">
+                                            <span class="tooltip-icon">👆</span>
+                                            <span>Переходов ~4K</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- TikTok View -->
+                                <div class="screen-content screen-tiktok hidden" id="screenTiktok">
+                                    <div class="tiktok-content">
+                                        <div class="tiktok-ad-placeholder">
+                                            <div class="tiktok-play-icon">▶</div>
+                                            <span class="tiktok-ad-badge">Реклама</span>
+                                            <span class="tiktok-ad-text">Ваш TikTok здесь</span>
+                                        </div>
+                                        <div class="tiktok-sidebar">
+                                            <div class="tiktok-avatar">
+                                                <img src="images/logo.png" alt="Мишка Макс">
+                                            </div>
+                                            <div class="tiktok-action">
+                                                <span class="tiktok-icon">❤️</span>
+                                                <span class="tiktok-count">25K</span>
+                                            </div>
+                                            <div class="tiktok-action">
+                                                <span class="tiktok-icon">💬</span>
+                                                <span class="tiktok-count">1.2K</span>
+                                            </div>
+                                            <div class="tiktok-action">
+                                                <span class="tiktok-icon">📤</span>
+                                                <span class="tiktok-count">5K</span>
+                                            </div>
+                                        </div>
+                                        <div class="tiktok-info">
+                                            <div class="tiktok-user">@mishka_max_</div>
+                                            <div class="tiktok-desc">Интеграция вашего продукта в TikTok...</div>
+                                        </div>
+                                    </div>
+                                    <div class="tiktok-tooltip" id="tiktokTooltip">
+                                        <div class="tooltip-stat">
+                                            <span class="tooltip-icon">👁</span>
+                                            <span>Охват ~100K</span>
+                                        </div>
+                                        <div class="tooltip-stat">
+                                            <span class="tooltip-icon">👆</span>
+                                            <span>Переходов ~5K</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Telegram View -->
+                                <div class="screen-content screen-telegram hidden" id="screenTelegram">
+                                    <div class="telegram-header">
+                                        <div class="telegram-avatar">
+                                            <img src="images/logo.png" alt="Мишка Макс">
+                                        </div>
+                                        <div class="telegram-info">
+                                            <div class="telegram-name">Мишка Макс</div>
+                                            <div class="telegram-subs">4 000 подписчиков</div>
+                                        </div>
+                                    </div>
+                                    <div class="telegram-messages">
+                                        <div class="telegram-message">
+                                            <div class="telegram-message-text">Привет, друзья! Сегодня расскажу о...</div>
+                                        </div>
+                                        <div class="telegram-message telegram-ad">
+                                            <div class="telegram-ad-badge">Реклама</div>
+                                            <div class="telegram-message-text">
+                                                <strong>Место под вашу рекламу</strong><br>
+                                                Описание вашего продукта здесь...
+                                            </div>
+                                            <div class="telegram-button">Подробнее</div>
+                                        </div>
+                                    </div>
+                                    <div class="telegram-tooltip" id="telegramTooltip">
+                                        <div class="tooltip-stat">
+                                            <span class="tooltip-icon">👁</span>
+                                            <span>Охват ~3K</span>
+                                        </div>
+                                        <div class="tooltip-stat">
+                                            <span class="tooltip-icon">👆</span>
+                                            <span>Переходов ~300</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="format-price">
-                        <span class="price-amount">5 000₽</span>
-                        <span class="price-info">за комбо</span>
-                    </div>
-                    <ul class="format-features">
-                        <li><span class="check">✓</span> Instagram + TikTok</li>
-                        <li><span class="check">✓</span> 200K+ суммарный охват</li>
-                        <li><span class="check">✓</span> Синергия аудиторий</li>
-                        <li><span class="check">✓</span> Видео + демография</li>
-                    </ul>
-                    <button class="btn btn-secondary btn-full" onclick="scrollToContact()">Выбрать</button>
                 </div>
             </div>
 
             <div class="formats-note">
-                <p>💡 <strong>Совет:</strong> При партнерстве от 3 месяцев — скидка до 20% и гибкий график размещений</p>
+                <p>При партнерстве от 3 месяцев — скидка до 20% и гибкий график размещений</p>
             </div>
         </div>
     </section>
@@ -561,6 +807,247 @@
                 navbar.classList.remove('scrolled');
             }
         });
+
+        // === CAMPAIGN BUILDER ===
+
+        // Pricing data
+        const pricing = {
+            instagram: {
+                post: 1000,
+                stories: 800,
+                reels: 1500
+            },
+            tiktok: {
+                post: 1200,
+                stories: 0, // No stories on TikTok
+                reels: 1500
+            },
+            telegram: {
+                post: 600,
+                stories: 0, // No stories on Telegram
+                reels: 0 // No reels on Telegram
+            }
+        };
+
+        // Stats data for tooltips
+        const statsData = {
+            instagram: {
+                post: { reach: '50K', clicks: '2K' },
+                stories: { reach: '15K', clicks: '800' },
+                reels: { reach: '80K', clicks: '4K' }
+            },
+            tiktok: {
+                post: { reach: '100K', clicks: '5K' },
+                stories: { reach: '0', clicks: '0' },
+                reels: { reach: '100K', clicks: '5K' }
+            },
+            telegram: {
+                post: { reach: '3K', clicks: '300' },
+                stories: { reach: '0', clicks: '0' },
+                reels: { reach: '0', clicks: '0' }
+            }
+        };
+
+        // Current state
+        let currentPlatform = 'instagram';
+        let currentFormat = 'post';
+
+        // Initialize builder
+        function initBuilder() {
+            // Platform radio buttons
+            document.querySelectorAll('input[name="platform"]').forEach(radio => {
+                radio.addEventListener('change', function() {
+                    currentPlatform = this.value;
+                    updatePlatformUI();
+                    updateFormatOptions();
+                    updatePhoneScreen();
+                    updatePrice();
+                });
+            });
+
+            // Format radio buttons
+            document.querySelectorAll('input[name="format"]').forEach(radio => {
+                radio.addEventListener('change', function() {
+                    currentFormat = this.value;
+                    updateFormatUI();
+                    updatePhoneScreen();
+                    updatePrice();
+                });
+            });
+
+            // Addon checkboxes
+            document.querySelectorAll('input[name="addon"]').forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    updatePrice();
+                });
+            });
+
+            // Initial setup
+            updateFormatOptions();
+            updatePrice();
+        }
+
+        // Update platform UI (active state)
+        function updatePlatformUI() {
+            document.querySelectorAll('.builder-radio[data-platform]').forEach(label => {
+                if (label.dataset.platform === currentPlatform) {
+                    label.classList.add('active');
+                } else {
+                    label.classList.remove('active');
+                }
+            });
+        }
+
+        // Update format UI (active state)
+        function updateFormatUI() {
+            document.querySelectorAll('.builder-radio[data-format]').forEach(label => {
+                if (label.dataset.format === currentFormat) {
+                    label.classList.add('active');
+                } else {
+                    label.classList.remove('active');
+                }
+            });
+        }
+
+        // Update available format options based on platform
+        function updateFormatOptions() {
+            const formatOptions = document.getElementById('formatOptions');
+            const platformPricing = pricing[currentPlatform];
+
+            document.querySelectorAll('.builder-radio[data-format]').forEach(label => {
+                const format = label.dataset.format;
+                const price = platformPricing[format];
+                const priceSpan = label.querySelector('.builder-radio-price');
+
+                if (price === 0 || price === undefined) {
+                    label.style.display = 'none';
+                    // If current format is hidden, switch to first available
+                    if (format === currentFormat) {
+                        const firstAvailable = Object.keys(platformPricing).find(f => platformPricing[f] > 0);
+                        if (firstAvailable) {
+                            currentFormat = firstAvailable;
+                            document.querySelector(`input[name="format"][value="${firstAvailable}"]`).checked = true;
+                            updateFormatUI();
+                        }
+                    }
+                } else {
+                    label.style.display = 'flex';
+                    if (priceSpan) {
+                        priceSpan.textContent = `${price.toLocaleString('ru-RU')}₽`;
+                    }
+                }
+            });
+        }
+
+        // Update phone screen based on selection
+        function updatePhoneScreen() {
+            // Hide all screens
+            document.querySelectorAll('.screen-content').forEach(screen => {
+                screen.classList.add('hidden');
+            });
+
+            // Show appropriate screen
+            if (currentPlatform === 'telegram') {
+                document.getElementById('screenTelegram').classList.remove('hidden');
+            } else if (currentPlatform === 'tiktok') {
+                document.getElementById('screenTiktok').classList.remove('hidden');
+            } else if (currentPlatform === 'instagram') {
+                if (currentFormat === 'stories') {
+                    document.getElementById('screenStories').classList.remove('hidden');
+                } else if (currentFormat === 'reels') {
+                    document.getElementById('screenReels').classList.remove('hidden');
+                } else {
+                    document.getElementById('screenProfile').classList.remove('hidden');
+                }
+            }
+
+            // Update tooltip stats
+            updateTooltipStats();
+        }
+
+        // Update tooltip statistics
+        function updateTooltipStats() {
+            const stats = statsData[currentPlatform][currentFormat];
+
+            // Update all tooltips with relevant stats
+            const tooltipSelectors = [
+                '#adTooltip', '#storiesTooltip', '#reelsTooltip',
+                '#tiktokTooltip', '#telegramTooltip'
+            ];
+
+            tooltipSelectors.forEach(selector => {
+                const tooltip = document.querySelector(selector);
+                if (tooltip) {
+                    const statElements = tooltip.querySelectorAll('.tooltip-stat span:last-child');
+                    if (statElements.length >= 2) {
+                        statElements[0].textContent = `Охват ~${stats.reach}`;
+                        statElements[1].textContent = `Переходов ~${stats.clicks}`;
+                    }
+                }
+            });
+        }
+
+        // Calculate and update total price
+        function updatePrice() {
+            const basePrice = pricing[currentPlatform][currentFormat] || 0;
+
+            let addonsPrice = 0;
+            document.querySelectorAll('input[name="addon"]:checked').forEach(checkbox => {
+                addonsPrice += parseInt(checkbox.value);
+            });
+
+            const total = basePrice + addonsPrice;
+
+            document.getElementById('builderTotalPrice').textContent =
+                `${total.toLocaleString('ru-RU')}₽`;
+        }
+
+        // Order campaign function
+        function orderCampaign() {
+            const basePrice = pricing[currentPlatform][currentFormat] || 0;
+
+            let addonsPrice = 0;
+            const addons = [];
+            document.querySelectorAll('input[name="addon"]:checked').forEach(checkbox => {
+                addonsPrice += parseInt(checkbox.value);
+                addons.push(checkbox.dataset.addon === 'link' ? 'Ссылка в шапке' : 'Вечное сохранение');
+            });
+
+            const total = basePrice + addonsPrice;
+
+            // Platform names
+            const platformNames = {
+                instagram: 'Instagram',
+                tiktok: 'TikTok',
+                telegram: 'Telegram'
+            };
+
+            // Format names
+            const formatNames = {
+                post: 'Post',
+                stories: 'Stories',
+                reels: 'Reels'
+            };
+
+            // Create order message
+            let message = `Здравствуйте! Хочу заказать рекламу:\n\n`;
+            message += `📱 Платформа: ${platformNames[currentPlatform]}\n`;
+            message += `📋 Формат: ${formatNames[currentFormat]}\n`;
+
+            if (addons.length > 0) {
+                message += `➕ Дополнительно: ${addons.join(', ')}\n`;
+            }
+
+            message += `\n💰 Стоимость: ${total.toLocaleString('ru-RU')}₽\n\n`;
+            message += `Свяжитесь со мной для обсуждения деталей!`;
+
+            // Open Telegram with message
+            const telegramUrl = `https://t.me/lexei032?text=${encodeURIComponent(message)}`;
+            window.open(telegramUrl, '_blank');
+        }
+
+        // Initialize builder when DOM is ready
+        document.addEventListener('DOMContentLoaded', initBuilder);
     </script>
 </body>
 </html>
