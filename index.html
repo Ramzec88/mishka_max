@@ -876,6 +876,24 @@
         </div>
     </section>
 
+    <!-- Mobile Sticky Bottom Bar -->
+    <div class="mobile-sticky-bar" id="mobileBar">
+        <div class="mobile-bar-content">
+            <div class="mobile-bar-info">
+                <div class="mobile-bar-count">
+                    <span id="mobileCount">0</span> услуг
+                </div>
+                <div class="mobile-bar-price">
+                    <span class="mobile-bar-total" id="mobileTotal">0₽</span>
+                    <span class="mobile-bar-discount" id="mobileDiscount"></span>
+                </div>
+            </div>
+            <button class="btn btn-primary mobile-bar-btn" id="mobileOrderBtn" onclick="orderCampaign()" disabled>
+                Заказать
+            </button>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -1141,10 +1159,43 @@
             const orderBtn = document.getElementById('orderBtn');
             if (count > 0) {
                 orderBtn.disabled = false;
-                orderBtn.textContent = `Заказать сборку за ${totalPrice.toLocaleString('ru-RU')}₽`;
+                orderBtn.textContent = `Запустить кампанию — ${totalPrice.toLocaleString('ru-RU')}₽`;
             } else {
                 orderBtn.disabled = true;
                 orderBtn.textContent = 'Выберите хотя бы одну услугу';
+            }
+
+            // Update mobile sticky bar
+            updateMobileBar(count, totalPrice, discountPercent);
+        }
+
+        // Mobile sticky bar update
+        function updateMobileBar(count, totalPrice, discountPercent) {
+            const mobileBar = document.getElementById('mobileBar');
+            const mobileCount = document.getElementById('mobileCount');
+            const mobileTotal = document.getElementById('mobileTotal');
+            const mobileDiscount = document.getElementById('mobileDiscount');
+            const mobileOrderBtn = document.getElementById('mobileOrderBtn');
+
+            // Update values
+            mobileCount.textContent = count;
+            mobileTotal.textContent = `${totalPrice.toLocaleString('ru-RU')}₽`;
+
+            if (discountPercent > 0) {
+                mobileDiscount.textContent = `-${discountPercent}%`;
+            } else {
+                mobileDiscount.textContent = '';
+            }
+
+            // Update button
+            if (count > 0) {
+                mobileOrderBtn.disabled = false;
+                mobileOrderBtn.textContent = 'Заказать';
+                mobileBar.classList.add('visible');
+            } else {
+                mobileOrderBtn.disabled = true;
+                mobileOrderBtn.textContent = 'Выберите';
+                mobileBar.classList.remove('visible');
             }
         }
 

@@ -1119,6 +1119,84 @@ section {
   }
 }
 
+/* Mobile Sticky Bottom Bar */
+.mobile-sticky-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  padding: var(--space-12) var(--space-16);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  transform: translateY(100%);
+  transition: transform var(--duration-normal) var(--ease-out);
+}
+
+.mobile-sticky-bar.visible {
+  transform: translateY(0);
+}
+
+.mobile-bar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-12);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.mobile-bar-info {
+  flex: 1;
+}
+
+.mobile-bar-count {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  margin-bottom: 2px;
+}
+
+.mobile-bar-count span {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+}
+
+.mobile-bar-price {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-8);
+}
+
+.mobile-bar-total {
+  font-family: var(--font-display);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-extrabold);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.mobile-bar-discount {
+  font-size: var(--font-size-xs);
+  color: var(--color-success);
+  font-weight: var(--font-weight-semibold);
+}
+
+.mobile-bar-btn {
+  padding: var(--space-12) var(--space-24);
+  font-size: var(--font-size-base);
+  white-space: nowrap;
+  min-width: auto;
+}
+
+.mobile-bar-btn:disabled {
+  background: var(--color-bg);
+  color: var(--color-text-light);
+  box-shadow: none;
+}
+
 /* Packages responsive */
 @media (max-width: 900px) {
   .packages-grid {
@@ -1133,6 +1211,21 @@ section {
 
   .package-hit:hover {
     transform: translateY(-8px);
+  }
+
+  /* Show mobile sticky bar */
+  .mobile-sticky-bar {
+    display: block;
+  }
+
+  /* Add padding to footer so content isn't hidden behind sticky bar */
+  .footer {
+    padding-bottom: 100px;
+  }
+
+  /* Hide summary in controls on mobile when sticky bar is active */
+  .builder-summary {
+    margin-bottom: var(--space-24);
   }
 }
 
