@@ -47,7 +47,7 @@
   --font-body: 'Inter', sans-serif;
   
   --font-size-xs: 12px;
-  --font-size-sm: 14px;
+  --font-size-sm: 15px;
   --font-size-base: 16px;
   --font-size-lg: 18px;
   --font-size-xl: 20px;
@@ -459,6 +459,8 @@ a:hover {
   font-weight: var(--font-weight-extrabold);
   color: white;
   margin-bottom: var(--space-8);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum';
 }
 
 .stat-label {
@@ -588,6 +590,8 @@ section {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: var(--space-8);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum';
 }
 
 .metric-growth {
@@ -1112,6 +1116,8 @@ section {
   font-size: var(--font-size-base);
   color: var(--color-text-light);
   text-decoration: line-through;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum';
 }
 
 .package-price-new {
@@ -1122,6 +1128,8 @@ section {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum';
 }
 
 .package-savings {
@@ -1254,12 +1262,16 @@ section {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum';
 }
 
 .mobile-bar-discount {
   font-size: var(--font-size-xs);
   color: var(--color-success);
   font-weight: var(--font-weight-semibold);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum';
 }
 
 .mobile-bar-btn {
@@ -1672,6 +1684,10 @@ section {
   font-size: var(--font-size-sm);
   color: var(--color-text-secondary);
   transition: color var(--duration-normal) var(--ease-in-out);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum';
+  min-width: 60px;
+  text-align: right;
 }
 
 .builder-service-bonus {
@@ -1760,6 +1776,8 @@ section {
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-lg);
   color: var(--color-success);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum';
 }
 
 /* Discount progress */
@@ -1822,6 +1840,8 @@ section {
   font-size: var(--font-size-sm);
   color: var(--color-text-secondary);
   text-decoration: line-through;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum';
 }
 
 .builder-total-final {
@@ -1844,6 +1864,8 @@ section {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum';
 }
 
 /* Phone mockup */
@@ -2727,6 +2749,8 @@ section {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: var(--space-4);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum';
 }
 
 .case-metric-label {
