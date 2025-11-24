@@ -190,6 +190,15 @@ a:hover {
   text-transform: none;
 }
 
+.btn:focus {
+  outline: none;
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
 .btn-primary {
   background: var(--gradient-primary);
   color: white;
@@ -563,6 +572,16 @@ section {
 .metric-card:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-xl);
+}
+
+.metric-card:focus {
+  outline: none;
+}
+
+.metric-card:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+  transform: translateY(-4px);
 }
 
 .metric-header {
@@ -949,6 +968,16 @@ section {
   transform: translateY(-8px);
   box-shadow: var(--shadow-xl);
   border-color: var(--color-primary);
+}
+
+.package-card:focus {
+  outline: none;
+}
+
+.package-card:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 4px;
+  transform: translateY(-4px);
 }
 
 .package-card.package-selected {
@@ -1626,8 +1655,19 @@ section {
   border-color: rgba(255, 87, 34, 0.2);
 }
 
+.builder-service:has(input:focus-visible) {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+  background: rgba(255, 87, 34, 0.08);
+  border-color: var(--color-primary);
+}
+
 .builder-service input {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
 }
 
 .builder-service-check {
@@ -2961,6 +3001,11 @@ section {
   border-color: var(--color-primary);
   background: rgba(255, 255, 255, 0.15);
   box-shadow: 0 0 0 3px rgba(255, 87, 34, 0.25);
+}
+
+.form-control:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
 textarea.form-control {
