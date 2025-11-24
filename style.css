@@ -2868,9 +2868,17 @@ section {
 }
 
 .trust-icon {
-  font-size: 48px;
-  margin-bottom: var(--space-16);
+  width: 64px;
+  height: 64px;
+  margin: 0 auto var(--space-16);
   display: block;
+  filter: drop-shadow(0 4px 12px rgba(255, 87, 34, 0.2));
+  transition: transform var(--duration-normal) var(--ease-in-out);
+}
+
+.trust-item:hover .trust-icon {
+  transform: scale(1.1) translateY(-4px);
+  filter: drop-shadow(0 8px 20px rgba(255, 87, 34, 0.3));
 }
 
 .trust-item h3 {
