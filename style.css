@@ -40,7 +40,8 @@
   --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.16);
   --shadow-xl: 0 20px 48px rgba(0, 0, 0, 0.2);
   --shadow-2xl: 0 24px 64px rgba(0, 0, 0, 0.24);
-  --shadow-glow: 0 8px 24px rgba(255, 87, 34, 0.3);
+  --shadow-glow: 0 10px 20px -5px rgba(255, 87, 34, 0.25);
+  --shadow-glow-hover: 0 15px 30px -5px rgba(255, 87, 34, 0.3);
   
   /* Типографика - СОВРЕМЕННЫЕ ШРИФТЫ */
   --font-display: 'Poppins', sans-serif;
@@ -197,22 +198,30 @@ a:hover {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 32px rgba(255, 87, 34, 0.4);
+  box-shadow: var(--shadow-glow-hover);
 }
 
 .btn-primary:active {
   transform: translateY(0);
+  box-shadow: 0 5px 15px -3px rgba(255, 87, 34, 0.3);
 }
 
 .btn-secondary {
   background: transparent;
   color: var(--color-primary);
   border: 2px solid var(--color-primary);
+  box-shadow: 0 4px 12px -2px rgba(255, 87, 34, 0.15);
 }
 
 .btn-secondary:hover {
   background: rgba(255, 87, 34, 0.08);
   transform: translateY(-2px);
+  box-shadow: 0 10px 20px -4px rgba(255, 87, 34, 0.2);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px -2px rgba(255, 87, 34, 0.15);
 }
 
 .btn-lg {
