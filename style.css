@@ -481,11 +481,12 @@ section {
   font-size: clamp(32px, 6vw, var(--font-size-4xl));
   text-align: center;
   margin-bottom: var(--space-16);
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 40%, var(--color-accent) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: fadeInUp 0.8s var(--ease-out);
+  font-weight: var(--font-weight-bold);
 }
 
 .section-subtitle {
@@ -2902,10 +2903,11 @@ section {
   max-width: 500px;
   margin: 0 auto;
   padding: var(--space-32);
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--radius-xl);
   backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form-wrapper h3 {
@@ -2927,9 +2929,9 @@ section {
 .form-control {
   width: 100%;
   padding: var(--space-12) var(--space-16);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
   border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.1);
   color: white;
   font-family: var(--font-body);
   font-size: var(--font-size-base);
@@ -2937,14 +2939,19 @@ section {
 }
 
 .form-control::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-control:hover {
+  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .form-control:focus {
   outline: none;
   border-color: var(--color-primary);
-  background: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 0 0 3px rgba(255, 87, 34, 0.2);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 3px rgba(255, 87, 34, 0.25);
 }
 
 textarea.form-control {
