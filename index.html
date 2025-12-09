@@ -1064,15 +1064,22 @@
 
                 <div class="contact-form-wrapper">
                     <h3>Или оставьте заявку</h3>
-                    <form class="contact-form" id="contactForm" onsubmit="submitForm(event)">
+                    <form class="contact-form" id="contactForm" action="https://formsubmit.co/9104171772a@gmail.com" method="POST">
+                        <!-- FormSubmit настройки -->
+                        <input type="hidden" name="_subject" value="Новая заявка с сайта Мишка Макс">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://mishka-max.ru/?success=true">
+                        <input type="hidden" name="_autoresponse" value="Спасибо за заявку! Мы свяжемся с вами в течение часа.">
+
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Ваше имя" required>
+                            <input type="text" name="name" class="form-control" placeholder="Ваше имя" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Email" required>
+                            <input type="email" name="email" class="form-control" placeholder="Email" required>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" placeholder="Кратко о вашем проекте" rows="4" required></textarea>
+                            <textarea name="message" class="form-control" placeholder="Кратко о вашем проекте" rows="4" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary btn-full">Отправить заявку</button>
                     </form>
@@ -1173,11 +1180,15 @@
             document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
         }
 
-        function submitForm(e) {
-            e.preventDefault();
-            alert('Спасибо! Мы свяжемся с вами в течение часа!');
-            document.getElementById('contactForm').reset();
-        }
+        // Проверка успешной отправки формы
+        window.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('success') === 'true') {
+                alert('✅ Спасибо за заявку! Мы свяжемся с вами в течение часа.');
+                // Убираем параметр из URL
+                window.history.replaceState({}, document.title, window.location.pathname);
+            }
+        });
 
         // Smooth scroll navigation
         document.querySelectorAll('.nav-link').forEach(link => {
