@@ -3682,6 +3682,6 @@ textarea.form-control {
 @media (max-width: 768px) {
   .footer-links {
     flex-direction: column;
-    gap: var(--space-16);
+    gap: var(--space-8);
   }
 }
