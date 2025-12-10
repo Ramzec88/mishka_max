@@ -3600,3 +3600,88 @@ textarea.form-control {
   line-height: 1.5;
   color: #2E7D32; /* Темно-зеленый текст */
 }
+
+/* Стили для чек-бокса согласия на обработку данных */
+.consent-wrapper {
+  margin-top: var(--space-16);
+  margin-bottom: var(--space-16);
+}
+
+.consent-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-12);
+  cursor: pointer;
+}
+
+.consent-checkbox input[type="checkbox"] {
+  margin-top: 4px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.consent-label {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+}
+
+.consent-label a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  transition: color var(--duration-fast) var(--ease-in-out);
+}
+
+.consent-label a:hover {
+  color: #ff6b4a;
+  text-decoration: none;
+}
+
+/* Футер сайта */
+.site-footer {
+  background: #1a1a2e;
+  color: rgba(255, 255, 255, 0.85);
+  padding: var(--space-40) var(--space-20);
+  margin-top: var(--space-60);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-32);
+  margin-bottom: var(--space-20);
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color var(--duration-fast) var(--ease-in-out);
+}
+
+.footer-links a:hover {
+  color: var(--color-primary);
+}
+
+.footer-copyright {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+  .footer-links {
+    flex-direction: column;
+    gap: var(--space-16);
+  }
+}
