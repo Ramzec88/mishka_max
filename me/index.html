@@ -18,6 +18,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мишка Макс — Детские Истории и Приключения</title>
+    <meta name="description" content="Смотри новые серии, скачивай песенки и развивающие материалы для детей! Мультики, сценарии и материалы для занятий.">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Мишка Макс — Мультики и Материалы">
+    <meta property="og:description" content="Смотри новые серии, скачивай песенки и развивающие материалы для детей!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mishka-max.ru/me">
+
+    <!-- Theme and Favicon -->
+    <meta name="theme-color" content="#52B8E8">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -283,7 +294,7 @@
         }
 
         .title-max {
-            color: var(--sky-blue-dark);
+            color: var(--white);
             display: block;
         }
 
@@ -448,18 +459,18 @@
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         }
 
-        /* Featured button */
+        /* Honey/Gold Featured button */
         .link-button.featured {
-            background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+            background: linear-gradient(135deg, #FFD700 0%, #FFA000 100%);
             border: 4px solid var(--white);
-            box-shadow: 
-                0 8px 32px rgba(255, 59, 59, 0.45),
+            box-shadow:
+                0 8px 32px rgba(255, 160, 0, 0.45),
                 0 4px 12px rgba(0, 0, 0, 0.15),
-                inset 0 2px 4px rgba(255, 255, 255, 0.3);
+                inset 0 2px 4px rgba(255, 255, 255, 0.5);
         }
 
         .link-button.featured::before {
-            background: linear-gradient(135deg, var(--red-dark) 0%, #C62828 100%);
+            background: linear-gradient(135deg, #FFC107 0%, #FF6F00 100%);
         }
 
         .link-button.featured .link-title,
@@ -473,16 +484,16 @@
         }
 
         .link-button.featured .link-icon svg {
-            fill: var(--red);
+            fill: #D35400;
         }
 
         .link-button.featured:hover {
             transform: translateY(-10px) scale(1.03) rotate(-1deg);
-            box-shadow: 
-                0 20px 56px rgba(255, 59, 59, 0.6),
+            box-shadow:
+                0 20px 56px rgba(255, 160, 0, 0.6),
                 0 6px 20px rgba(0, 0, 0, 0.2),
                 inset 0 2px 4px rgba(255, 255, 255, 0.4);
-            border-color: var(--yellow);
+            border-color: #FFF8E1;
         }
 
         .link-button.featured:hover .link-icon {
@@ -490,7 +501,33 @@
         }
 
         .link-button.featured:hover .link-icon svg {
-            fill: var(--red-dark);
+            fill: #D35400;
+        }
+
+        /* Compact button style */
+        .link-button.compact {
+            padding: 12px 20px;
+            align-items: center;
+            min-height: 60px;
+        }
+
+        .link-button.compact .link-icon {
+            width: 42px;
+            height: 42px;
+        }
+
+        .link-button.compact .link-icon svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .link-button.compact .link-title {
+            margin-bottom: 0;
+            font-size: 18px;
+        }
+
+        .link-button.compact + .link-button.compact {
+            margin-top: -4px;
         }
 
         /* Footer */
@@ -535,7 +572,31 @@
 
         @media (max-width: 380px) {
             .title { font-size: 36px; }
+            .link-title { font-size: 18px; }
+            .link-desc { font-size: 13px; line-height: 1.2; }
+            .link-button { padding: 15px 16px; }
+            .avatar { width: 120px; height: 120px; font-size: 70px; }
             .emoji-line { font-size: 30px; letter-spacing: 8px; }
+        }
+
+        /* Улучшение кликабельности на touch-устройствах */
+        @media (hover: none) {
+            .link-button:hover {
+                transform: none;
+                box-shadow: 0 6px 24px var(--shadow);
+            }
+            .link-button:active {
+                transform: scale(0.96);
+            }
+            .link-button.featured:hover {
+                transform: none;
+                box-shadow:
+                    0 8px 32px rgba(255, 160, 0, 0.45),
+                    0 4px 12px rgba(0, 0, 0, 0.15);
+            }
+            .link-button.featured:active {
+                transform: scale(0.96);
+            }
         }
     </style>
 </head>
@@ -596,7 +657,7 @@
                 </div>
             </a>
 
-            <a href="#" class="link-button">
+            <a href="#" class="link-button compact">
                 <div class="link-icon">
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/>
@@ -604,11 +665,10 @@
                 </div>
                 <div class="link-content">
                     <div class="link-title">INSTAGRAM (ГЛАВНЫЙ БЛОГ) 🌟</div>
-                    <div class="link-desc">Нас здесь больше всего! Свежие рилс каждый день</div>
                 </div>
             </a>
 
-            <a href="#" class="link-button">
+            <a href="#" class="link-button compact">
                 <div class="link-icon">
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.03-1.99 1.27-5.62 3.72-.53.37-.1.56-.34.56-.21 0-.59-.07-.88-.13-.36-.07-.64-.11-.62-.24.02-.13.42-.27.62-.39 2.42-1.06 4.03-1.76 4.83-2.11 2.3-.96 2.78-.96 3.09-.96.07 0 .22.02.32.12.08.08.1.19.11.27-.01.06.01.24 0 .38z"/>
@@ -616,11 +676,10 @@
                 </div>
                 <div class="link-content">
                     <div class="link-title">TELEGRAM-КАНАЛ</div>
-                    <div class="link-desc">Самый уютный канал. Видео, новости и общение</div>
                 </div>
             </a>
 
-            <a href="#" class="link-button">
+            <a href="#" class="link-button compact">
                 <div class="link-icon">
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
@@ -628,11 +687,10 @@
                 </div>
                 <div class="link-content">
                     <div class="link-title">TIK TOK</div>
-                    <div class="link-desc">Залипаем вместе! Самые смешные моменты</div>
                 </div>
             </a>
 
-            <a href="#" class="link-button">
+            <a href="#" class="link-button compact">
                 <div class="link-icon">
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
@@ -640,7 +698,6 @@
                 </div>
                 <div class="link-content">
                     <div class="link-title">САЙТ MISHKA-MAX.RU 💼</div>
-                    <div class="link-desc">Информация для рекламодателей и партнеров</div>
                 </div>
             </a>
         </div>
