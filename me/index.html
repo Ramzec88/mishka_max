@@ -358,6 +358,7 @@
         .link-button:nth-child(5) { animation-delay: 0.5s; }
         .link-button:nth-child(6) { animation-delay: 0.6s; }
         .link-button:nth-child(7) { animation-delay: 0.7s; }
+        .link-button:nth-child(8) { animation-delay: 0.8s; }
 
         @keyframes slideIn {
             from {
@@ -504,6 +505,39 @@
 
         .link-button.featured:hover .link-icon svg {
             fill: #D35400;
+        }
+
+        /* NEW Badge */
+        .new-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: linear-gradient(135deg, #FF3B3B 0%, #E63946 100%);
+            color: var(--white);
+            font-family: 'Fredoka', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 12px;
+            z-index: 2;
+            box-shadow:
+                0 4px 12px rgba(255, 59, 59, 0.4),
+                0 0 0 3px var(--white);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            animation: pulse-badge 2s ease-in-out infinite;
+            letter-spacing: 0.5px;
+        }
+
+        @keyframes pulse-badge {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+        }
+
+        .link-button:hover .new-badge {
+            background: linear-gradient(135deg, #FFD23F 0%, #FFA94D 100%);
+            box-shadow:
+                0 6px 16px rgba(255, 210, 63, 0.5),
+                0 0 0 3px var(--white);
         }
 
         /* Footer */
@@ -678,6 +712,19 @@
                 <div class="link-content">
                     <div class="link-title">YOUTUBE (СМОТРЕТЬ НА ТВ)</div>
                     <div class="link-desc">Все серии подряд в хорошем качестве</div>
+                </div>
+            </a>
+
+            <a href="https://dzen.ru/mishka_max" class="link-button" onclick="ym(105821243,'reachGoal','click_dzen')">
+                <span class="new-badge">NEW</span>
+                <div class="link-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                    </svg>
+                </div>
+                <div class="link-content">
+                    <div class="link-title">ДЗЕН</div>
+                    <div class="link-desc">Читайте статьи и смотрите видео</div>
                 </div>
             </a>
 
