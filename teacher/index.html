@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мишка Макс PRO — Для воспитателей и педагогов ДОУ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Fredoka:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Core бренда */
+            --core-orange: #FF7A3D;
+            
+            /* PRO палитра - основная для страницы */
+            --pro-terracotta: #D4876D;
+            --pro-dust-blue: #7B9BA8;
+            --pro-bg: #F5F1ED;
+            --pro-text: #4A4844;
+            
+            /* KIDS - для акцентов */
+            --kids-main: #FF8C42;
+            --kids-sky: #52B8E8;
+            --kids-green: #8AD879;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            color: var(--pro-text);
+            background: var(--pro-bg);
+            line-height: 1.6;
+        }
+
+        /* Хедер */
+        header {
+            background: white;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--core-orange);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-bear {
+            font-size: 2rem;
+        }
+
+        .nav-badge {
+            background: var(--pro-terracotta);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-left: 0.5rem;
+        }
+
+        /* Hero секция */
+        .hero {
+            background: linear-gradient(135deg, white 0%, var(--pro-bg) 100%);
+            padding: 4rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '📚';
+            position: absolute;
+            font-size: 25rem;
+            opacity: 0.03;
+            top: -5rem;
+            right: -5rem;
+            transform: rotate(15deg);
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: var(--pro-text);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-content .highlight {
+            color: var(--pro-terracotta);
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-content .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: var(--pro-terracotta);
+            opacity: 0.2;
+            border-radius: 4px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            color: var(--pro-text);
+            opacity: 0.9;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-stat {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            border-left: 4px solid var(--pro-terracotta);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .hero-stat-number {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 2.5rem;
+            color: var(--pro-terracotta);
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .hero-stat-label {
+            font-size: 0.95rem;
+            color: var(--pro-text);
+            opacity: 0.8;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1.2rem 2.5rem;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            font-family: 'Nunito', sans-serif;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--pro-terracotta);
+            color: white;
+            box-shadow: 0 8px 25px rgba(212, 135, 109, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(212, 135, 109, 0.4);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--pro-text);
+            border: 2px solid var(--pro-dust-blue);
+        }
+
+        .btn-secondary:hover {
+            background: var(--pro-dust-blue);
+            color: white;
+        }
+
+        .hero-visual {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 25px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .hero-visual-icon {
+            font-size: 12rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .hero-visual-text {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.5rem;
+            color: var(--pro-terracotta);
+        }
+
+        /* Проблемы педагогов */
+        .problems {
+            padding: 5rem 2rem;
+            background: white;
+        }
+
+        .problems-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Fredoka', sans-serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            text-align: center;
+            color: var(--pro-text);
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            color: var(--pro-text);
+            opacity: 0.8;
+        }
+
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .problem-card {
+            padding: 2rem;
+            background: var(--pro-bg);
+            border-radius: 20px;
+            border-top: 4px solid var(--pro-dust-blue);
+            transition: transform 0.3s;
+        }
+
+        .problem-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .problem-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .problem-title {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.4rem;
+            color: var(--pro-text);
+            margin-bottom: 0.8rem;
+        }
+
+        .problem-text {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--pro-text);
+            opacity: 0.85;
+        }
+
+        .solution-highlight {
+            background: linear-gradient(135deg, var(--pro-terracotta), var(--core-orange));
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 25px;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .solution-highlight h3 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .solution-highlight p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        /* Инфографика пользы */
+        .benefits-infographic {
+            padding: 5rem 2rem;
+            background: var(--pro-bg);
+        }
+
+        .benefits-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .benefits-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .comparison-column {
+            background: white;
+            padding: 3rem 2.5rem;
+            border-radius: 25px;
+            position: relative;
+        }
+
+        .comparison-column.without {
+            border: 3px solid #E5E5E5;
+        }
+
+        .comparison-column.with {
+            border: 3px solid var(--pro-terracotta);
+            box-shadow: 0 15px 50px rgba(212, 135, 109, 0.15);
+        }
+
+        .comparison-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .comparison-icon {
+            font-size: 4rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .comparison-title {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.8rem;
+            color: var(--pro-text);
+            margin-bottom: 0.5rem;
+        }
+
+        .comparison-column.with .comparison-title {
+            color: var(--pro-terracotta);
+        }
+
+        .comparison-items {
+            list-style: none;
+        }
+
+        .comparison-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--pro-bg);
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .comparison-item:last-child {
+            border-bottom: none;
+        }
+
+        .comparison-item-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            margin-top: 0.2rem;
+        }
+
+        .comparison-item-text {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Что внутри */
+        .whats-inside {
+            padding: 5rem 2rem;
+            background: white;
+        }
+
+        .whats-inside-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .content-card {
+            background: var(--pro-bg);
+            padding: 2.5rem;
+            border-radius: 20px;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--pro-terracotta), var(--pro-dust-blue));
+        }
+
+        .content-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        .content-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .content-title {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.6rem;
+            color: var(--pro-text);
+            margin-bottom: 1rem;
+        }
+
+        .content-description {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--pro-text);
+            opacity: 0.85;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-examples {
+            list-style: none;
+        }
+
+        .content-examples li {
+            padding: 0.5rem 0;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--pro-text);
+            opacity: 0.8;
+        }
+
+        .content-examples li::before {
+            content: '✓';
+            color: var(--pro-terracotta);
+            font-weight: 900;
+            font-size: 1.1rem;
+        }
+
+        /* Статистика эффективности */
+        .statistics {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, var(--pro-terracotta), var(--core-orange));
+            color: white;
+        }
+
+        .statistics-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .statistics h2 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1rem;
+        }
+
+        .statistics-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .stat-box {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s;
+        }
+
+        .stat-box:hover {
+            transform: scale(1.05);
+        }
+
+        .stat-number {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        /* Отзывы */
+        .testimonials {
+            padding: 5rem 2rem;
+            background: var(--pro-bg);
+        }
+
+        .testimonials-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+            position: relative;
+        }
+
+        .testimonial-quote {
+            font-size: 4rem;
+            color: var(--pro-terracotta);
+            opacity: 0.2;
+            position: absolute;
+            top: 1rem;
+            left: 1.5rem;
+            line-height: 1;
+        }
+
+        .testimonial-text {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            background: var(--pro-terracotta);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .testimonial-info {
+            flex: 1;
+        }
+
+        .testimonial-name {
+            font-weight: 700;
+            color: var(--pro-text);
+            margin-bottom: 0.2rem;
+        }
+
+        .testimonial-position {
+            font-size: 0.9rem;
+            color: var(--pro-text);
+            opacity: 0.7;
+        }
+
+        /* Тарифы */
+        .pricing {
+            padding: 5rem 2rem;
+            background: white;
+        }
+
+        .pricing-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: linear-gradient(135deg, white, var(--pro-bg));
+            border: 3px solid var(--pro-terracotta);
+            border-radius: 30px;
+            padding: 3rem;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(212, 135, 109, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: 2rem;
+            right: -3rem;
+            background: var(--kids-green);
+            color: white;
+            padding: 0.5rem 4rem;
+            transform: rotate(45deg);
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .pricing-title {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 2.5rem;
+            color: var(--pro-text);
+            margin-bottom: 1rem;
+        }
+
+        .pricing-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--pro-text);
+            opacity: 0.8;
+        }
+
+        .pricing-price {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 5rem;
+            color: var(--pro-terracotta);
+            font-weight: 900;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-price .currency {
+            font-size: 2.5rem;
+            margin-top: 0.8rem;
+        }
+
+        .pricing-period {
+            font-size: 1.3rem;
+            color: var(--pro-text);
+            opacity: 0.7;
+            margin-bottom: 2.5rem;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 2.5rem;
+            text-align: left;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .pricing-features li {
+            padding: 1rem;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-features li::before {
+            content: '✓';
+            color: var(--pro-terracotta);
+            font-weight: 900;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        /* CTA финальный */
+        .final-cta {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, var(--pro-dust-blue), var(--pro-terracotta));
+            color: white;
+            text-align: center;
+        }
+
+        .final-cta-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .final-cta h2 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1.5rem;
+        }
+
+        .final-cta p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+        }
+
+        .final-cta .btn-primary {
+            background: white;
+            color: var(--pro-terracotta);
+            font-size: 1.3rem;
+            padding: 1.5rem 3rem;
+        }
+
+        .final-cta .btn-primary:hover {
+            transform: translateY(-3px) scale(1.02);
+        }
+
+        /* Footer */
+        footer {
+            padding: 3rem 2rem 1.5rem;
+            background: var(--pro-text);
+            color: white;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        .footer-copyright {
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 968px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .benefits-comparison {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Анимации при скролле */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Хедер -->
+    <header>
+        <nav>
+            <a href="/" class="logo">
+                <span class="logo-bear">🐻</span>
+                Мишка Макс
+                <span class="nav-badge">PRO</span>
+            </a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>
+                    Готовые материалы для <span class="highlight">занятий каждый день</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Экономьте 10+ часов в неделю на подготовке. Получите доступ к библиотеке проверенных сценариев, которые работают!
+                </p>
+
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">260₽</span>
+                        <span class="hero-stat-label">в месяц — меньше чашки кофе в день</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">150+</span>
+                        <span class="hero-stat-label">готовых сценариев и материалов</span>
+                    </div>
+                </div>
+
+                <div class="hero-cta">
+                    <a href="#pricing" class="btn btn-primary">
+                        <span>🎯</span> Подключить сейчас
+                    </a>
+                    <a href="#whats-inside" class="btn btn-secondary">
+                        <span>📚</span> Что внутри
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <span class="hero-visual-icon">👩‍🏫</span>
+                <p class="hero-visual-text">Уже 10 500+ воспитателей с нами!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Проблемы -->
+    <section class="problems">
+        <div class="problems-container">
+            <h2 class="section-title">Знакомо?</h2>
+            <p class="section-subtitle">Эти проблемы мучают каждого воспитателя</p>
+
+            <div class="problems-grid fade-in">
+                <div class="problem-card">
+                    <span class="problem-icon">⏰</span>
+                    <h3 class="problem-title">Нехватка времени</h3>
+                    <p class="problem-text">
+                        Вечера уходят на поиск материалов, адаптацию сценариев и подготовку к занятиям вместо отдыха с семьёй.
+                    </p>
+                </div>
+
+                <div class="problem-card">
+                    <span class="problem-icon">🔍</span>
+                    <h3 class="problem-title">Где искать идеи?</h3>
+                    <p class="problem-text">
+                        Интернет переполнен материалами, но найти качественный, соответствующий ФГОС контент — задача не из лёгких.
+                    </p>
+                </div>
+
+                <div class="problem-card">
+                    <span class="problem-icon">🎭</span>
+                    <h3 class="problem-title">Праздники и утренники</h3>
+                    <p class="problem-text">
+                        Каждый праздник требует нового сценария. Хочется удивить детей и родителей, но идеи кончаются.
+                    </p>
+                </div>
+
+                <div class="problem-card">
+                    <span class="problem-icon">📋</span>
+                    <h3 class="problem-title">Документация</h3>
+                    <p class="problem-text">
+                        Помимо занятий нужно заполнять планы, отчёты, методические карты — на это тоже нужно время.
+                    </p>
+                </div>
+            </div>
+
+            <div class="solution-highlight fade-in">
+                <h3>Мы решили эти проблемы раз и навсегда! 🎉</h3>
+                <p>
+                    Подписка Мишка Макс PRO — это ваш личный методический кабинет с готовыми материалами на каждый день.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Инфографика сравнения -->
+    <section class="benefits-infographic">
+        <div class="benefits-container">
+            <h2 class="section-title">Ваша жизнь ДО и ПОСЛЕ подписки</h2>
+            <p class="section-subtitle">Почувствуйте разницу уже в первую неделю</p>
+
+            <div class="benefits-comparison fade-in">
+                <div class="comparison-column without">
+                    <div class="comparison-header">
+                        <span class="comparison-icon">😓</span>
+                        <h3 class="comparison-title">БЕЗ подписки</h3>
+                    </div>
+                    <ul class="comparison-items">
+                        <li class="comparison-item">
+                            <span class="comparison-item-icon">❌</span>
+                            <span class="comparison-item-text">3-4 часа вечером на поиск и адаптацию материалов</span>
+                        </li>
+                        <li class="comparison-item">
+                            <span class="comparison-item-icon">❌</span>
+                            <span class="comparison-item-text">Скачивание сценариев из сомнительных источников</span>
+                        </li>
+                        <li class="comparison-item">
+                            <span class="comparison-item-icon">❌</span>
+                            <span class="comparison-item-text">Переплата за каждый отдельный материал</span>
+                        </li>
+                        <li class="comparison-item">
+                            <span class="comparison-item-icon">❌</span>
+                            <span class="comparison-item-text">Постоянный стресс перед праздниками</span>
+                        </li>
+                        <li class="comparison-item">
+                            <span class="comparison-item-icon">❌</span>
+                            <span class="comparison-item-text">Отсутствие системы — каждый раз начинаете с нуля</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="comparison-column with">
+                    <div class="comparison-header">
+                        <span class="comparison-icon">✨</span>
+                        <h3 class="comparison-title">С подпиской PRO</h3>
+                    </div>
+                    <ul class="comparison-items">
+                        <li class="comparison-item">
+                            <span class="comparison-item-icon">✓</span>
+                            <span class="comparison-item-text">10-15 минут на выбор готового сценария — и готово!</span>
+                        </li>
+                        <li class="comparison-item">
+                            <span class="comparison-item-icon">✓</span>
+                            <span class="comparison-item-text">Все материалы проверены педагогами и соответствуют ФГОС</span>
+                        </li>
+                        <li class="comparison-item">
+                            <span class="comparison-item-icon">✓</span>
+                            <span class="comparison-item-text">Безлимитный доступ ко всей библиотеке за 260₽/мес</span>
+                        </li>
+                        <li class="comparison-item">
+                            <span class="comparison-item-icon">✓</span>
+                            <span class="comparison-item-text">Готовые сценарии праздников на весь год заранее</span>
+                        </li>
+                        <li class="comparison-item">
+                            <span class="comparison-item-icon">✓</span>
+                            <span class="comparison-item-text">Организованная база знаний — всё по темам и возрастам</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Что внутри -->
+    <section class="whats-inside" id="whats-inside">
+        <div class="whats-inside-container">
+            <h2 class="section-title">Что вы получите в закрытом канале</h2>
+            <p class="section-subtitle">Более 150 готовых материалов и новые каждую неделю!</p>
+
+            <div class="content-grid fade-in">
+                <div class="content-card">
+                    <span class="content-icon">🎭</span>
+                    <h3 class="content-title">Сценарии праздников</h3>
+                    <p class="content-description">
+                        Готовые сценарии на все праздники года с диалогами, музыкой, играми и реквизитом.
+                    </p>
+                    <ul class="content-examples">
+                        <li>Новый год и Рождество</li>
+                        <li>8 Марта, 23 Февраля</li>
+                        <li>Выпускной в детском саду</li>
+                        <li>День знаний, Масленица</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <span class="content-icon">📚</span>
+                    <h3 class="content-title">Конспекты занятий</h3>
+                    <p class="content-description">
+                        Подробные планы занятий по развитию речи, математике, окружающему миру для всех возрастов.
+                    </p>
+                    <ul class="content-examples">
+                        <li>Младшая группа (1-3 года)</li>
+                        <li>Средняя группа (3-4 года)</li>
+                        <li>Старшая группа (4-5 лет)</li>
+                        <li>Подготовительная (5-6 лет)</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <span class="content-icon">🎨</span>
+                    <h3 class="content-title">Творческие мастер-классы</h3>
+                    <p class="content-description">
+                        Пошаговые инструкции для занятий по рисованию, лепке, аппликации с Мишкой Максом.
+                    </p>
+                    <ul class="content-examples">
+                        <li>Поделки к праздникам</li>
+                        <li>Сезонное творчество</li>
+                        <li>Работа с природными материалами</li>
+                        <li>Подарки для родителей</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <span class="content-icon">🎵</span>
+                    <h3 class="content-title">Музыкальные занятия</h3>
+                    <p class="content-description">
+                        Песни, танцы, музыкальные игры с нотами, текстами и описанием движений.
+                    </p>
+                    <ul class="content-examples">
+                        <li>Утренняя гимнастика</li>
+                        <li>Хороводы и игры</li>
+                        <li>Танцы для утренников</li>
+                        <li>Песни про времена года</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <span class="content-icon">🏃</span>
+                    <h3 class="content-title">Физкультура и игры</h3>
+                    <p class="content-description">
+                        Комплексы упражнений, подвижные игры, эстафеты для развития моторики и координации.
+                    </p>
+                    <ul class="content-examples">
+                        <li>Комплексы утренней зарядки</li>
+                        <li>Подвижные игры на улице</li>
+                        <li>Спортивные праздники</li>
+                        <li>Игры на развитие ловкости</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <span class="content-icon">📋</span>
+                    <h3 class="content-title">Шаблоны документов</h3>
+                    <p class="content-description">
+                        Готовые бланки планов, отчётов, методических разработок — просто заполните!
+                    </p>
+                    <ul class="content-examples">
+                        <li>Календарно-тематическое планирование</li>
+                        <li>Карты наблюдений</li>
+                        <li>Шаблоны отчётов</li>
+                        <li>Портфолио воспитателя</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Статистика -->
+    <section class="statistics">
+        <div class="statistics-container">
+            <h2>Подписка окупается с первой недели!</h2>
+            <p class="statistics-subtitle">
+                Вот что экономят наши подписчики
+            </p>
+
+            <div class="stats-grid fade-in">
+                <div class="stat-box">
+                    <span class="stat-number">12ч</span>
+                    <span class="stat-label">сэкономленного времени в неделю</span>
+                </div>
+
+                <div class="stat-box">
+                    <span class="stat-number">3000₽+</span>
+                    <span class="stat-label">экономия на покупке отдельных материалов</span>
+                </div>
+
+                <div class="stat-box">
+                    <span class="stat-number">0</span>
+                    <span class="stat-label">стресса перед праздниками</span>
+                </div>
+
+                <div class="stat-box">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">уверенность в качестве материалов</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section class="testimonials">
+        <div class="testimonials-container">
+            <h2 class="section-title">Что говорят наши подписчики</h2>
+            <p class="section-subtitle">Реальные отзывы воспитателей со всей России</p>
+
+            <div class="testimonials-grid fade-in">
+                <div class="testimonial-card">
+                    <span class="testimonial-quote">"</span>
+                    <p class="testimonial-text">
+                        Подписка окупилась за первую неделю! Раньше тратила вечера на поиск сценариев, 
+                        теперь просто открываю канал — и всё готово. Дети в восторге от занятий с Мишкой!
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">👩‍🏫</div>
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Елена Смирнова</div>
+                            <div class="testimonial-position">Воспитатель, стаж 8 лет, Москва</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <span class="testimonial-quote">"</span>
+                    <p class="testimonial-text">
+                        Сценарии праздников — это просто находка! Использовала новогодний утренник — 
+                        родители были в восторге. Все материалы структурированные, понятные, сразу готовы к работе.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">👩‍🏫</div>
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Анна Петрова</div>
+                            <div class="testimonial-position">Методист ДОУ №45, Санкт-Петербург</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <span class="testimonial-quote">"</span>
+                    <p class="testimonial-text">
+                        260 рублей в месяц — это смешная цена за такой объём материалов! 
+                        Один сценарий праздника стоил бы дороже. А здесь целая библиотека и новинки каждую неделю!
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">👩‍🏫</div>
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Ольга Васильева</div>
+                            <div class="testimonial-position">Воспитатель, стаж 15 лет, Казань</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Тарифы -->
+    <section class="pricing" id="pricing">
+        <div class="pricing-container">
+            <h2 class="section-title">Простой и честный тариф</h2>
+            <p class="section-subtitle">Без скрытых платежей. Отменить можно в любой момент.</p>
+
+            <div class="pricing-card fade-in">
+                <div class="pricing-badge">Популярно</div>
+                
+                <h3 class="pricing-title">Мишка Макс PRO</h3>
+                <p class="pricing-subtitle">Безлимитный доступ ко всем материалам</p>
+
+                <div class="pricing-price">
+                    <span class="currency">₽</span>260
+                </div>
+                <div class="pricing-period">в месяц</div>
+
+                <ul class="pricing-features">
+                    <li>150+ готовых сценариев и конспектов</li>
+                    <li>Новые материалы каждую неделю</li>
+                    <li>Все праздники года</li>
+                    <li>Занятия для всех возрастных групп</li>
+                    <li>Шаблоны документов и планов</li>
+                    <li>Поддержка в чате 24/7</li>
+                    <li>Отмена подписки в любой момент</li>
+                </ul>
+
+                <a href="https://t.me/mishkamax_pro_bot" class="btn btn-primary" style="font-size: 1.3rem; padding: 1.5rem 3rem;">
+                    <span>✨</span> Подключить прямо сейчас
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Финальный CTA -->
+    <section class="final-cta">
+        <div class="final-cta-container">
+            <h2>Готовы экономить 12 часов в неделю?</h2>
+            <p>
+                Присоединяйтесь к 10 500+ воспитателям, которые уже работают с удовольствием, 
+                а не в стрессе. Первая неделя — пробная!
+            </p>
+            <a href="https://t.me/mishkamax_pro_bot" class="btn btn-primary">
+                <span>🚀</span> Начать экономить время
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="/">Главная</a>
+                <a href="#whats-inside">Что внутри</a>
+                <a href="#pricing">Тарифы</a>
+                <a href="mailto:pro@mishkamax.ru">Поддержка</a>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2025 Мишка Макс PRO. Для воспитателей с любовью 💝
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Анимация при скролле
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Плавная прокрутка
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
