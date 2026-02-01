@@ -47,8 +47,8 @@ Disallow: /
 User-agent: DotBot
 Disallow: /
 
-# Ссылка на карту сайта (когда создашь)
-# Sitemap: https://mishka-max.ru/sitemap.xml
+# Ссылка на карту сайта
+Sitemap: https://mishka-max.ru/sitemap.xml
 
 # Основной URL сайта
 Host: mishka-max.ru

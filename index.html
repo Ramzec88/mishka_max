@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
         (function(m,e,t,r,i,k,a){
@@ -15,8 +18,6 @@
     <noscript><div><img src="https://mc.yandex.ru/watch/105821243" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="yandex-verification" content="9bfd3d574d1f6298" />
     <link rel="canonical" href="https://mishka-max.ru/">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -26,12 +27,13 @@
     <meta name="geo.placename" content="Россия">
     <meta name="language" content="Russian">
 
-    <title>Реклама у блогера Мишка Макс | Детские товары и услуги | 286K подписчиков 2026</title>
-    <meta name="description" content="Реклама у детского блогера Мишка Макс: 286K подписчиков, охват 2.7М/месяц. Instagram, TikTok, Telegram. Целевая аудитория - родители детей 2-7 лет. Кейсы, статистика, прозрачные цены. Запустите кампанию за 48 часов!">
-    <meta name="keywords" content="реклама у детских блогеров, реклама детских товаров, блогер для родителей, интеграция instagram детский контент, реклама тикток дети, мишка макс блогер, нативная реклама для детей, инфлюенсер маркетинг родители, реклама игрушек инстаграм, детский блогер реклама россия">
+    <title>Мишка Макс — Добрый друг каждого ребёнка 🐻</title>
+    <meta name="description" content="Мишка Макс — детский блогер и друг каждого ребёнка. Развивающий контент, песенки, мультики для детей 2-7 лет. 286K подписчиков в Instagram, TikTok, Telegram. Присоединяйтесь к нашей дружной семье!">
+    <meta name="keywords" content="мишка макс, детский блогер, развивающие видео для детей, песенки для детей, мультики для малышей, детский контент, блогер для детей, развивающий контент, детские песни, видео для детей 2-7 лет">
 
-    <meta property="og:title" content="Мишка Макс — Реклама для умных родителей">
-    <meta property="og:description" content="Запустите кампанию за 5 минут. Охват более 2.7М в месяц. Аудитория 286K+, которая покупает.">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Мишка Макс — Добрый друг каждого ребёнка">
+    <meta property="og:description" content="Развивающий контент, песенки и мультики для детей 2-7 лет. 286K+ подписчиков доверяют Мишке Максу!">
     <meta property="og:image" content="https://mishka-max.ru/images/og-preview.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -41,8 +43,8 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Мишка Макс — Реклама для умных родителей">
-    <meta name="twitter:description" content="Запустите кампанию за 5 минут. Охват более 2.7М в месяц. Аудитория 241K+, которая покупает.">
+    <meta name="twitter:title" content="Мишка Макс — Добрый друг каждого ребёнка">
+    <meta name="twitter:description" content="Развивающий контент, песенки и мультики для детей 2-7 лет. 286K+ подписчиков!">
     <meta name="twitter:image" content="https://mishka-max.ru/images/og-preview.jpg">
 
     <!-- Favicon -->
@@ -51,1775 +53,1172 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Instagram* Embed в кейсах */
-        .case-image .instagram-media {
-            margin: 0 auto !important;
-            max-width: 100% !important;
-            min-width: auto !important;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .case-image {
+        :root {
+            /* Core бренда */
+            --core-orange: #FF7A3D;
+            
+            /* KIDS палитра - основная для страницы */
+            --kids-main: #FF8C42;
+            --kids-sky: #52B8E8;
+            --kids-green: #8AD879;
+            --kids-bg: #FFF8F3;
+            --kids-text: #2C3E50;
+            
+            /* B2B палитра - для цифр и акцентов */
+            --b2b-main: #FF5722;
+            --b2b-indigo: #1A1A2E;
+            --b2b-cyan: #00BCD4;
+            
+            /* PRO палитра - для воспитателей */
+            --pro-terracotta: #D4876D;
+            --pro-dust-blue: #7B9BA8;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            color: var(--kids-text);
+            overflow-x: hidden;
+            background: var(--kids-bg);
+        }
+
+        /* Плавающие декоративные элементы */
+        .floating-shapes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
             overflow: hidden;
+        }
+
+        .shape {
+            position: absolute;
+            opacity: 0.15;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .shape:nth-child(1) {
+            top: 10%;
+            left: 10%;
+            width: 80px;
+            height: 80px;
+            background: var(--kids-main);
+            border-radius: 50%;
+            animation-delay: 0s;
+        }
+
+        .shape:nth-child(2) {
+            top: 60%;
+            right: 15%;
+            width: 60px;
+            height: 60px;
+            background: var(--kids-sky);
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            animation-delay: 3s;
+        }
+
+        .shape:nth-child(3) {
+            bottom: 20%;
+            left: 20%;
+            width: 100px;
+            height: 100px;
+            background: var(--kids-green);
+            border-radius: 50%;
+            animation-delay: 6s;
+        }
+
+        .shape:nth-child(4) {
+            top: 40%;
+            left: 50%;
+            width: 70px;
+            height: 70px;
+            background: var(--core-orange);
+            border-radius: 20% 80% 80% 20% / 80% 20% 20% 80%;
+            animation-delay: 9s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(30px, -30px) rotate(90deg); }
+            50% { transform: translate(-20px, 20px) rotate(180deg); }
+            75% { transform: translate(40px, 10px) rotate(270deg); }
+        }
+
+        /* Хедер */
+        header {
+            position: relative;
+            z-index: 100;
+            padding: 1.5rem 2rem;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--core-orange);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s;
+        }
+
+        .logo:hover {
+            transform: scale(1.05) rotate(-2deg);
+        }
+
+        .logo-bear {
+            font-size: 2.5rem;
+            animation: wave 2s infinite;
+        }
+
+        @keyframes wave {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(15deg); }
+            75% { transform: rotate(-15deg); }
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--kids-text);
+            text-decoration: none;
+            font-weight: 600;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--kids-main);
+            transition: width 0.3s;
+            border-radius: 2px;
+        }
+
+        .nav-links a:hover {
+            color: var(--kids-main);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Главный герой */
+        .hero {
+            position: relative;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--kids-bg) 0%, #FFE8CC 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 1200px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            font-weight: 900;
+            color: var(--kids-text);
+            margin-bottom: 1rem;
+            line-height: 1.1;
+            animation: slideDown 1s ease-out;
+        }
+
+        .hero h1 .word {
+            display: inline-block;
+            animation: bounce 1s ease-in-out infinite;
+        }
+
+        .hero h1 .word:nth-child(1) { animation-delay: 0s; }
+        .hero h1 .word:nth-child(2) { animation-delay: 0.1s; }
+        .hero h1 .word:nth-child(3) { animation-delay: 0.2s; }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: var(--kids-text);
+            margin-bottom: 2rem;
+            animation: fadeIn 1s ease-out 0.3s backwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin: 3rem 0;
+            animation: fadeIn 1s ease-out 0.6s backwards;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Fredoka', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 900;
+            color: var(--kids-main);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: var(--kids-text);
+            opacity: 0.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+            animation: fadeIn 1s ease-out 0.9s backwards;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            font-family: 'Nunito', sans-serif;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--kids-main), var(--core-orange));
+            color: white;
+            box-shadow: 0 10px 30px rgba(255, 140, 66, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 140, 66, 0.6);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--kids-text);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Секция "Кто такой Мишка Макс" */
+        .about {
+            padding: 6rem 2rem;
+            background: white;
+            position: relative;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image-circle {
+            width: 100%;
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, var(--kids-sky), var(--kids-green));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15rem;
+            animation: pulse 3s infinite;
+            box-shadow: 0 20px 60px rgba(82, 184, 232, 0.3);
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .about-text h2 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            color: var(--kids-text);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: var(--kids-text);
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature {
+            padding: 1.5rem;
+            background: var(--kids-bg);
+            border-radius: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .feature h3 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.3rem;
+            color: var(--kids-text);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Платформы */
+        .platforms {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--kids-sky) 0%, var(--kids-green) 100%);
+            color: white;
+        }
+
+        .platforms-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .platforms h2 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 1rem;
+        }
+
+        .platforms-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+        }
+
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .platform-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2.5rem;
+            border-radius: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .platform-card:hover {
+            transform: translateY(-10px) rotate(2deg);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+        }
+
+        .platform-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .platform-name {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.8rem;
+            color: var(--kids-text);
+            margin-bottom: 1rem;
+        }
+
+        .platform-stats {
+            color: var(--kids-text);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .platform-followers {
+            font-weight: 900;
+            color: var(--kids-main);
+            font-size: 2rem;
+            display: block;
+            margin-top: 0.5rem;
+        }
+
+        /* Аудитория */
+        .audience {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .audience-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .audience h2 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            text-align: center;
+            color: var(--kids-text);
+            margin-bottom: 1rem;
+        }
+
+        .audience-subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            margin-bottom: 4rem;
+            color: var(--kids-text);
+        }
+
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .audience-card {
+            padding: 3rem;
+            border-radius: 30px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .audience-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .audience-card:nth-child(1) {
+            background: linear-gradient(135deg, #FFE8CC, var(--kids-bg));
+        }
+
+        .audience-card:nth-child(2) {
+            background: linear-gradient(135deg, var(--kids-green), #B8E986);
+        }
+
+        .audience-card:nth-child(3) {
+            background: linear-gradient(135deg, var(--pro-terracotta), #E8C4B8);
+        }
+
+        .audience-card:nth-child(4) {
+            background: linear-gradient(135deg, var(--b2b-cyan), #8EC5FC);
+        }
+
+        .audience-card:hover {
+            transform: translateY(-10px) scale(1.02);
+        }
+
+        .audience-card-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .audience-emoji {
+            font-size: 5rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .audience-title {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 2rem;
+            color: var(--kids-text);
+            margin-bottom: 1rem;
+        }
+
+        .audience-description {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--kids-text);
+            margin-bottom: 1.5rem;
+        }
+
+        .audience-benefits {
+            list-style: none;
+        }
+
+        .audience-benefits li {
+            padding: 0.5rem 0;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .audience-benefits li::before {
+            content: '✨';
+            font-size: 1.2rem;
+        }
+
+        /* Цифры успеха */
+        .success {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--b2b-main), var(--kids-main));
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .success::before {
+            content: '🎉';
+            position: absolute;
+            font-size: 20rem;
+            opacity: 0.05;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: spin 30s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        .success-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .success h2 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .success-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .success-stat {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s;
+        }
+
+        .success-stat:hover {
+            transform: scale(1.1);
+        }
+
+        .success-number {
+            font-family: 'Fredoka', sans-serif;
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 900;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .success-label {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+
+        /* Партнёрство */
+        .partnership {
+            padding: 6rem 2rem;
+            background: var(--kids-bg);
+        }
+
+        .partnership-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .partnership h2 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            color: var(--kids-text);
+            margin-bottom: 1.5rem;
+        }
+
+        .partnership-text {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            color: var(--kids-text);
+        }
+
+        /* Footer */
+        footer {
+            padding: 4rem 2rem 2rem;
+            background: var(--kids-text);
+            color: white;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+            display: block;
+            padding: 0.3rem 0;
+        }
+
+        .footer-section a:hover {
+            color: var(--mishka-orange);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .social-link:hover {
+            background: var(--kids-main);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            opacity: 0.8;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image-circle {
+                font-size: 10rem;
+            }
+
+            .hero-stats {
+                gap: 1.5rem;
+            }
+        }
+
+        /* Курсор с сердечками */
+        .heart-cursor {
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            animation: heartFloat 2s ease-out forwards;
+        }
+
+        @keyframes heartFloat {
+            to {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <img src="images/logo.png" alt="Логотип блога Мишка Макс - реклама для родителей" class="logo-icon">
-                <span class="logo-text">Мишка Макс</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#metrics" class="nav-link">Статистика</a></li>
-                <li><a href="#audience" class="nav-link">Аудитория</a></li>
-                <li><a href="#formats" class="nav-link">Пакеты</a></li>
-                <li><a href="#cases" class="nav-link">Результаты</a></li>
-                <li><a href="#contact" class="nav-link nav-cta">Начать</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-content">
-            <div class="hero-badge">
-                <svg style="width: 20px; height: 20px; display: inline-block; vertical-align: middle; margin-right: 6px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="url(#sparkle-grad)" opacity="0.9"/>
-                    <path d="M7 4L8 7L11 8L8 9L7 12L6 9L3 8L6 7L7 4Z" fill="url(#sparkle-grad)" opacity="0.7"/>
-                    <defs>
-                        <linearGradient id="sparkle-grad" x1="2" y1="2" x2="22" y2="22">
-                            <stop offset="0%" stop-color="#FFD700"/>
-                            <stop offset="100%" stop-color="#FFA500"/>
-                        </linearGradient>
-                    </defs>
-                </svg>
-                Реклама, которая работает
-            </div>
-            <h1 class="hero-title">Реклама детских товаров у блогера: аудитория 241K родителей</h1>
-            <p class="hero-subtitle">
-                Целевая аудитория, которая покупает. 94% — люди, принимающие решения.
-                Охват более 2.7М в месяц. Результаты за 48 часов.
-            </p>
-            <div class="hero-buttons">
-                <button class="btn btn-primary btn-lg" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
-                    <svg style="width: 20px; height: 20px; display: inline-block; vertical-align: middle; margin-right: 8px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2L14 8H20L15 12L17 18L12 14L7 18L9 12L4 8H10L12 2Z" fill="white" opacity="0.95"/>
-                        <path d="M12 14L12 22" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                        <path d="M8 18L10 22L12 20" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M16 18L14 22L12 20" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    Запустить кампанию
-                </button>
-                <button class="btn btn-secondary btn-lg" onclick="downloadMediaKit()">
-                    <svg style="width: 20px; height: 20px; display: inline-block; vertical-align: middle; margin-right: 8px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
-                        <rect x="7" y="14" width="3" height="6" fill="currentColor" opacity="0.8"/>
-                        <rect x="11" y="10" width="3" height="10" fill="currentColor" opacity="0.9"/>
-                        <rect x="15" y="7" width="3" height="13" fill="currentColor"/>
-                    </svg>
-                    Скачать медиа-кит
-                </button>
-            </div>
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <div class="stat-value">286K+</div>
-                    <div class="stat-label">Подписчиков</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-value">&gt; 2.7М</div>
-                    <div class="stat-label">Ежемесячный охват</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-value">48ч</div>
-                    <div class="stat-label">До результатов</div>
-                </div>
-            </div>
-            <div style="text-align: right; margin-top: 16px; font-size: 12px; color: rgba(255, 255, 255, 0.6);">
-                *по состоянию на январь 2026 г.
-            </div>
-        </div>
-    </section>
-
-    <!-- Metrics Section -->
-    <section class="metrics" id="metrics">
-        <div class="container">
-            <h2 class="section-title">Ваша аудитория на всех платформах</h2>
-            <p class="section-subtitle">Мультиканальное покрытие для максимального эффекта</p>
-            
-            <div class="metrics-grid">
-                <a href="https://instagram.com/mishka_max_" target="_blank" class="metric-card metric-instagram">
-                    <div class="metric-header">
-                        <svg class="metric-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
-                            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" fill="none"/>
-                            <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
-                        </svg>
-                        <div>
-                            <div class="metric-platform">Instagram*</div>
-                            <div class="metric-handle">@mishka_max_</div>
-                        </div>
-                    </div>
-                    <div class="metric-number">191K</div>
-                    <div class="metric-growth">
-                        <svg style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-right: 4px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 17L9 11L13 15L21 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M21 7L21 11M21 7L17 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        Виральный охват Reels
-                    </div>
-                </a>
-
-                <a href="https://tiktok.com/@mishka_max_" target="_blank" class="metric-card metric-tiktok">
-                    <div class="metric-header">
-                        <svg class="metric-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.66 0 2.89 2.89 0 0 1 5.66-.03v-3.4a6.29 6.29 0 0 0-5.66 3.43 6.29 6.29 0 0 0 5.66 9.17 6.3 6.3 0 0 0 5.66-3.43v-3.4a9.13 9.13 0 0 0 3.77 1.04V9.45a4.83 4.83 0 0 1-.92-.76z"/>
-                        </svg>
-                        <div>
-                            <div class="metric-platform">TikTok</div>
-                            <div class="metric-handle">@mishka_max_</div>
-                        </div>
-                    </div>
-                    <div class="metric-number">84.6K</div>
-                    <div class="metric-growth">
-                        <svg style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-right: 4px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="currentColor"/>
-                        </svg>
-                        30% трафика из Поиска
-                    </div>
-                </a>
-
-                <a href="https://t.me/mishka_max" target="_blank" class="metric-card metric-telegram">
-                    <div class="metric-header">
-                        <svg class="metric-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
-                        </svg>
-                        <div>
-                            <div class="metric-platform">Telegram</div>
-                            <div class="metric-handle">@mishka_max</div>
-                        </div>
-                    </div>
-                    <div class="metric-number">10.3K</div>
-                    <div class="metric-growth">
-                        <svg style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-right: 4px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20 7h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v3H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zM10 4h4v3h-4V4zm10 16H4V9h16v11z" fill="currentColor"/>
-                            <circle cx="12" cy="15" r="2" fill="currentColor"/>
-                        </svg>
-                        Педагоги и Воспитатели
-                    </div>
-                </a>
-
-                <div class="metric-card metric-engagement">
-                    <div class="metric-header">
-                        <svg class="metric-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-                        </svg>
-                        <div>
-                            <div class="metric-platform">Вовлечение</div>
-                            <div class="metric-handle">High ER</div>
-                        </div>
-                    </div>
-                    <div class="metric-number" style="font-size: 28px;">Высокая активность</div>
-                    <div class="metric-growth">⭐ Лояльное ядро родителей</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Audience Demographics -->
-    <section class="audience" id="audience">
-        <div class="container">
-            <h2 class="section-title">Кто смотрит ваше объявление?</h2>
-            <p class="section-subtitle">Ядро аудитории — родители и профессионалы дошкольного образования</p>
-
-            <div class="audience-grid">
-
-                <div class="audience-card audience-card-primary">
-                    <h3>
-                        <svg style="width: 28px; height: 28px; display: inline-block; vertical-align: middle; margin-right: 8px;" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="16" cy="10" r="3.5" stroke="url(#family-grad)" stroke-width="2"/>
-                            <path d="M10 22c0-3.5 2.5-6 6-6s6 2.5 6 6" stroke="url(#family-grad)" stroke-width="2" stroke-linecap="round"/>
-                            <circle cx="9" cy="12" r="2.5" stroke="url(#family-grad)" stroke-width="1.8"/>
-                            <circle cx="23" cy="12" r="2.5" stroke="url(#family-grad)" stroke-width="1.8"/>
-                            <path d="M4 22c0-2 1.5-3.5 4-3.5" stroke="url(#family-grad)" stroke-width="1.8" stroke-linecap="round"/>
-                            <path d="M28 22c0-2-1.5-3.5-4-3.5" stroke="url(#family-grad)" stroke-width="1.8" stroke-linecap="round"/>
-                            <defs>
-                                <linearGradient id="family-grad" x1="4" y1="8" x2="28" y2="22">
-                                    <stop offset="0%" stop-color="#FF5722"/>
-                                    <stop offset="100%" stop-color="#FF1744"/>
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                        Ядро аудитории
-                    </h3>
-                    <p class="audience-highlight">Женщины 25-34 года (ЛПР — 94%)</p>
-
-                    <div class="audience-segment segment-orange">
-                        <div class="segment-header">
-                            <span class="segment-icon">👨‍👩‍👧</span>
-                            <div class="segment-title">Родители (Moms & Dads)</div>
-                        </div>
-                        <p class="segment-desc">
-                            Ищут развитие и досуг для детей 1-5 лет
-                        </p>
-                    </div>
-
-                    <div class="audience-segment segment-blue">
-                        <div class="segment-header">
-                            <span class="segment-icon">💼</span>
-                            <div class="segment-title">Педагоги (B2B)</div>
-                            <span class="segment-badge">62% TG</span>
-                        </div>
-                        <p class="segment-desc" style="margin-bottom: 8px;">
-                            Воспитатели, логопеды, муз. руководители. Ищут материалы для работы.
-                        </p>
-                        <div class="segment-list">
-                            • Воспитатели ДОУ<br>
-                            • Логопеды<br>
-                            • Методисты
-                        </div>
-                    </div>
-                </div>
-
-                <div class="audience-card audience-card-accent">
-                    <h3>
-                        <svg class="section-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="12" cy="9" r="3" stroke="url(#bulb-grad)" stroke-width="2"/>
-                            <path d="M9 15c0-1.5 1-3 3-3s3 1.5 3 3v2H9v-2z" stroke="url(#bulb-grad)" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M10 17h4M11 19h2" stroke="url(#bulb-grad)" stroke-width="2" stroke-linecap="round"/>
-                            <defs>
-                                <linearGradient id="bulb-grad" x1="9" y1="6" x2="15" y2="19">
-                                    <stop offset="0%" stop-color="#FF5722"/>
-                                    <stop offset="100%" stop-color="#FF1744"/>
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                        Интересы и потребности
-                    </h3>
-                    <div class="interests-grid">
-                        <div class="interest-item">
-                            <svg class="interest-icon" viewBox="0 0 32 32" fill="none">
-                                <rect x="8" y="6" width="16" height="20" rx="1" stroke="url(#edu-grad)" stroke-width="2"/>
-                                <path d="M12 12h8M12 16h8M12 20h6" stroke="url(#edu-grad)" stroke-width="1.5" stroke-linecap="round"/>
-                                <defs><linearGradient id="edu-grad" x1="8" y1="6" x2="24" y2="26"><stop offset="0%" stop-color="#FF5722"/><stop offset="100%" stop-color="#FF1744"/></linearGradient></defs>
-                            </svg>
-                            <div class="interest-name">Образование</div>
-                        </div>
-                        <div class="interest-item">
-                            <svg class="interest-icon" viewBox="0 0 32 32" fill="none">
-                                <path d="M10 22c2-4 4-8 6-8s4 4 6 8" stroke="url(#dev-grad)" stroke-width="2" stroke-linecap="round"/>
-                                <circle cx="12" cy="12" r="2" fill="url(#dev-grad)"/>
-                                <circle cx="20" cy="12" r="2" fill="url(#dev-grad)"/>
-                                <path d="M8 8l4 4M24 8l-4 4" stroke="url(#dev-grad)" stroke-width="2" stroke-linecap="round"/>
-                                <defs><linearGradient id="dev-grad" x1="8" y1="8" x2="24" y2="22"><stop offset="0%" stop-color="#FF5722"/><stop offset="100%" stop-color="#FF1744"/></linearGradient></defs>
-                            </svg>
-                            <div class="interest-name">Раннее развитие</div>
-                        </div>
-                        <div class="interest-item">
-                            <svg class="interest-icon" viewBox="0 0 32 32" fill="none">
-                                <circle cx="16" cy="10" r="3" stroke="url(#fam-grad)" stroke-width="2"/>
-                                <path d="M10 20c0-3 2.5-5 6-5s6 2 6 5" stroke="url(#fam-grad)" stroke-width="2" stroke-linecap="round"/>
-                                <circle cx="10" cy="12" r="2" stroke="url(#fam-grad)" stroke-width="1.5"/>
-                                <circle cx="22" cy="12" r="2" stroke="url(#fam-grad)" stroke-width="1.5"/>
-                                <defs><linearGradient id="fam-grad" x1="10" y1="7" x2="22" y2="20"><stop offset="0%" stop-color="#FF5722"/><stop offset="100%" stop-color="#FF1744"/></linearGradient></defs>
-                            </svg>
-                            <div class="interest-name">Семья</div>
-                        </div>
-                        <div class="interest-item" style="position: relative;">
-                            <span class="interest-badge-new">NEW!</span>
-                            <svg class="interest-icon" viewBox="0 0 32 32" fill="none">
-                                <rect x="8" y="10" width="16" height="14" rx="1" stroke="url(#method-grad)" stroke-width="2"/>
-                                <path d="M12 14h8M12 18h6" stroke="url(#method-grad)" stroke-width="1.5" stroke-linecap="round"/>
-                                <path d="M8 10l8-4 8 4" stroke="url(#method-grad)" stroke-width="2" stroke-linejoin="round"/>
-                                <defs><linearGradient id="method-grad" x1="8" y1="6" x2="24" y2="24"><stop offset="0%" stop-color="#FF5722"/><stop offset="100%" stop-color="#FF1744"/></linearGradient></defs>
-                            </svg>
-                            <div class="interest-name">Методические материалы</div>
-                        </div>
-                        <div class="interest-item">
-                            <svg class="interest-icon" viewBox="0 0 32 32" fill="none">
-                                <path d="M10 18l6-8 6 8" stroke="url(#art-grad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <circle cx="12" cy="12" r="2" stroke="url(#art-grad)" stroke-width="1.5"/>
-                                <path d="M20 10c1 0 2 1 2 2s-1 2-2 2" stroke="url(#art-grad)" stroke-width="1.5" stroke-linecap="round"/>
-                                <defs><linearGradient id="art-grad" x1="10" y1="10" x2="22" y2="18"><stop offset="0%" stop-color="#FF5722"/><stop offset="100%" stop-color="#FF1744"/></linearGradient></defs>
-                            </svg>
-                            <div class="interest-name">Творчество</div>
-                        </div>
-                        <div class="interest-item">
-                            <svg class="interest-icon" viewBox="0 0 32 32" fill="none">
-                                <path d="M16 24c-4 0-7-3-7-7s3-7 7-7 7 3 7 7-3 7-7 7z" stroke="url(#health-grad)" stroke-width="2"/>
-                                <path d="M13 17l2 2 4-4" stroke="url(#health-grad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <defs><linearGradient id="health-grad" x1="9" y1="10" x2="23" y2="24"><stop offset="0%" stop-color="#FF5722"/><stop offset="100%" stop-color="#FF1744"/></linearGradient></defs>
-                            </svg>
-                            <div class="interest-name">Здоровье</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="audience-card audience-card-accent">
-                    <h3>
-                        <svg style="width: 28px; height: 28px; display: inline-block; vertical-align: middle; margin-right: 8px;" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="16" cy="16" r="12" stroke="url(#globe-grad)" stroke-width="2"/>
-                            <path d="M16 4c0 0-6 4-6 12s6 12 6 12" stroke="url(#globe-grad)" stroke-width="2"/>
-                            <path d="M16 4c0 0 6 4 6 12s-6 12-6 12" stroke="url(#globe-grad)" stroke-width="2"/>
-                            <path d="M4 16h24" stroke="url(#globe-grad)" stroke-width="2"/>
-                            <path d="M6 10h20M6 22h20" stroke="url(#globe-grad)" stroke-width="1.5"/>
-                            <defs>
-                                <linearGradient id="globe-grad" x1="4" y1="4" x2="28" y2="28">
-                                    <stop offset="0%" stop-color="#FF5722"/>
-                                    <stop offset="100%" stop-color="#FF1744"/>
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                        География влияния
-                    </h3>
-                    <p class="audience-highlight">Весь русскоязычный мир (СНГ + Мир)</p>
-
-                    <div class="geo-list-container">
-                        <div class="geo-row">
-                            <span class="geo-flag">🇷🇺</span>
-                            <span class="geo-name">Россия</span>
-                            <span class="geo-badge">Топ-1</span>
-                        </div>
-                        <div class="geo-row">
-                            <span class="geo-flag">🇺🇿</span>
-                            <span class="geo-name">Узбекистан</span>
-                        </div>
-                        <div class="geo-row">
-                            <span class="geo-flag">🇰🇿</span>
-                            <span class="geo-name">Казахстан</span>
-                        </div>
-                    </div>
-
-                    <div class="geo-note">
-                        <span style="font-size: 16px;">✅</span>
-                        <span class="geo-note-text">
-                            Идеально для Digital-товаров, маркетплейсов с доставкой по СНГ и брендов с широкой географией
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Campaign Builder Section -->
-    <section class="formats" id="formats">
-        <div class="container">
-            <h2 class="section-title">Калькулятор стоимости рекламы и форматы интеграций</h2>
-            <p class="section-subtitle">Выберите платформу и формат — увидьте результат в реальном времени</p>
-
-            <!-- Готовые пакеты -->
-            <div class="packages-grid">
-                <div class="package-card package-test" onclick="selectPackage('test')">
-                    <div class="package-badge">Быстрый охват</div>
-                    <div class="package-icon">🚀</div>
-                    <h3 class="package-title">Легкий старт</h3>
-                    <p class="package-desc">Виральность TikTok + Эксперты в Telegram</p>
-                    <ul class="package-includes">
-                        <li>Видео TikTok (Поиск + SEO)</li>
-                        <li>Пост Telegram (Аудитория педагогов)</li>
-                    </ul>
-                    <div class="package-price">
-                        <span class="package-price-old">14 000₽</span>
-                        <span class="package-price-new">13 300₽</span>
-                    </div>
-                    <div class="package-savings">Выгода 5%</div>
-                </div>
-
-                <div class="package-card package-hit" onclick="selectPackage('hit')">
-                    <div class="package-badge package-badge-hot">Выбор брендов</div>
-                    <div class="package-availability">🔥 Высокая конверсия</div>
-                    <div class="package-icon">💎</div>
-                    <h3 class="package-title">Instagram* Viral</h3>
-                    <p class="package-desc">Доступ к ядру платежеспособных мам</p>
-                    <ul class="package-includes">
-                        <li>Reels (Видео заказчика)</li>
-                        <li>Stories (Серия с охватом)</li>
-                        <li>Post (Серия фото)</li>
-                    </ul>
-                    <div class="package-price">
-                        <span class="package-price-old">20 100₽</span>
-                        <span class="package-price-new">18 090₽</span>
-                    </div>
-                    <div class="package-savings">Выгода 10%</div>
-                </div>
-
-                <div class="package-card package-dominator" onclick="selectPackage('dominator')">
-                    <div class="package-badge package-badge-premium">All-in-One</div>
-                    <div class="package-availability">👑 Максимальный охват</div>
-                    <div class="package-icon">
-                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 24L12 40L20 52H44L52 40L56 24L32 8L8 24Z" fill="url(#crown-grad)" opacity="0.3"/><path d="M8 24L12 40L20 52H44L52 40L56 24L32 8L8 24Z" stroke="url(#crown-grad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="crown-grad" x1="8" y1="8" x2="56" y2="52"><stop offset="0%" stop-color="#FFD700"/><stop offset="100%" stop-color="#FF6B35"/></linearGradient></defs></svg>
-                    </div>
-                    <h3 class="package-title">Экосистема 360</h3>
-                    <p class="package-desc">Ваш бренд везде: Инста, ТТ, Телеграм</p>
-                    <ul class="package-includes">
-                        <li>Reels интеграция</li>
-                        <li>Stories (Серия с охватом)</li>
-                        <li>Post (Серия фото)</li>
-                        <li>Видео в TikTok</li>
-                        <li>Пост в Telegram (для профи)</li>
-                        <li>Закреп поста (7 дней)</li>
-                    </ul>
-                    <div class="package-price">
-                        <span class="package-price-old">37 100₽</span>
-                        <span class="package-price-new">29 680₽</span>
-                    </div>
-                    <div class="package-savings">Выгода 20%</div>
-                </div>
-            </div>
-
-            <div class="builder-divider">
-                <span>или соберите свой пакет</span>
-            </div>
-
-            <div class="builder-container">
-                <!-- Левая колонка: Контрольная панель -->
-                <div class="builder-controls">
-                    <div class="builder-group">
-                        <div class="builder-platform-header">
-                            <svg class="builder-platform-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
-                                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" fill="none"/>
-                                <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
-                            </svg>
-                            <h3 class="builder-group-title">Instagram*</h3>
-                            <span class="builder-platform-subs">191K</span>
-                        </div>
-                        <div class="builder-services">
-                            <label class="builder-service" data-service-id="ig-reels">
-                                <input type="checkbox" name="service" value="12000" data-platform="instagram" data-format="reels" data-reach="60K" data-clicks="High">
-                                <span class="builder-service-check"></span>
-                                <span class="builder-service-info">
-                                    <span class="builder-service-name">Reels (Видео заказчика)</span>
-                                    <span class="builder-service-stats">~60K охват</span>
-                                </span>
-                                <span class="builder-service-availability">🔥 Топ выбор</span>
-                                <span class="builder-service-price">12 000₽</span>
-                            </label>
-                            <label class="builder-service" data-service-id="ig-stories">
-                                <input type="checkbox" name="service" value="2100" data-platform="instagram" data-format="stories" data-reach="6K" data-clicks="Link">
-                                <span class="builder-service-check"></span>
-                                <span class="builder-service-info">
-                                    <span class="builder-service-name">Stories</span>
-                                    <span class="builder-service-stats">~6K охват</span>
-                                </span>
-                                <span class="builder-service-price">2 100₽</span>
-                            </label>
-                            <label class="builder-service" data-service-id="ig-post">
-                                <input type="checkbox" name="service" value="6000" data-platform="instagram" data-format="post" data-reach="25K" data-clicks="High">
-                                <span class="builder-service-check"></span>
-                                <span class="builder-service-info">
-                                    <span class="builder-service-name">Post (Серия фото)</span>
-                                    <span class="builder-service-stats">~25K охват</span>
-                                </span>
-                                <span class="builder-service-price">6 000₽</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="builder-group">
-                        <div class="builder-platform-header">
-                            <svg class="builder-platform-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.66 0 2.89 2.89 0 0 1 5.66-.03v-3.4a6.29 6.29 0 0 0-5.66 3.43 6.29 6.29 0 0 0 5.66 9.17 6.3 6.3 0 0 0 5.66-3.43v-3.4a9.13 9.13 0 0 0 3.77 1.04V9.45a4.83 4.83 0 0 1-.92-.76z"/>
-                            </svg>
-                            <h3 class="builder-group-title">TikTok</h3>
-                            <span class="builder-platform-subs">84.6K</span>
-                        </div>
-                        <div class="builder-services">
-                            <label class="builder-service" data-service-id="tt-video">
-                                <input type="checkbox" name="service" value="10000" data-platform="tiktok" data-format="video" data-reach="10K" data-clicks="SEO">
-                                <span class="builder-service-check"></span>
-                                <span class="builder-service-info">
-                                    <span class="builder-service-name">Видео (Поисковой трафик)</span>
-                                    <span class="builder-service-stats">~10K охват</span>
-                                </span>
-                                <span class="builder-service-price">10 000₽</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="builder-group">
-                        <div class="builder-platform-header">
-                            <svg class="builder-platform-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
-                            </svg>
-                            <h3 class="builder-group-title">Telegram</h3>
-                            <span class="builder-platform-subs">10.3K (PRO)</span>
-                        </div>
-                        <div class="builder-services">
-                            <label class="builder-service" data-service-id="tg-post">
-                                <input type="checkbox" name="service" value="4000" data-platform="telegram" data-format="post" data-reach="3K" data-clicks="High">
-                                <span class="builder-service-check"></span>
-                                <span class="builder-service-info">
-                                    <span class="builder-service-name">Пост для Педагогов (B2B)</span>
-                                    <span class="builder-service-stats">~3K охват</span>
-                                </span>
-                                <span class="builder-service-availability">🎯 Целевая</span>
-                                <span class="builder-service-price">4 000₽</span>
-                            </label>
-                            <label class="builder-service" data-service-id="tg-stories">
-                                <input type="checkbox" name="service" value="900" data-platform="telegram" data-format="stories" data-reach="1K" data-clicks="Medium">
-                                <span class="builder-service-check"></span>
-                                <span class="builder-service-info">
-                                    <span class="builder-service-name">Stories (на сутки)</span>
-                                    <span class="builder-service-stats">~1K охват</span>
-                                </span>
-                                <span class="builder-service-price">900₽</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="builder-group builder-extras">
-                        <h3 class="builder-group-title">Бонус</h3>
-                        <div class="builder-services">
-                            <label class="builder-service builder-service-bonus" data-service-id="bonus-pin-3">
-                                <input type="checkbox" name="service" value="1500" data-platform="bonus" data-format="pin" data-reach="+" data-clicks="+">
-                                <span class="builder-service-check"></span>
-                                <span class="builder-service-info">
-                                    <span class="builder-service-name">Закреп поста (3 дня)</span>
-                                    <span class="builder-service-stats">Топ ленты</span>
-                                </span>
-                                <span class="builder-service-price">1 500₽</span>
-                            </label>
-                            <label class="builder-service builder-service-bonus" data-service-id="bonus-pin-7">
-                                <input type="checkbox" name="service" value="3000" data-platform="bonus" data-format="pin" data-reach="+" data-clicks="+">
-                                <span class="builder-service-check"></span>
-                                <span class="builder-service-info">
-                                    <span class="builder-service-name">Закреп поста (7 дней)</span>
-                                    <span class="builder-service-stats">Топ ленты</span>
-                                </span>
-                                <span class="builder-service-price">3 000₽</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="builder-summary">
-                        <div class="summary-header">
-                            <div class="summary-info">Выбрано: <span id="serviceCount">0</span></div>
-                            <div class="summary-discount hidden" id="discountBlock">
-                                <span class="discount-icon">🏷️</span>
-                                <span>Скидка <span id="discountPercent">0</span>% (−<span id="discountAmount">0</span>₽)</span>
-                            </div>
-                            <div class="summary-progress-text" id="discountProgressText">Ещё <span id="servicesNeeded">2</span> для скидки</div>
-                        </div>
-                        <div class="summary-main">
-                            <div class="summary-price-group">
-                                <div class="summary-old-price" id="basePrice">0₽</div>
-                                <div class="summary-total-price" id="builderTotalPrice">0₽</div>
-                            </div>
-                            <button class="btn btn-primary builder-cta-compact" id="orderBtn" onclick="orderCampaign()" disabled>Обсудить условия</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Правая колонка: Визуализация смартфона -->
-                <div class="builder-preview">
-                    <div class="phone-mockup">
-                        <div class="phone-frame">
-                            <div class="phone-notch"></div>
-                            <div class="phone-screen" id="phoneScreen">
-                                <!-- Instagram* Profile View (default) -->
-                                <div class="screen-content screen-profile" id="screenProfile">
-                                    <div class="profile-header">
-                                        <div class="profile-avatar">
-                                            <img src="images/logo.png" alt="Профиль блогера Мишка Макс в Instagram* с 191K подписчиков">
-                                        </div>
-                                        <div class="profile-stats">
-                                            <div class="profile-stat">
-                                                <span class="profile-stat-value">191K</span>
-                                                <span class="profile-stat-label">подписчиков</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="profile-name">Мишка Макс</div>
-                                    <div class="profile-bio">Детский блог для умных родителей</div>
-
-                                    <!-- Пост-превью -->
-                                    <div class="profile-posts">
-                                        <div class="profile-post ad-placeholder" id="adPlaceholder">
-                                            <div class="ad-overlay">
-                                                <span class="ad-badge">Реклама</span>
-                                                <span class="ad-text">Место под ваш продукт</span>
-                                            </div>
-                                            <div class="ad-tooltip" id="adTooltip">
-                                                <div class="tooltip-stat">
-                                                    <span class="tooltip-icon">👁</span>
-                                                    <span>Охват ~50K</span>
-                                                </div>
-                                                <div class="tooltip-stat">
-                                                    <span class="tooltip-icon">👆</span>
-                                                    <span>Переходов ~2K</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="profile-post"></div>
-                                        <div class="profile-post"></div>
-                                    </div>
-                                </div>
-
-                                <!-- Stories View -->
-                                <div class="screen-content screen-stories hidden" id="screenStories">
-                                    <div class="stories-header">
-                                        <div class="stories-progress">
-                                            <div class="stories-progress-bar"></div>
-                                        </div>
-                                        <div class="stories-user">
-                                            <div class="stories-avatar">
-                                                <img src="images/logo.png" alt="Пример рекламной интеграции в Instagram* Stories">
-                                            </div>
-                                            <span class="stories-username">mishka_max_</span>
-                                        </div>
-                                    </div>
-                                    <div class="stories-content">
-                                        <div class="stories-ad-placeholder">
-                                            <span class="stories-ad-badge">Реклама</span>
-                                            <span class="stories-ad-text">Место под вашу рекламу</span>
-                                            <div class="stories-swipe">
-                                                <span>Свайп вверх</span>
-                                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                                    <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="stories-tooltip" id="storiesTooltip">
-                                        <div class="tooltip-stat">
-                                            <span class="tooltip-icon">👁</span>
-                                            <span>Охват ~15K</span>
-                                        </div>
-                                        <div class="tooltip-stat">
-                                            <span class="tooltip-icon">👆</span>
-                                            <span>Переходов ~800</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Reels View -->
-                                <div class="screen-content screen-reels hidden" id="screenReels">
-                                    <div class="reels-content">
-                                        <div class="reels-ad-placeholder">
-                                            <div class="reels-play-icon">▶</div>
-                                            <span class="reels-ad-badge">Реклама</span>
-                                            <span class="reels-ad-text">Ваш Reels здесь</span>
-                                        </div>
-                                        <div class="reels-sidebar">
-                                            <div class="reels-action">
-                                                <span class="reels-icon">
-                                                    <svg style="width: 24px; height: 24px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.27 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.08C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.27 18.6 15.36 13.45 20.03L12 21.35Z" fill="currentColor"/>
-                                                    </svg>
-                                                </span>
-                                                <span class="reels-count">12K</span>
-                                            </div>
-                                            <div class="reels-action">
-                                                <span class="reels-icon">
-                                                    <svg style="width: 24px; height: 24px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M21 11.5C21.0034 12.8199 20.6951 14.1219 20.1 15.3C19.3944 16.7118 18.3098 17.8992 16.9674 18.7293C15.6251 19.5594 14.0782 19.9994 12.5 20C11.1801 20.0035 9.87812 19.6951 8.7 19.1L3 21L4.9 15.3C4.30493 14.1219 3.99656 12.8199 4 11.5C4.00061 9.92179 4.44061 8.37488 5.27072 7.03258C6.10083 5.69028 7.28825 4.6056 8.7 3.90003C9.87812 3.30496 11.1801 2.99659 12.5 3.00003H13C15.0843 3.11502 17.053 3.99479 18.5291 5.47089C20.0052 6.94699 20.885 8.91568 21 11V11.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    </svg>
-                                                </span>
-                                                <span class="reels-count">843</span>
-                                            </div>
-                                            <div class="reels-action">
-                                                <span class="reels-icon">
-                                                    <svg style="width: 24px; height: 24px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M4 12L9 17L9 7L4 12Z" fill="currentColor"/>
-                                                        <path d="M9 5L19 5C19.5304 5 20.0391 5.21071 20.4142 5.58579C20.7893 5.96086 21 6.46957 21 7L21 17C21 17.5304 20.7893 18.0391 20.4142 18.4142C20.0391 18.7893 19.5304 19 19 19L9 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    </svg>
-                                                </span>
-                                                <span class="reels-count">2.1K</span>
-                                            </div>
-                                        </div>
-                                        <div class="reels-info">
-                                            <div class="reels-user">
-                                                <img src="images/logo.png" alt="Пример рекламной интеграции в Instagram* Reels">
-                                                <span>mishka_max_</span>
-                                            </div>
-                                            <div class="reels-desc">Интеграция вашего продукта...</div>
-                                        </div>
-                                    </div>
-                                    <div class="reels-tooltip" id="reelsTooltip">
-                                        <div class="tooltip-stat">
-                                            <span class="tooltip-icon">👁</span>
-                                            <span>Охват ~80K</span>
-                                        </div>
-                                        <div class="tooltip-stat">
-                                            <span class="tooltip-icon">👆</span>
-                                            <span>Переходов ~4K</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- TikTok View -->
-                                <div class="screen-content screen-tiktok hidden" id="screenTiktok">
-                                    <div class="tiktok-content">
-                                        <div class="tiktok-ad-placeholder">
-                                            <div class="tiktok-play-icon">▶</div>
-                                            <span class="tiktok-ad-badge">Реклама</span>
-                                            <span class="tiktok-ad-text">Ваш TikTok здесь</span>
-                                        </div>
-                                        <div class="tiktok-sidebar">
-                                            <div class="tiktok-avatar">
-                                                <img src="images/logo.png" alt="Пример рекламной интеграции в TikTok видео">
-                                            </div>
-                                            <div class="tiktok-action">
-                                                <span class="tiktok-icon">
-                                                    <svg style="width: 24px; height: 24px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.27 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.08C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.27 18.6 15.36 13.45 20.03L12 21.35Z" fill="currentColor"/>
-                                                    </svg>
-                                                </span>
-                                                <span class="tiktok-count">25K</span>
-                                            </div>
-                                            <div class="tiktok-action">
-                                                <span class="tiktok-icon">
-                                                    <svg style="width: 24px; height: 24px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M21 11.5C21.0034 12.8199 20.6951 14.1219 20.1 15.3C19.3944 16.7118 18.3098 17.8992 16.9674 18.7293C15.6251 19.5594 14.0782 19.9994 12.5 20C11.1801 20.0035 9.87812 19.6951 8.7 19.1L3 21L4.9 15.3C4.30493 14.1219 3.99656 12.8199 4 11.5C4.00061 9.92179 4.44061 8.37488 5.27072 7.03258C6.10083 5.69028 7.28825 4.6056 8.7 3.90003C9.87812 3.30496 11.1801 2.99659 12.5 3.00003H13C15.0843 3.11502 17.053 3.99479 18.5291 5.47089C20.0052 6.94699 20.885 8.91568 21 11V11.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    </svg>
-                                                </span>
-                                                <span class="tiktok-count">1.2K</span>
-                                            </div>
-                                            <div class="tiktok-action">
-                                                <span class="tiktok-icon">
-                                                    <svg style="width: 24px; height: 24px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M4 12L9 17L9 7L4 12Z" fill="currentColor"/>
-                                                        <path d="M9 5L19 5C19.5304 5 20.0391 5.21071 20.4142 5.58579C20.7893 5.96086 21 6.46957 21 7L21 17C21 17.5304 20.7893 18.0391 20.4142 18.4142C20.0391 18.7893 19.5304 19 19 19L9 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    </svg>
-                                                </span>
-                                                <span class="tiktok-count">5K</span>
-                                            </div>
-                                        </div>
-                                        <div class="tiktok-info">
-                                            <div class="tiktok-user">@mishka_max_</div>
-                                            <div class="tiktok-desc">Интеграция вашего продукта в TikTok...</div>
-                                        </div>
-                                    </div>
-                                    <div class="tiktok-tooltip" id="tiktokTooltip">
-                                        <div class="tooltip-stat">
-                                            <span class="tooltip-icon">👁</span>
-                                            <span>Охват ~100K</span>
-                                        </div>
-                                        <div class="tooltip-stat">
-                                            <span class="tooltip-icon">👆</span>
-                                            <span>Переходов ~5K</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Telegram View -->
-                                <div class="screen-content screen-telegram hidden" id="screenTelegram">
-                                    <div class="telegram-header">
-                                        <div class="telegram-avatar">
-                                            <img src="images/logo.png" alt="Пример рекламной интеграции в Telegram канале">
-                                        </div>
-                                        <div class="telegram-info">
-                                            <div class="telegram-name">Мишка Макс</div>
-                                            <div class="telegram-subs">10 300 подписчиков</div>
-                                        </div>
-                                    </div>
-                                    <div class="telegram-messages">
-                                        <div class="telegram-message">
-                                            <div class="telegram-message-text">Привет, друзья! Сегодня расскажу о...</div>
-                                        </div>
-                                        <div class="telegram-message telegram-ad">
-                                            <div class="telegram-ad-badge">Реклама</div>
-                                            <div class="telegram-message-text">
-                                                <strong>Место под вашу рекламу</strong><br>
-                                                Описание вашего продукта здесь...
-                                            </div>
-                                            <div class="telegram-button">Подробнее</div>
-                                        </div>
-                                    </div>
-                                    <div class="telegram-tooltip" id="telegramTooltip">
-                                        <div class="tooltip-stat">
-                                            <span class="tooltip-icon">👁</span>
-                                            <span>Охват ~3K</span>
-                                        </div>
-                                        <div class="tooltip-stat">
-                                            <span class="tooltip-icon">👆</span>
-                                            <span>Переходов ~300</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="formats-note">
-                <p>При партнерстве от 3 месяцев — скидка до 20% и гибкий график размещений</p>
-            </div>
-
-            <div class="builder-hint">
-                <p>Цена указана за одно размещение. Выберите несколько услуг и получите скидку до 20%!</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Case Studies -->
-    <section class="cases" id="cases">
-        <div class="container">
-            <h2 class="section-title">Примеры успешных кампаний</h2>
-            <p class="section-subtitle">Реальные результаты реальных брендов</p>
-            
-            <div class="cases-grid">
-                <div class="case-card case-placeholder">
-                    <div class="case-image">
-                        <div class="case-image-placeholder" style="display: flex; align-items: center; justify-content: center; font-size: 64px; opacity: 0.3;">
-                            ✨
-                        </div>
-                    </div>
-                    <div class="case-content" style="text-align: center;">
-                        <h3 style="color: #FF5722; margin-bottom: 16px;">Ваш бренд здесь</h3>
-                        <p style="font-size: 18px; color: #666; margin-bottom: 24px; line-height: 1.6;">
-                            Станьте первым клиентом и получите <strong style="color: #FF1744;">специальные условия</strong> для запуска кампании
-                        </p>
-                        <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" style="margin-top: 12px;">
-                            Стать первым
-                        </button>
-                    </div>
-                </div>
-
-                <div class="case-card case-placeholder">
-                    <div class="case-image">
-                        <div class="case-image-placeholder" style="display: flex; align-items: center; justify-content: center; font-size: 64px; opacity: 0.3;">
-                            🚀
-                        </div>
-                    </div>
-                    <div class="case-content" style="text-align: center;">
-                        <h3 style="color: #FF5722; margin-bottom: 16px;">Ваш успех здесь</h3>
-                        <p style="font-size: 18px; color: #666; margin-bottom: 24px; line-height: 1.6;">
-                            Ваша история успеха может быть здесь. Начните сотрудничество с <strong style="color: #FF1744;">проверенной аудиторией</strong>
-                        </p>
-                        <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" style="margin-top: 12px;">
-                            Начать сейчас
-                        </button>
-                    </div>
-                </div>
-
-                <div class="case-card case-placeholder">
-                    <div class="case-image">
-                        <div class="case-image-placeholder" style="display: flex; align-items: center; justify-content: center; font-size: 64px; opacity: 0.3;">
-                            💎
-                        </div>
-                    </div>
-                    <div class="case-content" style="text-align: center;">
-                        <h3 style="color: #FF5722; margin-bottom: 16px;">Ваши результаты здесь</h3>
-                        <p style="font-size: 18px; color: #666; margin-bottom: 24px; line-height: 1.6;">
-                            Получите доступ к аудитории <strong style="color: #FF1744;">241K+ активных родителей</strong>, которые принимают решения о покупках
-                        </p>
-                        <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" style="margin-top: 12px;">
-                            Запустить кампанию
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Trust Section -->
-    <section class="trust">
-        <div class="container">
-            <h2 class="section-title">Почему бренды выбирают нас?</h2>
-            <div class="trust-grid">
-                <div class="trust-item">
-                    <svg class="trust-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="32" cy="32" r="28" fill="url(#target-bg)" opacity="0.2"/>
-                        <path d="M32 8C18.745 8 8 18.745 8 32C8 45.255 18.745 56 32 56C45.255 56 56 45.255 56 32C56 18.745 45.255 8 32 8Z" stroke="url(#target-grad)" stroke-width="3" stroke-linecap="round"/>
-                        <circle cx="32" cy="32" r="12" fill="url(#target-grad)" opacity="0.3"/>
-                        <circle cx="32" cy="32" r="6" fill="url(#target-grad)"/>
-                        <defs>
-                            <linearGradient id="target-grad" x1="8" y1="8" x2="56" y2="56">
-                                <stop offset="0%" stop-color="#FF5722"/>
-                                <stop offset="100%" stop-color="#FF1744"/>
-                            </linearGradient>
-                            <linearGradient id="target-bg" x1="8" y1="8" x2="56" y2="56">
-                                <stop offset="0%" stop-color="#FFFFFF"/>
-                                <stop offset="100%" stop-color="#FFB3A7"/>
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                    <h3>Точная аудитория</h3>
-                    <p>Не просто подписчики, а люди, которые принимают решения и тратят деньги на своих детей</p>
-                </div>
-                <div class="trust-item">
-                    <svg class="trust-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M32 8L38 24L54 28L40 40L44 56L32 48L20 56L24 40L10 28L26 24L32 8Z" fill="url(#speed-bg)" opacity="0.2"/>
-                        <path d="M32 8L38 24M38 24L54 28M38 24L32 48M54 28L40 40M40 40L44 56M40 40L32 48M44 56L32 48M32 48L20 56M20 56L24 40M24 40L10 28M24 40L32 48M10 28L26 24M26 24L32 8" stroke="url(#speed-grad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                        <defs>
-                            <linearGradient id="speed-grad" x1="10" y1="8" x2="54" y2="56">
-                                <stop offset="0%" stop-color="#FF5722"/>
-                                <stop offset="100%" stop-color="#FF1744"/>
-                            </linearGradient>
-                            <linearGradient id="speed-bg" x1="10" y1="8" x2="54" y2="56">
-                                <stop offset="0%" stop-color="#FFFFFF"/>
-                                <stop offset="100%" stop-color="#FFB3A7"/>
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                    <h3>Быстрые результаты</h3>
-                    <p>До 80% максимального охвата достигается в первые 24 часа</p>
-                </div>
-                <div class="trust-item">
-                    <svg class="trust-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="График роста показателей эффективности рекламы">
-                        <rect x="10" y="14" width="44" height="40" rx="2" fill="url(#chart-bg)" opacity="0.2"/>
-                        <rect x="10" y="14" width="44" height="40" rx="2" stroke="url(#chart-grad)" stroke-width="2.5"/>
-                        <path d="M18 46V36M26 46V28M34 46V32M42 46V24M50 46V20" stroke="url(#chart-grad)" stroke-width="3" stroke-linecap="round"/>
-                        <defs>
-                            <linearGradient id="chart-grad" x1="10" y1="14" x2="54" y2="54">
-                                <stop offset="0%" stop-color="#FF5722"/>
-                                <stop offset="100%" stop-color="#FF1744"/>
-                            </linearGradient>
-                            <linearGradient id="chart-bg" x1="10" y1="14" x2="54" y2="54">
-                                <stop offset="0%" stop-color="#FFFFFF"/>
-                                <stop offset="100%" stop-color="#FFB3A7"/>
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                    <h3>Полная прозрачность</h3>
-                    <p>Подробные отчёты с screenshot-ами метрик из официальных API платформ</p>
-                </div>
-                <div class="trust-item">
-                    <svg class="trust-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="32" cy="32" r="24" fill="url(#refresh-bg)" opacity="0.2"/>
-                        <path d="M32 12V8M32 56V52M52 32H56M8 32H12" stroke="url(#refresh-grad)" stroke-width="3" stroke-linecap="round"/>
-                        <path d="M44 20C48.418 23.791 51 29.48 51 35.5C51 46.27 42.27 55 31.5 55C20.73 55 12 46.27 12 35.5C12 24.73 20.73 16 31.5 16" stroke="url(#refresh-grad)" stroke-width="3" stroke-linecap="round"/>
-                        <path d="M44 12L44 20L36 20" stroke="url(#refresh-grad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                        <defs>
-                            <linearGradient id="refresh-grad" x1="12" y1="12" x2="52" y2="52">
-                                <stop offset="0%" stop-color="#FF5722"/>
-                                <stop offset="100%" stop-color="#FF1744"/>
-                            </linearGradient>
-                            <linearGradient id="refresh-bg" x1="8" y1="8" x2="56" y2="56">
-                                <stop offset="0%" stop-color="#FFFFFF"/>
-                                <stop offset="100%" stop-color="#FFB3A7"/>
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                    <h3>Гибкое партнерство</h3>
-                    <p>От разовых публикаций до долгосрочных контрактов со скидками до 20%</p>
-                </div>
-                <div class="trust-item">
-                    <svg class="trust-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M32 8L12 20V32C12 45 20 54 32 56C44 54 52 45 52 32V20L32 8Z" fill="url(#shield-bg)" opacity="0.2"/>
-                        <path d="M32 8L12 20V32C12 45 20 54 32 56C44 54 52 45 52 32V20L32 8Z" stroke="url(#shield-grad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M24 32L30 38L42 26" stroke="url(#shield-grad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                        <defs>
-                            <linearGradient id="shield-grad" x1="12" y1="8" x2="52" y2="56">
-                                <stop offset="0%" stop-color="#FF5722"/>
-                                <stop offset="100%" stop-color="#FF1744"/>
-                            </linearGradient>
-                            <linearGradient id="shield-bg" x1="12" y1="8" x2="52" y2="56">
-                                <stop offset="0%" stop-color="#FFFFFF"/>
-                                <stop offset="100%" stop-color="#FFB3A7"/>
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                    <h3>Безопасный контент</h3>
-                    <p>Только товары и услуги, безопасные для детей и соответствующие закону</p>
-                </div>
-                <div class="trust-item">
-                    <svg class="trust-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="32" cy="32" r="24" fill="url(#time-bg)" opacity="0.2"/>
-                        <circle cx="32" cy="32" r="24" stroke="url(#time-grad)" stroke-width="3"/>
-                        <path d="M32 16V32L42 42" stroke="url(#time-grad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                        <circle cx="32" cy="32" r="2" fill="url(#time-grad)"/>
-                        <defs>
-                            <linearGradient id="time-grad" x1="8" y1="8" x2="56" y2="56">
-                                <stop offset="0%" stop-color="#FF5722"/>
-                                <stop offset="100%" stop-color="#FF1744"/>
-                            </linearGradient>
-                            <linearGradient id="time-bg" x1="8" y1="8" x2="56" y2="56">
-                                <stop offset="0%" stop-color="#FFFFFF"/>
-                                <stop offset="100%" stop-color="#FFB3A7"/>
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                    <h3>Быстрая коммуникация</h3>
-                    <p>Ответ в течение 24 часов. Поддержка по Telegram, Email и WhatsApp</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact CTA -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="contact-content">
-                <h2 class="section-title contact-title">Готовы запустить кампанию?</h2>
-                <p class="section-subtitle contact-subtitle">Выберите удобный способ связи. Ответим в течение часа</p>
-                
-                <div class="contact-methods">
-                    <a href="https://t.me/mishka_max_manager" target="_blank" class="contact-method">
-                        <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
-                        </svg>
-                        <div>
-                            <div class="contact-method-title">Telegram</div>
-                            <div class="contact-method-detail">@mishka_max_manager</div>
-                        </div>
-                    </a>
-
-                    <a href="mailto:9104171772a@gmail.com" class="contact-method">
-                        <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                        </svg>
-                        <div>
-                            <div class="contact-method-title">Email</div>
-                            <div class="contact-method-detail">9104171772a@gmail.com</div>
-                        </div>
-                    </a>
-
-                    <a href="https://wa.me/79154680166" target="_blank" class="contact-method">
-                        <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.869 1.171c-1.493.821-2.712 2.007-3.596 3.465C2.821 13.87 2.409 15.459 2.409 17.137c0 1.555.372 3.078 1.083 4.49.26.558.52 1.04.859 1.487l-1.54 4.626 4.752-1.54c1.408.772 3.015 1.217 4.616 1.217 1.678 0 3.268-.41 4.69-1.188 1.421-.778 2.603-1.88 3.448-3.302.845-1.42 1.308-3.002 1.308-4.68 0-1.678-.41-3.268-1.188-4.693-.778-1.425-1.88-2.604-3.302-3.448-1.422-.844-3.005-1.308-4.684-1.308z"/>
-                        </svg>
-                        <div>
-                            <div class="contact-method-title">WhatsApp</div>
-                            <div class="contact-method-detail">+7 915 468-01-66</div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="contact-form-wrapper">
-                    <h3>Или оставьте заявку</h3>
-                    <form class="contact-form" id="contactForm" action="https://formsubmit.co/9104171772a@gmail.com" method="POST">
-                        <!-- FormSubmit настройки -->
-                        <input type="hidden" name="_subject" value="Новая заявка с сайта Мишка Макс">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_template" value="table">
-                        <input type="hidden" name="_next" value="https://mishka-max.ru/?success=true">
-                        <input type="hidden" name="_autoresponse" value="Спасибо за заявку! Мы свяжемся с вами в течение часа.">
-
-                        <div class="form-group">
-                            <input type="text" name="name" class="form-control" placeholder="Ваше имя" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" class="form-control" placeholder="Email" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" class="form-control" placeholder="Кратко о вашем проекте" rows="4" required></textarea>
-                        </div>
-                        <div class="consent-wrapper">
-                            <label class="consent-checkbox">
-                                <input type="checkbox" name="consent" required>
-                                <span class="consent-label">Я согласен на <a href="privacy-policy.html" target="_blank">обработку персональных данных</a> и принимаю условия <a href="user-agreement.html" target="_blank">Пользовательского соглашения</a></span>
-                            </label>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full">Отправить заявку</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mobile Sticky Bottom Bar -->
-    <div class="mobile-sticky-bar" id="mobileBar">
-        <div class="mobile-bar-content">
-            <div class="mobile-bar-info">
-                <div class="mobile-bar-count">
-                    <span id="mobileCount">0</span> услуг
-                </div>
-                <div class="mobile-bar-price">
-                    <span class="mobile-bar-total" id="mobileTotal">0₽</span>
-                    <span class="mobile-bar-discount" id="mobileDiscount"></span>
-                </div>
-            </div>
-            <button class="btn btn-primary mobile-bar-btn" id="mobileOrderBtn" onclick="orderCampaign()" disabled>
-                Заказать
-            </button>
-        </div>
+    <!-- Плавающие фигуры -->
+    <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
     </div>
 
-    <!-- FAQ Section -->
-    <section class="faq" id="faq" style="background: var(--color-bg); padding: 40px 24px;">
-        <div class="container" style="max-width: 800px;">
-            <h2 class="section-title">Вопросы о рекламе в блоге</h2>
-            <div class="faq-item" style="margin-bottom: 20px;">
-                <h3 style="font-size: 18px; margin-bottom: 8px;">Как купить рекламу у блогера официально?</h3>
-                <p style="color: var(--color-text-secondary);">Мы работаем официально. Возможна оплата по счету для юрлиц с предоставлением закрывающих документов (договор, акт) для вашей бухгалтерии.</p>
+    <!-- Шапка -->
+    <header>
+        <nav>
+            <a href="#" class="logo">
+                <span class="logo-bear">🐻</span>
+                Мишка Макс
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">О Мишке</a></li>
+                <li><a href="#platforms">Соцсети</a></li>
+                <li><a href="#audience">Аудитория</a></li>
+                <li><a href="#partnership">Партнёрство</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Главный экран -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>
+                <span class="word">Привет!</span> 
+                <span class="word">Я</span> 
+                <span class="word">Мишка Макс! 🐻</span>
+            </h1>
+            <p class="hero-subtitle">
+                Самый добрый медведь в интернете, который учит малышей добру, цветам, формам и радости! ✨
+            </p>
+            
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">326К+</span>
+                    <span class="stat-label">подписчиков</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">2.7М+</span>
+                    <span class="stat-label">просмотров/месяц</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">1-5</span>
+                    <span class="stat-label">лет возраст</span>
+                </div>
             </div>
-            <div class="faq-item" style="margin-bottom: 20px;">
-                <h3 style="font-size: 18px; margin-bottom: 8px;">Делаете ли вы нативную рекламу для детских брендов?</h3>
-                <p style="color: var(--color-text-secondary);">Да, нативная интеграция — наш основной профиль. Мы вписываем продукт в сценарий роликов Reels и TikTok так, чтобы это не выглядело навязыванием.</p>
-            </div>
-            <div class="faq-item">
-                <h3 style="font-size: 18px; margin-bottom: 8px;">Какая статистика предоставляется после размещения?</h3>
-                <p style="color: var(--color-text-secondary);">Через 24 и 48 часов мы высылаем скриншоты охватов, переходов по ссылкам и реакций из официальной статистики Instagram* и TikTok.</p>
+
+            <div class="cta-buttons">
+                <a href="#platforms" class="btn btn-primary">
+                    <span>🎬</span> Смотреть видео
+                </a>
+                <a href="#partnership" class="btn btn-secondary">
+                    <span>🤝</span> Стать партнёром
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
+    <!-- О Мишке Максе -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-image">
+                <div class="about-image-circle">🐻</div>
+            </div>
+            <div class="about-text">
+                <h2>Кто такой Мишка Макс?</h2>
+                <p>
+                    Мишка Макс — это не просто персонаж. Это добрый друг миллионов малышей, 
+                    который каждый день дарит детям радость и новые знания!
+                </p>
+                <p>
+                    Через яркие, короткие и безопасные видео Мишка учит цветам, формам, 
+                    цифрам, добрым делам — всему, что важно для развития ребёнка от 1 до 5 лет.
+                </p>
+
+                <div class="about-features">
+                    <div class="feature">
+                        <span class="feature-icon">📚</span>
+                        <h3>Обучение</h3>
+                        <p>Развивающий контент по методикам педагогов</p>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">❤️</span>
+                        <h3>Доброта</h3>
+                        <p>Только позитивные эмоции и важные ценности</p>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">🎨</span>
+                        <h3>Творчество</h3>
+                        <p>Яркие образы и музыка для малышей</p>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">🛡️</span>
+                        <h3>Безопасность</h3>
+                        <p>100% детский контент без рекламы</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Платформы -->
+    <section class="platforms" id="platforms">
+        <div class="platforms-container">
+            <h2>Мы везде, где живут дети! 🌟</h2>
+            <p class="platforms-subtitle">
+                Подписывайтесь на Мишку Макса во всех соцсетях и не пропускайте новые приключения!
+            </p>
+
+            <div class="platform-grid">
+                <div class="platform-card">
+                    <div class="platform-icon">📸</div>
+                    <div class="platform-name">Instagram</div>
+                    <div class="platform-stats">Ежедневные Reels с Мишкой</div>
+                    <span class="platform-followers">221К</span>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-icon">🎵</div>
+                    <div class="platform-name">TikTok</div>
+                    <div class="platform-stats">Короткие весёлые видео</div>
+                    <span class="platform-followers">95К</span>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-icon">✈️</div>
+                    <div class="platform-name">Telegram</div>
+                    <div class="platform-stats">Для воспитателей и родителей</div>
+                    <span class="platform-followers">10.5К</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Аудитория -->
+    <section class="audience" id="audience">
+        <div class="audience-container">
+            <h2>Мишка Макс для всех! 💝</h2>
+            <p class="audience-subtitle">
+                Каждый находит что-то своё в мире Мишки Макса
+            </p>
+
+            <div class="audience-grid">
+                <div class="audience-card">
+                    <div class="audience-card-content">
+                        <span class="audience-emoji">👶</span>
+                        <h3 class="audience-title">Для Детей</h3>
+                        <p class="audience-description">
+                            Яркие, короткие видео, которые развлекают и обучают одновременно!
+                        </p>
+                        <ul class="audience-benefits">
+                            <li>Учим цвета и формы</li>
+                            <li>Развиваем речь и внимание</li>
+                            <li>Добрые истории</li>
+                            <li>Весёлая музыка</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="audience-card">
+                    <div class="audience-card-content">
+                        <span class="audience-emoji">👩‍👧</span>
+                        <h3 class="audience-title">Для Мам</h3>
+                        <p class="audience-description">
+                            Безопасный контент, которому можно доверять развитие ребёнка.
+                        </p>
+                        <ul class="audience-benefits">
+                            <li>Проверенные методики</li>
+                            <li>Без неуместной рекламы</li>
+                            <li>Развивающая польза</li>
+                            <li>Можно смотреть вместе</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="audience-card">
+                    <div class="audience-card-content">
+                        <span class="audience-emoji">👩‍🏫</span>
+                        <h3 class="audience-title">Для Воспитателей</h3>
+                        <p class="audience-description">
+                            Готовые сценарии занятий и методические материалы от Мишки.
+                        </p>
+                        <ul class="audience-benefits">
+                            <li>Подписка 260₽/мес</li>
+                            <li>Сценарии праздников</li>
+                            <li>Готовые занятия</li>
+                            <li>Методическая база</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="audience-card">
+                    <div class="audience-card-content">
+                        <span class="audience-emoji">🤝</span>
+                        <h3 class="audience-title">Для Брендов</h3>
+                        <p class="audience-description">
+                            Эффективное размещение рекламы детских товаров и услуг.
+                        </p>
+                        <ul class="audience-benefits">
+                            <li>326K+ охват аудитории</li>
+                            <li>2.7M просмотров/мес</li>
+                            <li>Высокая вовлечённость</li>
+                            <li>Креативные интеграции</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Цифры успеха -->
+    <section class="success">
+        <div class="success-container">
+            <h2>Цифры, которые впечатляют! 🚀</h2>
+            <div class="success-grid">
+                <div class="success-stat">
+                    <span class="success-number">326K+</span>
+                    <span class="success-label">Всего подписчиков</span>
+                </div>
+                <div class="success-stat">
+                    <span class="success-number">2.7M+</span>
+                    <span class="success-label">Просмотров в месяц</span>
+                </div>
+                <div class="success-stat">
+                    <span class="success-number">365</span>
+                    <span class="success-label">Дней контента в году</span>
+                </div>
+                <div class="success-stat">
+                    <span class="success-number">10K+</span>
+                    <span class="success-label">Воспитателей доверяют</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Партнёрство -->
+    <section class="partnership" id="partnership">
+        <div class="partnership-container">
+            <h2>Хотите сотрудничать с Мишкой Максом? 🤝</h2>
+            <p class="partnership-text">
+                Мы открыты к партнёрствам с брендами детских товаров, образовательными сервисами 
+                и семейными проектами. Наша аудитория — это активные родители и педагоги, 
+                которые доверяют Мишке Максу! 
+            </p>
+
+            <div class="cta-buttons">
+                <a href="/reklama" class="btn btn-primary">
+                    <span>📊</span> Узнать подробнее
+                </a>
+                <a href="mailto:ad@mishkamax.ru" class="btn btn-secondary">
+                    <span>📧</span> Написать нам
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="footer-container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <div class="footer-logo">
-                        <img src="images/logo.png" alt="Логотип блога Мишка Макс - реклама для родителей" class="logo-icon">
-                        <span class="logo-text">Мишка Макс</span>
+                    <h3>Мишка Макс</h3>
+                    <p>Добрый друг для каждого ребёнка. Обучаем, развиваем, вдохновляем! 🐻✨</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/mishka_max_" class="social-link" target="_blank" rel="noopener">📸</a>
+                        <a href="https://tiktok.com/@mishka_max_" class="social-link" target="_blank" rel="noopener">🎵</a>
+                        <a href="https://t.me/+7-oGjM-AgbcxNWQ6" class="social-link" target="_blank" rel="noopener">✈️</a>
                     </div>
-                    <p class="footer-desc">Реклама, которая работает. Для умных родителей и успешных брендов.</p>
                 </div>
-                
+
                 <div class="footer-section">
-                    <h4>Социальные сети</h4>
-                    <ul class="footer-links">
-                        <li><a href="https://instagram.com/mishka_max_" target="_blank">Instagram*</a></li>
-                        <li><a href="https://tiktok.com/@mishka_max_" target="_blank">TikTok</a></li>
-                        <li><a href="https://t.me/mishka_max" target="_blank">Telegram</a></li>
+                    <h3>Ссылки</h3>
+                    <ul>
+                        <li><a href="#about">О проекте</a></li>
+                        <li><a href="#platforms">Наши соцсети</a></li>
+                        <li><a href="#audience">Для кого мы</a></li>
+                        <li><a href="#partnership">Реклама</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
-                    <h4>Информация</h4>
-                    <ul class="footer-links">
-                        <li><a href="#" onclick="downloadMediaKit(); return false;">Скачать медиа-кит</a></li>
-                        <li><a href="#formats">Пакеты и цены</a></li>
-                        <li><a href="#cases">Примеры работ</a></li>
+                    <h3>Для партнёров</h3>
+                    <ul>
+                        <li><a href="/mediakit-mishka-max2.pdf" target="_blank">Медиакит</a></li>
+                        <li><a href="/reklama">Сотрудничество</a></li>
+                        <li><a href="mailto:ad@mishkamax.ru">Контакты</a></li>
+                        <li><a href="/reklama">Лицензирование</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Для воспитателей</h3>
+                    <ul>
+                        <li><a href="#">Подписка 260₽/мес</a></li>
+                        <li><a href="#">Сценарии занятий</a></li>
+                        <li><a href="#">Методические материалы</a></li>
+                        <li><a href="#">Праздники</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>© 2026 Мишка Макс. Все права защищены.</p>
-                <p>Контент создан для детской аудитории и безопасен для семей.</p>
-                <p style="font-size: 11px; margin-top: 16px; opacity: 0.7;">*Meta признана экстремистской организацией и запрещена в России, её продукты Instagram* и Facebook (Инстаграм и Фейсбук) также запрещены на территории РФ</p>
+                <p>&copy; 2025 Мишка Макс. Все права защищены. Сделано с ❤️ для детей</p>
             </div>
         </div>
     </footer>
 
     <script>
-        function downloadMediaKit() {
-            // Добавляем отправку цели
-            ym(105821243,'reachGoal','download_mediakit');
-
-            // Create a temporary link element
-            const link = document.createElement('a');
-            link.href = 'mediakit-mishka-max.pdf';
-            link.download = 'mediakit-mishka-max.pdf';
-
-            // Append to body, click, and remove
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
-
-        function scrollToContact() {
-            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-        }
-
-        // Проверка успешной отправки формы
-        window.addEventListener('DOMContentLoaded', () => {
-            const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.get('success') === 'true') {
-                alert('✅ Спасибо за заявку! Мы свяжемся с вами в течение часа.');
-                // Убираем параметр из URL
-                window.history.replaceState({}, document.title, window.location.pathname);
+        // Интерактивный курсор с сердечками при клике
+        document.addEventListener('click', function(e) {
+            if (Math.random() > 0.7) { // Только 30% кликов
+                const heart = document.createElement('div');
+                heart.className = 'heart-cursor';
+                heart.textContent = ['❤️', '💛', '💚', '💙', '💜'][Math.floor(Math.random() * 5)];
+                heart.style.left = e.pageX + 'px';
+                heart.style.top = e.pageY + 'px';
+                heart.style.fontSize = (Math.random() * 20 + 20) + 'px';
+                document.body.appendChild(heart);
+                
+                setTimeout(() => heart.remove(), 2000);
             }
         });
 
-        // Smooth scroll navigation
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', (e) => {
-                if (link.getAttribute('href').startsWith('#')) {
-                    e.preventDefault();
-                    const target = document.querySelector(link.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({ behavior: 'smooth' });
-                    }
+        // Плавная прокрутка к якорям
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
                 }
             });
         });
 
-        // Navbar scroll effect
-        window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // === PACKAGES CONFIG ===
-        const packages = {
-            test: { // "Легкий старт" (TikTok + TG)
-                services: ['tt-video', 'tg-post'],
-                screens: ['screenTiktok', 'screenTelegram'],
-                fixedPrice: 13300, // Скидка 5% с 14000 (10000+4000)
-                discount: 5
-            },
-            hit: { // "Instagram* Viral" (Reels + Stories + Post)
-                services: ['ig-reels', 'ig-stories', 'ig-post'],
-                screens: ['screenReels', 'screenStories', 'screenProfile'],
-                fixedPrice: 18090, // Скидка 10% с 20100 (12000+2100+6000)
-                discount: 10
-            },
-            dominator: { // "Экосистема 360" (Все платформы + закреп)
-                services: ['ig-reels', 'ig-stories', 'ig-post', 'tt-video', 'tg-post', 'bonus-pin-7'],
-                screens: ['screenReels', 'screenTiktok', 'screenTelegram', 'screenStories', 'screenProfile'],
-                fixedPrice: 29680, // Скидка 20% с 37100 (12000+2100+6000+10000+4000+3000)
-                discount: 20
-            }
+        // Анимация появления элементов при скролле
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
         };
 
-        let screenAnimationInterval = null;
-        let activePackage = null; // Track selected package
-
-        // Select package function
-        function selectPackage(packageId) {
-            const pkg = packages[packageId];
-            if (!pkg) return;
-
-            // Set active package for price calculation
-            activePackage = packageId;
-
-            // Clear all checkboxes first
-            document.querySelectorAll('input[name="service"]').forEach(cb => {
-                cb.checked = false;
-            });
-
-            // Select package services with animation
-            pkg.services.forEach((serviceId, index) => {
-                setTimeout(() => {
-                    const serviceLabel = document.querySelector(`[data-service-id="${serviceId}"]`);
-                    if (serviceLabel) {
-                        const checkbox = serviceLabel.querySelector('input[type="checkbox"]');
-                        if (checkbox) {
-                            checkbox.checked = true;
-                            // Add pulse animation
-                            serviceLabel.classList.add('service-selected-animation');
-                            setTimeout(() => {
-                                serviceLabel.classList.remove('service-selected-animation');
-                            }, 500);
-                        }
-                    }
-                    // Update builder after last item
-                    if (index === pkg.services.length - 1) {
-                        setTimeout(() => {
-                            updateBuilder();
-                            startScreenAnimation(pkg.screens);
-                        }, 100);
-                    }
-                }, index * 100); // Stagger animation
-            });
-
-            // Highlight selected package
-            document.querySelectorAll('.package-card').forEach(card => {
-                card.classList.remove('package-selected');
-            });
-            document.querySelector(`.package-${packageId}`)?.classList.add('package-selected');
-
-            // Scroll to builder
-            setTimeout(() => {
-                document.querySelector('.builder-container').scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'center'
-                });
-            }, pkg.services.length * 100 + 200);
-        }
-
-        // Screen cycling animation
-        function startScreenAnimation(screens) {
-            if (screenAnimationInterval) {
-                clearInterval(screenAnimationInterval);
-            }
-
-            let currentIndex = 0;
-
-            // Show first screen immediately
-            showScreen(screens[currentIndex]);
-
-            // Cycle through screens
-            screenAnimationInterval = setInterval(() => {
-                currentIndex = (currentIndex + 1) % screens.length;
-                showScreen(screens[currentIndex]);
-            }, 1500);
-
-            // Stop after 2 full cycles
-            setTimeout(() => {
-                if (screenAnimationInterval) {
-                    clearInterval(screenAnimationInterval);
-                    screenAnimationInterval = null;
-                }
-            }, screens.length * 1500 * 2);
-        }
-
-        function showScreen(screenId) {
-            document.querySelectorAll('.screen-content').forEach(screen => {
-                screen.classList.add('hidden');
-            });
-            const targetScreen = document.getElementById(screenId);
-            if (targetScreen) {
-                targetScreen.classList.remove('hidden');
-                targetScreen.classList.add('screen-fade-in');
-                setTimeout(() => {
-                    targetScreen.classList.remove('screen-fade-in');
-                }, 300);
-            }
-        }
-
-        // === CAMPAIGN BUILDER (Multi-select version) ===
-
-        // Discount thresholds
-        const discountThresholds = [
-            { count: 2, percent: 5 },
-            { count: 3, percent: 10 },
-            { count: 4, percent: 15 },
-            { count: 5, percent: 20 }
-        ];
-
-        // Initialize builder
-        function initBuilder() {
-            // Service checkboxes
-            document.querySelectorAll('input[name="service"]').forEach(checkbox => {
-                checkbox.addEventListener('change', function() {
-                    updateBuilder();
-                    updatePhoneScreen();
-                });
-            });
-
-            // Initial setup
-            updateBuilder();
-        }
-
-        // Check if selected services match a package exactly
-        function isPackageMatch(pkg, checkedServices) {
-            const selectedIds = Array.from(checkedServices).map(cb => {
-                return cb.closest('[data-service-id]').dataset.serviceId;
-            });
-
-            if (selectedIds.length !== pkg.services.length) return false;
-
-            return pkg.services.every(id => selectedIds.includes(id)) &&
-                   selectedIds.every(id => pkg.services.includes(id));
-        }
-
-        // Main update function
-        function updateBuilder() {
-            const checkedServices = document.querySelectorAll('input[name="service"]:checked');
-            const count = checkedServices.length;
-
-            // Calculate base price
-            let basePrice = 0;
-            checkedServices.forEach(cb => {
-                basePrice += parseInt(cb.value);
-            });
-
-            // Check if current selection matches active package
-            let totalPrice, discountPercent;
-            const pkg = activePackage ? packages[activePackage] : null;
-
-            if (pkg && isPackageMatch(pkg, checkedServices)) {
-                // Use fixed package price
-                totalPrice = pkg.fixedPrice;
-                discountPercent = pkg.discount;
-            } else {
-                // Calculate discount normally
-                activePackage = null; // Reset if user changed selection
-                discountPercent = 0;
-                for (let i = discountThresholds.length - 1; i >= 0; i--) {
-                    if (count >= discountThresholds[i].count) {
-                        discountPercent = discountThresholds[i].percent;
-                        break;
-                    }
-                }
-                const discount = Math.round(basePrice * discountPercent / 100);
-                totalPrice = basePrice - discount;
-            }
-
-            const discountAmount = basePrice - totalPrice;
-
-            // Update counter
-            document.getElementById('serviceCount').textContent = count;
-
-            // Update base price
-            document.getElementById('basePrice').textContent = `${basePrice.toLocaleString('ru-RU')}₽`;
-
-            // Update discount block
-            const discountBlock = document.getElementById('discountBlock');
-            const progressText = document.getElementById('discountProgressText');
-
-            if (discountPercent > 0) {
-                discountBlock.classList.remove('hidden');
-                if (progressText) progressText.style.display = 'none';
-
-                document.getElementById('discountPercent').textContent = discountPercent;
-                document.getElementById('discountAmount').textContent = discountAmount.toLocaleString('ru-RU');
-            } else {
-                discountBlock.classList.add('hidden');
-                if (progressText) progressText.style.display = 'block';
-
-                // Calculate needed services
-                const nextThreshold = discountThresholds[0];
-                const servicesNeeded = Math.max(0, nextThreshold.count - count);
-
-                const neededEl = document.getElementById('servicesNeeded');
-                if (neededEl) neededEl.textContent = servicesNeeded;
-            }
-
-            // Update total price
-            document.getElementById('builderTotalPrice').textContent = `${totalPrice.toLocaleString('ru-RU')}₽`;
-
-            // Update order button
-            const orderBtn = document.getElementById('orderBtn');
-            if (count > 0) {
-                orderBtn.disabled = false;
-                orderBtn.textContent = 'Обсудить';
-            } else {
-                orderBtn.disabled = true;
-                orderBtn.textContent = 'Выберите услуги';
-            }
-
-            // Update mobile sticky bar
-            updateMobileBar(count, totalPrice, discountPercent);
-        }
-
-        // Mobile sticky bar update
-        function updateMobileBar(count, totalPrice, discountPercent) {
-            const mobileBar = document.getElementById('mobileBar');
-            const mobileCount = document.getElementById('mobileCount');
-            const mobileTotal = document.getElementById('mobileTotal');
-            const mobileDiscount = document.getElementById('mobileDiscount');
-            const mobileOrderBtn = document.getElementById('mobileOrderBtn');
-
-            // Update values
-            mobileCount.textContent = count;
-            mobileTotal.textContent = `${totalPrice.toLocaleString('ru-RU')}₽`;
-
-            if (discountPercent > 0) {
-                mobileDiscount.textContent = `-${discountPercent}%`;
-            } else {
-                mobileDiscount.textContent = '';
-            }
-
-            // Update button
-            if (count > 0) {
-                mobileOrderBtn.disabled = false;
-                mobileOrderBtn.textContent = 'Заказать';
-                mobileBar.classList.add('visible');
-            } else {
-                mobileOrderBtn.disabled = true;
-                mobileOrderBtn.textContent = 'Выберите';
-                mobileBar.classList.remove('visible');
-            }
-        }
-
-        // Update phone screen based on selected services
-        function updatePhoneScreen() {
-            const checkedServices = document.querySelectorAll('input[name="service"]:checked');
-
-            // Hide all screens first
-            document.querySelectorAll('.screen-content').forEach(screen => {
-                screen.classList.add('hidden');
-            });
-
-            if (checkedServices.length === 0) {
-                // Show default Instagram* profile
-                document.getElementById('screenProfile').classList.remove('hidden');
-                return;
-            }
-
-            // Find the last selected service (for main display)
-            const lastSelected = checkedServices[checkedServices.length - 1];
-            const platform = lastSelected.dataset.platform;
-            const format = lastSelected.dataset.format;
-
-            // Show appropriate screen
-            if (platform === 'telegram') {
-                document.getElementById('screenTelegram').classList.remove('hidden');
-            } else if (platform === 'tiktok') {
-                document.getElementById('screenTiktok').classList.remove('hidden');
-            } else if (platform === 'instagram') {
-                if (format === 'stories') {
-                    document.getElementById('screenStories').classList.remove('hidden');
-                } else if (format === 'reels') {
-                    document.getElementById('screenReels').classList.remove('hidden');
-                } else {
-                    document.getElementById('screenProfile').classList.remove('hidden');
-                }
-            } else if (platform === 'bonus') {
-                // For bonuses, show last non-bonus selection or default
-                const nonBonusServices = [...checkedServices].filter(cb => cb.dataset.platform !== 'bonus');
-                if (nonBonusServices.length > 0) {
-                    const last = nonBonusServices[nonBonusServices.length - 1];
-                    updateScreenForService(last);
-                } else {
-                    document.getElementById('screenProfile').classList.remove('hidden');
-                }
-            }
-
-            // Update tooltip stats with combined reach
-            updateCombinedStats();
-        }
-
-        function updateScreenForService(service) {
-            const platform = service.dataset.platform;
-            const format = service.dataset.format;
-
-            if (platform === 'telegram') {
-                document.getElementById('screenTelegram').classList.remove('hidden');
-            } else if (platform === 'tiktok') {
-                document.getElementById('screenTiktok').classList.remove('hidden');
-            } else if (platform === 'instagram') {
-                if (format === 'stories') {
-                    document.getElementById('screenStories').classList.remove('hidden');
-                } else if (format === 'reels') {
-                    document.getElementById('screenReels').classList.remove('hidden');
-                } else {
-                    document.getElementById('screenProfile').classList.remove('hidden');
-                }
-            }
-        }
-
-        // Update combined stats in tooltips
-        function updateCombinedStats() {
-            const checkedServices = document.querySelectorAll('input[name="service"]:checked');
-
-            let totalReach = 0;
-            let totalClicks = 0;
-
-            checkedServices.forEach(cb => {
-                const reach = cb.dataset.reach;
-                const clicks = cb.dataset.clicks;
-
-                if (reach && reach !== '+') {
-                    totalReach += parseFloat(reach.replace('K', '')) * 1000;
-                }
-                if (clicks && clicks !== '+') {
-                    totalClicks += parseFloat(clicks.replace('K', '')) * 1000;
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
                 }
             });
+        }, observerOptions);
 
-            // Format numbers
-            const formatNum = (num) => {
-                if (num >= 1000) {
-                    return `${(num / 1000).toFixed(0)}K`;
-                }
-                return num.toString();
-            };
-
-            // Update all tooltips
-            const tooltipSelectors = [
-                '#adTooltip', '#storiesTooltip', '#reelsTooltip',
-                '#tiktokTooltip', '#telegramTooltip'
-            ];
-
-            tooltipSelectors.forEach(selector => {
-                const tooltip = document.querySelector(selector);
-                if (tooltip) {
-                    const statElements = tooltip.querySelectorAll('.tooltip-stat span:last-child');
-                    if (statElements.length >= 2) {
-                        statElements[0].textContent = `Охват ~${formatNum(totalReach) || '0'}`;
-                        statElements[1].textContent = `Переходов ~${formatNum(totalClicks) || '0'}`;
-                    }
-                }
-            });
-        }
-
-        // Order campaign function
-        function orderCampaign() {
-            const checkedServices = document.querySelectorAll('input[name="service"]:checked');
-
-            if (checkedServices.length === 0) {
-                return;
-            }
-
-            // Calculate totals
-            let basePrice = 0;
-            const selectedItems = [];
-
-            checkedServices.forEach(cb => {
-                basePrice += parseInt(cb.value);
-                const platform = cb.dataset.platform;
-                const format = cb.dataset.format;
-                const price = parseInt(cb.value);
-                const name = cb.closest('.builder-service').querySelector('.builder-service-name').textContent;
-
-                selectedItems.push({
-                    platform: platform,
-                    name: name,
-                    price: price
-                });
-            });
-
-            // Calculate discount
-            const count = checkedServices.length;
-            let discountPercent = 0;
-            for (let i = discountThresholds.length - 1; i >= 0; i--) {
-                if (count >= discountThresholds[i].count) {
-                    discountPercent = discountThresholds[i].percent;
-                    break;
-                }
-            }
-
-            const discountAmount = Math.round(basePrice * discountPercent / 100);
-            const totalPrice = basePrice - discountAmount;
-
-            // Group by platform
-            const grouped = {};
-            selectedItems.forEach(item => {
-                if (!grouped[item.platform]) {
-                    grouped[item.platform] = [];
-                }
-                grouped[item.platform].push(item);
-            });
-
-            // Create order message
-            let message = `Здравствуйте! Хочу заказать рекламу:\n\n`;
-
-            const platformNames = {
-                instagram: 'Instagram*',
-                tiktok: 'TikTok',
-                telegram: 'Telegram',
-                bonus: 'Бонусы'
-            };
-
-            Object.keys(grouped).forEach(platform => {
-                message += `${platformNames[platform]}:\n`;
-                grouped[platform].forEach(item => {
-                    message += `  • ${item.name} — ${item.price.toLocaleString('ru-RU')}₽\n`;
-                });
-                message += '\n';
-            });
-
-            message += `Итого услуг: ${count}\n`;
-            message += `Базовая стоимость: ${basePrice.toLocaleString('ru-RU')}₽\n`;
-
-            if (discountPercent > 0) {
-                message += `Скидка ${discountPercent}%: -${discountAmount.toLocaleString('ru-RU')}₽\n`;
-            }
-
-            message += `\nК оплате: ${totalPrice.toLocaleString('ru-RU')}₽\n\n`;
-            message += `Свяжитесь со мной для обсуждения деталей!`;
-
-            // Open Telegram with message
-            const telegramUrl = `https://t.me/mishka_max_manager?text=${encodeURIComponent(message)}`;
-
-            // ОТПРАВКА ЦЕЛИ В МЕТРИКУ
-            ym(105821243,'reachGoal','btn_order_click');
-
-            window.open(telegramUrl, '_blank');
-        }
-
-        // Initialize builder when DOM is ready
-        document.addEventListener('DOMContentLoaded', initBuilder);
+        // Применяем анимацию к карточкам
+        document.querySelectorAll('.platform-card, .audience-card, .feature').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
     </script>
-
-    <!-- Schema.org микроразметка для SEO -->
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Person",
-      "name": "Мишка Макс",
-      "alternateName": ["Bear Max", "Mishka Max"],
-      "jobTitle": "Детский блогер, Инфлюенсер",
-      "description": "Детский образовательный контент для родителей и детей 2-7 лет",
-      "url": "https://mishka-max.ru",
-      "image": "https://mishka-max.ru/images/logo.png",
-      "sameAs": [
-        "https://instagram.com/mishka_max_",
-        "https://tiktok.com/@mishka_max_",
-        "https://t.me/mishka_max"
-      ],
-      "knowsAbout": ["Детский образовательный контент", "Развивающие игры", "Обучение алфавиту", "Родительское воспитание"],
-      "audience": {
-        "@type": "Audience",
-        "audienceType": "Родители детей 2-7 лет"
-      }
-    },
-    {
-      "@type": "Service",
-      "name": "Рекламные интеграции у блогера Мишка Макс",
-      "description": "Размещение рекламы детских товаров и услуг в Instagram, TikTok, Telegram с охватом 2.7М+ в месяц",
-      "provider": {
-        "@type": "Person",
-        "name": "Мишка Макс"
-      },
-      "areaServed": "RU",
-      "audience": {
-        "@type": "Audience",
-        "audienceType": "Родители детей 2-7 лет",
-        "geographicArea": {
-          "@type": "Country",
-          "name": "Россия"
-        }
-      },
-      "availableChannel": [
-        {
-          "@type": "ServiceChannel",
-          "name": "Instagram",
-          "url": "https://instagram.com/mishka_max_"
-        },
-        {
-          "@type": "ServiceChannel",
-          "name": "TikTok",
-          "url": "https://tiktok.com/@mishka_max_"
-        },
-        {
-          "@type": "ServiceChannel",
-          "name": "Telegram",
-          "url": "https://t.me/mishka_max"
-        }
-      ]
-    },
-    {
-      "@type": "Product",
-      "name": "Рекламная интеграция 'Dominator'",
-      "description": "Полный комплекс продвижения: Instagram Reels, Stories, TikTok видео и Telegram пост.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Мишка Макс"
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "6320",
-        "priceCurrency": "RUB",
-        "availability": "https://schema.org/InStock",
-        "url": "https://mishka-max.ru/",
-        "priceValidUntil": "2026-12-31"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "127"
-      }
-    },
-    {
-      "@type": "WebSite",
-      "name": "Мишка Макс - Реклама детских товаров",
-      "url": "https://mishka-max.ru",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://mishka-max.ru/?s={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-  ]
-}
-</script>
-
-    <!-- Instagram* Embed Script -->
-    <script async src="//www.instagram.com/embed.js"></script>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="footer-container">
-            <div class="footer-legal-links">
-                <a href="user-agreement.html">Пользовательское соглашение</a>
-                <a href="privacy-policy.html">Политика конфиденциальности</a>
-            </div>
-            <div class="footer-copyright">
-                &copy; 2025 Мишка Макс. Все права защищены.
-            </div>
-        </div>
-    </footer>
 </body>
 </html>
