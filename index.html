@@ -559,10 +559,26 @@
             color: var(--kids-text);
         }
 
+        /* Карусель для аудитории */
+        .audience-carousel-wrapper {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+            padding: 0 60px;
+        }
+
         .audience-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            display: flex;
             gap: 2.5rem;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            padding: 1rem 0;
+        }
+
+        .audience-grid::-webkit-scrollbar {
+            display: none;
         }
 
         .audience-card {
@@ -571,6 +587,27 @@
             position: relative;
             overflow: hidden;
             transition: transform 0.3s;
+            min-width: 320px;
+            flex: 0 0 calc(25% - 2rem);
+        }
+
+        @media (max-width: 1200px) {
+            .audience-card {
+                flex: 0 0 calc(33.333% - 2rem);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .audience-card {
+                flex: 0 0 calc(50% - 2rem);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .audience-card {
+                flex: 0 0 calc(100% - 2rem);
+                min-width: 280px;
+            }
         }
 
         .audience-card::before {
@@ -644,6 +681,69 @@
         .audience-benefits li::before {
             content: '✨';
             font-size: 1.2rem;
+        }
+
+        /* Кнопки карусели */
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: white;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            z-index: 10;
+            color: var(--kids-text);
+        }
+
+        .carousel-btn:hover {
+            background: var(--kids-main);
+            color: white;
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 6px 30px rgba(255, 140, 66, 0.4);
+        }
+
+        .carousel-btn:active {
+            transform: translateY(-50%) scale(0.95);
+        }
+
+        .carousel-prev {
+            left: 10px;
+        }
+
+        .carousel-next {
+            right: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .audience-carousel-wrapper {
+                padding: 0 50px;
+            }
+
+            .carousel-btn {
+                width: 40px;
+                height: 40px;
+            }
+
+            .carousel-btn svg {
+                width: 20px;
+                height: 20px;
+            }
+
+            .carousel-prev {
+                left: 5px;
+            }
+
+            .carousel-next {
+                right: 5px;
+            }
         }
 
         /* Цифры успеха */
@@ -1002,7 +1102,14 @@
                 Каждый находит что-то своё в мире Мишки Макса
             </p>
 
-            <div class="audience-grid">
+            <div class="audience-carousel-wrapper">
+                <button class="carousel-btn carousel-prev" aria-label="Предыдущая карточка">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+
+                <div class="audience-grid">
                 <div class="audience-card">
                     <div class="audience-card-content">
                         <span class="audience-emoji">👶</span>
@@ -1067,6 +1174,13 @@
                     </div>
                 </div>
             </div>
+
+            <button class="carousel-btn carousel-next" aria-label="Следующая карточка">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
         </div>
     </section>
 
@@ -1219,6 +1333,70 @@
             el.style.transition = 'all 0.6s ease-out';
             observer.observe(el);
         });
+
+        // Карусель аудитории
+        const audienceGrid = document.querySelector('.audience-grid');
+        const prevBtn = document.querySelector('.carousel-prev');
+        const nextBtn = document.querySelector('.carousel-next');
+
+        if (audienceGrid && prevBtn && nextBtn) {
+            const scrollAmount = () => {
+                const card = audienceGrid.querySelector('.audience-card');
+                if (card) {
+                    return card.offsetWidth + parseFloat(getComputedStyle(audienceGrid).gap);
+                }
+                return 350; // fallback
+            };
+
+            prevBtn.addEventListener('click', () => {
+                audienceGrid.scrollBy({
+                    left: -scrollAmount(),
+                    behavior: 'smooth'
+                });
+            });
+
+            nextBtn.addEventListener('click', () => {
+                audienceGrid.scrollBy({
+                    left: scrollAmount(),
+                    behavior: 'smooth'
+                });
+            });
+
+            // Показываем/скрываем кнопки в зависимости от позиции прокрутки
+            const updateButtons = () => {
+                const maxScroll = audienceGrid.scrollWidth - audienceGrid.clientWidth;
+                prevBtn.style.opacity = audienceGrid.scrollLeft <= 0 ? '0.3' : '1';
+                prevBtn.style.pointerEvents = audienceGrid.scrollLeft <= 0 ? 'none' : 'auto';
+                nextBtn.style.opacity = audienceGrid.scrollLeft >= maxScroll - 10 ? '0.3' : '1';
+                nextBtn.style.pointerEvents = audienceGrid.scrollLeft >= maxScroll - 10 ? 'none' : 'auto';
+            };
+
+            audienceGrid.addEventListener('scroll', updateButtons);
+            window.addEventListener('resize', updateButtons);
+            updateButtons();
+
+            // Поддержка свайпа на мобильных
+            let startX = 0;
+            let scrollLeft = 0;
+            let isDragging = false;
+
+            audienceGrid.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].pageX;
+                scrollLeft = audienceGrid.scrollLeft;
+                isDragging = true;
+            });
+
+            audienceGrid.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                const x = e.touches[0].pageX;
+                const walk = (startX - x) * 2;
+                audienceGrid.scrollLeft = scrollLeft + walk;
+            });
+
+            audienceGrid.addEventListener('touchend', () => {
+                isDragging = false;
+            });
+        }
     </script>
 </body>
 </html>
