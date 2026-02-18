@@ -68,20 +68,40 @@
     </style>
 </head>
 <body>
+    <!-- Прогресс-бар скролла -->
+    <div style="position:fixed;top:0;left:0;height:4px;background:linear-gradient(90deg,#FF5722,#FF1744,#00BCD4);z-index:9999;width:0%;transition:width .1s;" id="reklamaScrollProgress"></div>
+
+    <!-- Мобильное меню -->
+    <div id="reklamaMobileNav" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(26,26,46,0.97);backdrop-filter:blur(20px);z-index:1500;flex-direction:column;align-items:center;justify-content:center;gap:2rem;">
+        <a href="/" style="font-family:'Poppins',sans-serif;font-size:1.8rem;font-weight:700;color:white;text-decoration:none;">🏠 Главная</a>
+        <a href="/teacher/" style="font-family:'Poppins',sans-serif;font-size:1.8rem;font-weight:700;color:white;text-decoration:none;">Педагогам</a>
+        <a href="#metrics" onclick="closeReklamaMobileNav()" style="font-family:'Poppins',sans-serif;font-size:1.5rem;font-weight:600;color:rgba(255,255,255,0.8);text-decoration:none;">Статистика</a>
+        <a href="#audience" onclick="closeReklamaMobileNav()" style="font-family:'Poppins',sans-serif;font-size:1.5rem;font-weight:600;color:rgba(255,255,255,0.8);text-decoration:none;">Аудитория</a>
+        <a href="#formats" onclick="closeReklamaMobileNav()" style="font-family:'Poppins',sans-serif;font-size:1.5rem;font-weight:600;color:rgba(255,255,255,0.8);text-decoration:none;">Пакеты</a>
+        <a href="#contact" onclick="closeReklamaMobileNav()" style="background:linear-gradient(135deg,#FF5722,#FF1744);color:white;padding:1rem 2.5rem;border-radius:30px;font-family:'Poppins',sans-serif;font-size:1.3rem;font-weight:700;text-decoration:none;box-shadow:0 8px 25px rgba(255,87,34,0.4);">Начать сотрудничество</a>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
+            <a href="/" class="nav-logo" style="text-decoration:none;">
                 <img src="../images/logo.png" alt="Логотип блога Мишка Макс - реклама для родителей" class="logo-icon">
                 <span class="logo-text">Мишка Макс</span>
-            </div>
+            </a>
             <ul class="nav-menu">
+                <li><a href="/" class="nav-link" style="font-weight:600;">🏠 Главная</a></li>
+                <li><a href="/teacher/" class="nav-link" style="font-weight:600;">Педагогам</a></li>
                 <li><a href="#metrics" class="nav-link">Статистика</a></li>
                 <li><a href="#audience" class="nav-link">Аудитория</a></li>
                 <li><a href="#formats" class="nav-link">Пакеты</a></li>
                 <li><a href="#cases" class="nav-link">Результаты</a></li>
                 <li><a href="#contact" class="nav-link nav-cta">Начать</a></li>
             </ul>
+            <button id="reklamaHamburger" aria-label="Открыть меню" style="display:none;flex-direction:column;gap:5px;cursor:pointer;padding:0.5rem;background:none;border:none;z-index:200;">
+                <span style="display:block;width:26px;height:3px;background:var(--color-text-primary);border-radius:3px;transition:all .3s;"></span>
+                <span style="display:block;width:26px;height:3px;background:var(--color-text-primary);border-radius:3px;transition:all .3s;"></span>
+                <span style="display:block;width:26px;height:3px;background:var(--color-text-primary);border-radius:3px;transition:all .3s;"></span>
+            </button>
         </div>
     </nav>
 
@@ -1813,13 +1833,64 @@
     <footer class="site-footer">
         <div class="footer-container">
             <div class="footer-legal-links">
-                <a href="user-agreement.html">Пользовательское соглашение</a>
-                <a href="privacy-policy.html">Политика конфиденциальности</a>
+                <a href="/">🐻 Главная</a>
+                <a href="/teacher/">Педагогам</a>
+                <a href="/user-agreement.html">Пользовательское соглашение</a>
+                <a href="/privacy-policy.html">Политика конфиденциальности</a>
             </div>
             <div class="footer-copyright">
-                &copy; 2025 Мишка Макс. Все права защищены.
+                &copy; 2026 Мишка Макс. Все права защищены.
             </div>
         </div>
     </footer>
+
+    <script>
+        // ===== Прогресс-бар скролла =====
+        const reklamaScrollProgress = document.getElementById('reklamaScrollProgress');
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            if (reklamaScrollProgress && docHeight > 0) {
+                reklamaScrollProgress.style.width = (scrollTop / docHeight * 100) + '%';
+            }
+        }, { passive: true });
+
+        // ===== Гамбургер-меню =====
+        const reklamaHamburger = document.getElementById('reklamaHamburger');
+        const reklamaMobileNav = document.getElementById('reklamaMobileNav');
+
+        function closeReklamaMobileNav() {
+            if (reklamaMobileNav) reklamaMobileNav.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+
+        if (reklamaHamburger && reklamaMobileNav) {
+            reklamaHamburger.addEventListener('click', () => {
+                const isOpen = reklamaMobileNav.style.display === 'flex';
+                reklamaMobileNav.style.display = isOpen ? 'none' : 'flex';
+                document.body.style.overflow = isOpen ? '' : 'hidden';
+            });
+
+            reklamaMobileNav.addEventListener('click', (e) => {
+                if (e.target === reklamaMobileNav) closeReklamaMobileNav();
+            });
+        }
+
+        // Показываем гамбургер на мобильных
+        function checkMobileNav() {
+            if (window.innerWidth <= 900) {
+                if (reklamaHamburger) reklamaHamburger.style.display = 'flex';
+                document.querySelectorAll('.nav-menu').forEach(m => {
+                    if (window.innerWidth <= 900) m.style.display = 'none';
+                });
+            } else {
+                if (reklamaHamburger) reklamaHamburger.style.display = 'none';
+                if (reklamaMobileNav) { reklamaMobileNav.style.display = 'none'; document.body.style.overflow = ''; }
+                document.querySelectorAll('.nav-menu').forEach(m => m.style.display = '');
+            }
+        }
+        checkMobileNav();
+        window.addEventListener('resize', checkMobileNav);
+    </script>
 </body>
 </html>

@@ -37,10 +37,22 @@
             line-height: 1.6;
         }
 
+        /* Прогресс-бар скролла */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--pro-terracotta), var(--core-orange), var(--pro-dust-blue));
+            z-index: 9999;
+            width: 0%;
+            transition: width 0.1s;
+        }
+
         /* Хедер */
         header {
             background: white;
-            padding: 1.5rem 2rem;
+            padding: 1rem 2rem;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
             position: sticky;
             top: 0;
@@ -64,10 +76,23 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            transition: transform 0.3s;
+        }
+
+        .logo:hover {
+            transform: scale(1.04) rotate(-1deg);
         }
 
         .logo-bear {
             font-size: 2rem;
+            display: inline-block;
+            animation: wave 2.5s ease-in-out infinite;
+        }
+
+        @keyframes wave {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(12deg); }
+            75% { transform: rotate(-12deg); }
         }
 
         .nav-badge {
@@ -78,6 +103,161 @@
             font-size: 0.85rem;
             font-weight: 700;
             margin-left: 0.5rem;
+        }
+
+        /* Nav-ссылки */
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--pro-text);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--pro-terracotta);
+            border-radius: 2px;
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--pro-terracotta);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a.active {
+            color: var(--pro-terracotta);
+        }
+
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .nav-links .nav-btn {
+            background: linear-gradient(135deg, var(--kids-main), var(--core-orange));
+            color: white !important;
+            padding: 0.5rem 1.3rem;
+            border-radius: 25px;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(255, 140, 66, 0.35);
+            transition: all 0.3s;
+        }
+
+        .nav-links .nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 140, 66, 0.5);
+            color: white !important;
+        }
+
+        .nav-links .nav-btn::after {
+            display: none;
+        }
+
+        /* Гамбургер */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 0.5rem;
+            background: none;
+            border: none;
+            z-index: 200;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 26px;
+            height: 3px;
+            background: var(--pro-text);
+            border-radius: 3px;
+            transition: all 0.3s;
+        }
+
+        .hamburger.open span:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+        .hamburger.open span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.open span:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+
+        /* Мобильное меню */
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(245, 241, 237, 0.97);
+            backdrop-filter: blur(20px);
+            z-index: 150;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .mobile-nav.open {
+            display: flex;
+            animation: fadeInMob 0.3s ease-out;
+        }
+
+        @keyframes fadeInMob {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .mobile-nav a {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--pro-text);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .mobile-nav a:hover {
+            color: var(--pro-terracotta);
+            transform: scale(1.05);
+        }
+
+        .mobile-nav .nav-btn {
+            background: linear-gradient(135deg, var(--kids-main), var(--core-orange));
+            color: white !important;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            box-shadow: 0 8px 25px rgba(255, 140, 66, 0.4);
+        }
+
+        @media (max-width: 900px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+            }
         }
 
         /* Hero секция */
@@ -832,6 +1012,17 @@
     </style>
 </head>
 <body>
+    <!-- Прогресс-бар скролла -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Мобильное меню -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="/" onclick="closeMobileNav()">🏠 Главная</a>
+        <a href="/teacher/" class="active" onclick="closeMobileNav()">Педагогам</a>
+        <a href="/reklama/" onclick="closeMobileNav()">Для брендов</a>
+        <a href="https://t.me/mishkamax_pro_bot" class="nav-btn" onclick="closeMobileNav()">Подключить PRO</a>
+    </div>
+
     <!-- Хедер -->
     <header>
         <nav>
@@ -840,6 +1031,18 @@
                 Мишка Макс
                 <span class="nav-badge">PRO</span>
             </a>
+            <ul class="nav-links">
+                <li><a href="/">Главная</a></li>
+                <li><a href="/teacher/#whats-inside">Что внутри</a></li>
+                <li><a href="/teacher/#pricing">Тарифы</a></li>
+                <li><a href="/reklama/">Для брендов</a></li>
+                <li><a href="https://t.me/mishkamax_pro_bot" class="nav-btn">Подключить PRO</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
 
@@ -1232,13 +1435,15 @@
     <footer>
         <div class="footer-container">
             <div class="footer-links">
-                <a href="/">Главная</a>
+                <a href="/">🐻 Главная</a>
                 <a href="#whats-inside">Что внутри</a>
                 <a href="#pricing">Тарифы</a>
+                <a href="/reklama/">Для брендов</a>
                 <a href="mailto:pro@mishkamax.ru">Поддержка</a>
+                <a href="/privacy-policy.html">Политика конфиденциальности</a>
             </div>
             <div class="footer-copyright">
-                &copy; 2025 Мишка Макс PRO. Для воспитателей с любовью 💝
+                &copy; 2026 Мишка Макс PRO. Для воспитателей с любовью 💝
             </div>
         </div>
     </footer>
@@ -1274,6 +1479,76 @@
                     });
                 }
             });
+        });
+
+        // ===== Гамбургер-меню =====
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobileNav');
+
+        function closeMobileNav() {
+            if (hamburger) hamburger.classList.remove('open');
+            if (mobileNav) mobileNav.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        if (hamburger && mobileNav) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('open');
+                mobileNav.classList.toggle('open');
+                document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+            });
+
+            mobileNav.addEventListener('click', (e) => {
+                if (e.target === mobileNav) closeMobileNav();
+            });
+        }
+
+        // ===== Прогресс-бар скролла =====
+        const scrollProgress = document.getElementById('scrollProgress');
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            if (scrollProgress && docHeight > 0) {
+                scrollProgress.style.width = (scrollTop / docHeight * 100) + '%';
+            }
+        });
+
+        // ===== Анимация счётчиков (count-up) =====
+        function animateCounter(el) {
+            const target = el.dataset.target;
+            if (!target) return;
+            const numMatch = target.match(/[\d.,]+/);
+            if (!numMatch) return;
+            const num = parseFloat(numMatch[0].replace(',', '.'));
+            const suffix = target.replace(numMatch[0], '');
+            let count = 0;
+            const increments = 60;
+            const timer = setInterval(() => {
+                count++;
+                const progress = count / increments;
+                const eased = 1 - Math.pow(1 - progress, 3);
+                const current = num * eased;
+                const display = Number.isInteger(num) ? Math.floor(current) : current.toFixed(1);
+                el.textContent = display + suffix;
+                if (count >= increments) {
+                    el.textContent = target;
+                    clearInterval(timer);
+                }
+            }, 30);
+        }
+
+        const counterObs = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.dataset.counted) {
+                    entry.target.dataset.counted = 'true';
+                    entry.target.dataset.target = entry.target.textContent;
+                    animateCounter(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.hero-stat-number, .stat-number').forEach(el => {
+            counterObs.observe(el);
         });
     </script>
 </body>

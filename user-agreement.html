@@ -104,8 +104,22 @@
     </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar" id="legalNavbar" style="position:fixed;top:0;width:100%;z-index:1000;background:rgba(255,255,255,0.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,0.05);padding:1rem 0;">
+        <div class="nav-container">
+            <a href="/" style="display:flex;align-items:center;gap:0.5rem;text-decoration:none;font-family:'Poppins',sans-serif;font-size:1.3rem;font-weight:700;background:linear-gradient(135deg,#FF5722,#FF1744);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">
+                🐻 Мишка Макс
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-link">Главная</a></li>
+                <li><a href="/teacher/" class="nav-link">Педагогам</a></li>
+                <li><a href="/reklama/" class="nav-link nav-cta">Для брендов</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="legal-page">
-        <a href="index.html" class="back-link">← Вернуться на главную</a>
+        <a href="/" class="back-link">← Вернуться на главную</a>
 
         <h1>Пользовательское соглашение</h1>
         <p class="update-date">Дата последнего обновления: 10 декабря 2025 г.</p>

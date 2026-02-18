@@ -233,6 +233,132 @@
             width: 100%;
         }
 
+        .nav-links a.active {
+            color: var(--kids-main);
+        }
+
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        /* Кнопка-ссылка в nav */
+        .nav-links .nav-cta-btn {
+            background: linear-gradient(135deg, var(--kids-main), var(--core-orange));
+            color: white !important;
+            padding: 0.5rem 1.3rem;
+            border-radius: 25px;
+            font-weight: 700;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 140, 66, 0.35);
+        }
+
+        .nav-links .nav-cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 140, 66, 0.5);
+            color: white !important;
+        }
+
+        .nav-links .nav-cta-btn::after {
+            display: none;
+        }
+
+        /* Гамбургер */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 0.5rem;
+            background: none;
+            border: none;
+            z-index: 200;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 26px;
+            height: 3px;
+            background: var(--kids-text);
+            border-radius: 3px;
+            transition: all 0.3s;
+        }
+
+        .hamburger.open span:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+        .hamburger.open span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.open span:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+
+        /* Мобильное меню */
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 248, 243, 0.97);
+            backdrop-filter: blur(20px);
+            z-index: 150;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .mobile-nav.open {
+            display: flex;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .mobile-nav a {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--kids-text);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .mobile-nav a:hover {
+            color: var(--kids-main);
+            transform: scale(1.05);
+        }
+
+        .mobile-nav .nav-cta-btn {
+            background: linear-gradient(135deg, var(--kids-main), var(--core-orange));
+            color: white !important;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            box-shadow: 0 8px 25px rgba(255, 140, 66, 0.4);
+        }
+
+        /* Прогресс-бар скролла */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--kids-main), var(--kids-sky), var(--kids-green));
+            z-index: 9999;
+            transition: width 0.1s;
+            width: 0%;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+
         /* Главный герой */
         .hero {
             position: relative;
@@ -683,6 +809,28 @@
             font-size: 1.2rem;
         }
 
+        .audience-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            margin-top: 1.5rem;
+            padding: 0.6rem 1.4rem;
+            background: rgba(255, 255, 255, 0.8);
+            color: var(--kids-text);
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .audience-cta:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
         /* Кнопки карусели */
         .carousel-btn {
             position: absolute;
@@ -964,10 +1112,22 @@
         <div class="shape"></div>
     </div>
 
+    <!-- Прогресс-бар скролла -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Мобильное меню -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="#about" onclick="closeMobileNav()">О Мишке</a>
+        <a href="#platforms" onclick="closeMobileNav()">Соцсети</a>
+        <a href="#audience" onclick="closeMobileNav()">Аудитория</a>
+        <a href="/teacher/">Педагогам</a>
+        <a href="/reklama/" class="nav-cta-btn">Реклама</a>
+    </div>
+
     <!-- Шапка -->
     <header>
         <nav>
-            <a href="#" class="logo">
+            <a href="/" class="logo">
                 <span class="logo-bear">🐻</span>
                 Мишка Макс
             </a>
@@ -977,7 +1137,13 @@
                 <li><a href="#audience">Аудитория</a></li>
                 <li><a href="#partnership">Партнёрство</a></li>
                 <li><a href="/teacher/">Педагогам</a></li>
+                <li><a href="/reklama/" class="nav-cta-btn">Реклама</a></li>
             </ul>
+            <button class="hamburger" id="hamburger" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
 
@@ -1071,26 +1237,26 @@
             </p>
 
             <div class="platform-grid">
-                <div class="platform-card">
+                <a href="https://instagram.com/mishka_max_" target="_blank" rel="noopener" class="platform-card" style="text-decoration:none;display:block;">
                     <div class="platform-icon">📸</div>
                     <div class="platform-name">Instagram</div>
                     <div class="platform-stats">Ежедневные Reels с Мишкой</div>
                     <span class="platform-followers">221К</span>
-                </div>
+                </a>
 
-                <div class="platform-card">
+                <a href="https://tiktok.com/@mishka_max_" target="_blank" rel="noopener" class="platform-card" style="text-decoration:none;display:block;">
                     <div class="platform-icon">🎵</div>
                     <div class="platform-name">TikTok</div>
                     <div class="platform-stats">Короткие весёлые видео</div>
                     <span class="platform-followers">95К</span>
-                </div>
+                </a>
 
-                <div class="platform-card">
+                <a href="https://t.me/+7-oGjM-AgbcxNWQ6" target="_blank" rel="noopener" class="platform-card" style="text-decoration:none;display:block;">
                     <div class="platform-icon">✈️</div>
                     <div class="platform-name">Telegram</div>
                     <div class="platform-stats">Для воспитателей и родителей</div>
                     <span class="platform-followers">10.5К</span>
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -1156,6 +1322,7 @@
                             <li>Готовые занятия</li>
                             <li>Методическая база</li>
                         </ul>
+                        <a href="/teacher/" class="audience-cta">📚 Подключить PRO →</a>
                     </div>
                 </div>
 
@@ -1172,6 +1339,7 @@
                             <li>Высокая вовлечённость</li>
                             <li>Креативные интеграции</li>
                         </ul>
+                        <a href="/reklama/" class="audience-cta">📊 Медиакит →</a>
                     </div>
                 </div>
             </div>
@@ -1258,10 +1426,10 @@
                 <div class="footer-section">
                     <h3>Для партнёров</h3>
                     <ul>
-                        <li><a href="/mediakit-mishka-max2.pdf" target="_blank">Медиакит</a></li>
-                        <li><a href="/reklama">Сотрудничество</a></li>
-                        <li><a href="mailto:ad@mishkamax.ru">Контакты</a></li>
-                        <li><a href="/reklama">Лицензирование</a></li>
+                        <li><a href="/mediakit-mishka-max2.pdf" target="_blank">Медиакит (PDF)</a></li>
+                        <li><a href="/reklama/">Сотрудничество</a></li>
+                        <li><a href="mailto:ad@mishkamax.ru">Написать нам</a></li>
+                        <li><a href="/privacy-policy.html">Политика</a></li>
                     </ul>
                 </div>
 
@@ -1277,7 +1445,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2025 Мишка Макс. Все права защищены. Сделано с ❤️ для детей</p>
+                <p>&copy; 2026 Мишка Макс. Все права защищены. Сделано с ❤️ для детей</p>
             </div>
         </div>
     </footer>
@@ -1397,6 +1565,119 @@
             audienceGrid.addEventListener('touchend', () => {
                 isDragging = false;
             });
+        }
+
+        // ===== Гамбургер-меню =====
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobileNav');
+
+        function closeMobileNav() {
+            hamburger.classList.remove('open');
+            mobileNav.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        if (hamburger && mobileNav) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('open');
+                mobileNav.classList.toggle('open');
+                document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+            });
+
+            mobileNav.addEventListener('click', (e) => {
+                if (e.target === mobileNav) closeMobileNav();
+            });
+        }
+
+        // ===== Прогресс-бар скролла =====
+        const scrollProgress = document.getElementById('scrollProgress');
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = (scrollTop / docHeight) * 100;
+            if (scrollProgress) scrollProgress.style.width = progress + '%';
+        });
+
+        // ===== Анимация счётчиков (count-up) =====
+        function animateCounter(el, target, suffix) {
+            const parts = target.split(suffix);
+            const num = parseFloat(parts[0].replace(',', '.'));
+            const suf = suffix + (parts[1] || '');
+            let start = 0;
+            const duration = 2000;
+            const step = 16;
+            const increments = Math.ceil(duration / step);
+            let count = 0;
+            const timer = setInterval(() => {
+                count++;
+                const progress = count / increments;
+                const eased = 1 - Math.pow(1 - progress, 3);
+                const current = (num * eased);
+                const display = Number.isInteger(num) ? Math.floor(current) : current.toFixed(1);
+                el.textContent = display + suf;
+                if (count >= increments) {
+                    el.textContent = target;
+                    clearInterval(timer);
+                }
+            }, step);
+        }
+
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.dataset.counted) {
+                    entry.target.dataset.counted = 'true';
+                    const original = entry.target.dataset.target;
+                    if (original) {
+                        const suffix = original.includes('К') ? 'К+' : original.includes('M') || original.includes('М') ? 'M+' : '+';
+                        animateCounter(entry.target, original, '');
+                    }
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.stat-number, .success-number').forEach(el => {
+            el.dataset.target = el.textContent;
+            counterObserver.observe(el);
+        });
+
+        // ===== Burst конфетти при первой загрузке =====
+        function launchConfetti() {
+            const emojis = ['⭐', '🌟', '✨', '🎉', '🎊', '💫', '🐻'];
+            for (let i = 0; i < 20; i++) {
+                setTimeout(() => {
+                    const el = document.createElement('div');
+                    el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+                    el.style.cssText = `
+                        position: fixed;
+                        left: ${Math.random() * 100}vw;
+                        top: -50px;
+                        font-size: ${Math.random() * 24 + 16}px;
+                        z-index: 9998;
+                        pointer-events: none;
+                        animation: confettiFall ${Math.random() * 2 + 2}s ease-in forwards;
+                    `;
+                    document.body.appendChild(el);
+                    setTimeout(() => el.remove(), 4000);
+                }, i * 100);
+            }
+        }
+
+        // Добавляем keyframes для конфетти
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes confettiFall {
+                to {
+                    transform: translateY(110vh) rotate(${Math.random() * 720}deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Запускаем при первом посещении
+        if (!sessionStorage.getItem('confettiShown')) {
+            setTimeout(launchConfetti, 500);
+            sessionStorage.setItem('confettiShown', '1');
         }
     </script>
 </body>
