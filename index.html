@@ -28,8 +28,8 @@
     <meta name="language" content="Russian">
 
     <title>Мишка Макс — Добрый друг каждого ребёнка 🐻</title>
-    <meta name="description" content="Мишка Макс — детский блогер и друг каждого ребёнка. Развивающий контент, песенки, мультики для детей 2-7 лет. 286K подписчиков в Instagram, TikTok, Telegram. Присоединяйтесь к нашей дружной семье!">
-    <meta name="keywords" content="мишка макс, детский блогер, развивающие видео для детей, песенки для детей, мультики для малышей, детский контент, блогер для детей, развивающий контент, детские песни, видео для детей 2-7 лет">
+    <meta name="description" content="Мишка Макс — безопасный проводник в мир знаний для детей 1–5 лет. 326K+ семей доверяют нашему контенту для эмоционального интеллекта малыша и безопасного развития. Песенки, мультики, методики для воспитателей.">
+    <meta name="keywords" content="мишка макс, детский блогер, развивающие видео для детей, песенки для детей, мультики для малышей, детский контент, эмоциональный интеллект малыша, безопасное развитие, методики для воспитателей, видео для детей 1-5 лет">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="Мишка Макс — Добрый друг каждого ребёнка">
@@ -52,6 +52,7 @@
     <link rel="apple-touch-icon" href="images/favicon.png">
 
     <link rel="stylesheet" href="fonts/fonts.css">
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
     <style>
         * {
             margin: 0;
@@ -951,6 +952,211 @@
                 opacity: 0;
             }
         }
+
+        /* === SCROLL-REVEAL АНИМАЦИЯ === */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+
+        /* === СЕКЦИЯ ЛЕГЕНДА === */
+        .story {
+            padding: 5rem 2rem;
+            background: linear-gradient(160deg, #FFF4EC 0%, #FFF8F3 60%, #EEF8FF 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .story::before {
+            content: '🐻';
+            position: absolute;
+            font-size: 18rem;
+            opacity: 0.04;
+            right: -2rem;
+            top: -2rem;
+            line-height: 1;
+            pointer-events: none;
+        }
+        .story-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .story-label {
+            display: inline-block;
+            background: var(--kids-main);
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 0.35rem 1rem;
+            border-radius: 50px;
+            margin-bottom: 1.5rem;
+        }
+        .story-container h2 {
+            font-family: 'Comfortaa', sans-serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            color: var(--kids-text);
+            margin-bottom: 2.5rem;
+        }
+        .story-quote {
+            background: #fff;
+            border-left: 4px solid var(--kids-main);
+            border-radius: 0 16px 16px 0;
+            padding: 2rem 2.5rem;
+            margin: 0 auto 2rem;
+            text-align: left;
+            box-shadow: 0 4px 24px rgba(255, 140, 66, 0.1);
+        }
+        .story-quote p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--kids-text);
+            margin-bottom: 1rem;
+        }
+        .story-quote p:last-child { margin-bottom: 0; }
+        .story-quote strong { color: var(--kids-main); }
+        .story-accent {
+            font-size: 1.1rem;
+            color: var(--kids-text);
+            opacity: 0.75;
+            font-style: italic;
+            margin-top: 1.5rem;
+        }
+        .story-icons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+        .story-icon-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .story-icon-item ph-icon,
+        .story-icon-item i {
+            font-size: 2.2rem;
+            color: var(--kids-main);
+        }
+        .story-icon-item span {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--kids-text);
+        }
+
+        /* === СЕКЦИЯ FAQ === */
+        .faq {
+            padding: 5rem 2rem;
+            background: var(--kids-bg);
+        }
+        .faq-container {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+        .faq-container h2 {
+            font-family: 'Comfortaa', sans-serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 0.75rem;
+            color: var(--kids-text);
+        }
+        .faq-subtitle {
+            text-align: center;
+            color: var(--kids-text);
+            opacity: 0.65;
+            margin-bottom: 3rem;
+            font-size: 1.05rem;
+        }
+        .faq-category {
+            margin-bottom: 2.5rem;
+        }
+        .faq-category-title {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--kids-main);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid rgba(255, 140, 66, 0.2);
+        }
+        .faq-category-title i { font-size: 1.1rem; }
+        .faq-item {
+            background: #fff;
+            border-radius: 16px;
+            margin-bottom: 0.75rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 1.1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+            font-family: 'Nunito', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--kids-text);
+            gap: 1rem;
+        }
+        .faq-question .faq-chevron {
+            flex-shrink: 0;
+            font-size: 1.2rem;
+            color: var(--kids-main);
+            transition: transform 0.3s;
+        }
+        .faq-item.open .faq-chevron {
+            transform: rotate(180deg);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, padding 0.35s ease;
+        }
+        .faq-item.open .faq-answer {
+            max-height: 300px;
+        }
+        .faq-answer-inner {
+            padding: 0 1.5rem 1.25rem;
+            font-size: 0.97rem;
+            line-height: 1.7;
+            color: var(--kids-text);
+            opacity: 0.85;
+        }
+        .faq-answer-inner a {
+            color: var(--kids-main);
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .faq-answer-inner a:hover { text-decoration: underline; }
+
+        @media (max-width: 768px) {
+            .story-quote { padding: 1.5rem; }
+            .story::before { font-size: 10rem; }
+            .faq-question { font-size: 0.95rem; padding: 1rem 1.2rem; }
+        }
     </style>
 </head>
 <body>
@@ -1013,6 +1219,42 @@
                 <a href="#partnership" class="btn btn-secondary">
                     <span>🤝</span> Стать партнёром
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Легенда: Рождение Солнечного Медведя -->
+    <section class="story" id="story">
+        <div class="story-container">
+            <div class="story-label reveal">История создания</div>
+            <h2 class="reveal reveal-delay-1">Рождение Солнечного Медведя</h2>
+
+            <div class="story-quote reveal reveal-delay-2">
+                <p>Всё началось с одного вопроса: «А как объяснить малышу, почему солнышко греет, а дружба — это важно?»</p>
+                <p>Мишка Макс не появился в студии анимации. Он «родился» в тот момент, когда я, наблюдая за своим племянником, захотел создать для него самого доброго, честного и безопасного друга. Персонажа, который не просто развлекает яркой картинкой, а бережно берёт за руку и ведёт по миру цветов, звуков и первых важных открытий.</p>
+                <p>Макс — это воплощение детского любопытства. Он такой же, как наши дети: он учится радоваться дождю, делать добрые дела и делиться открытиями. Поэтому ему верят. Поэтому с ним растут более <strong>326 000 семей</strong> по всей стране.</p>
+                <p>Мы не просто создаём контент — мы создаём безопасное пространство, где каждый ребёнок чувствует себя любимым и понятым.</p>
+            </div>
+
+            <p class="story-accent reveal reveal-delay-3">Мишка Макс — это «контент как для своего ребёнка».</p>
+
+            <div class="story-icons">
+                <div class="story-icon-item reveal reveal-delay-1">
+                    <i class="ph-duotone ph-heart" style="color: #FF5722;"></i>
+                    <span>Доброта</span>
+                </div>
+                <div class="story-icon-item reveal reveal-delay-2">
+                    <i class="ph-duotone ph-book-open" style="color: #FF8C42;"></i>
+                    <span>Обучение</span>
+                </div>
+                <div class="story-icon-item reveal reveal-delay-3">
+                    <i class="ph-duotone ph-shield-check" style="color: #52B8E8;"></i>
+                    <span>Безопасность</span>
+                </div>
+                <div class="story-icon-item reveal reveal-delay-4">
+                    <i class="ph-duotone ph-smiley" style="color: #8AD879;"></i>
+                    <span>Радость</span>
+                </div>
             </div>
         </div>
     </section>
@@ -1229,6 +1471,105 @@
         </div>
     </section>
 
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="faq-container">
+            <h2 class="reveal">Вопросы и ответы</h2>
+            <p class="faq-subtitle reveal reveal-delay-1">Всё, что вы хотели узнать о Мишке Максе</p>
+
+            <!-- Для родителей -->
+            <div class="faq-category reveal reveal-delay-2">
+                <div class="faq-category-title">
+                    <i class="ph-duotone ph-heart"></i> Для родителей
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        На какой возраст рассчитан контент Мишки Макса?
+                        <i class="ph ph-caret-down faq-chevron"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Наши видео и песни идеально подходят для малышей от <strong>1 до 5 лет</strong>. В этом возрасте дети активно познают мир, и Мишка становится их проводником в изучении цветов, форм и добрых поступков. Мы уделяем особое внимание эмоциональному интеллекту малыша и его безопасному развитию.</div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Безопасен ли контент для психики ребёнка?
+                        <i class="ph ph-caret-down faq-chevron"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Абсолютно. Мы придерживаемся принципа «экологичного контента»: никаких резких звуков, агрессивного монтажа или неуместной рекламы. Только спокойный темп и позитивные ценности. Контент создаётся как для своего ребёнка.</div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Где лучше всего смотреть Мишку Макса?
+                        <i class="ph ph-caret-down faq-chevron"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Мы есть там, где вам удобно! Основные видео выходят в <strong>Instagram</strong> и <strong>TikTok</strong>, а полезные советы и анонсы — в нашем <strong>Telegram-канале</strong>.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Для педагогов -->
+            <div class="faq-category reveal reveal-delay-3">
+                <div class="faq-category-title">
+                    <i class="ph-duotone ph-book-open"></i> Для педагогов и воспитателей
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Как использовать материалы Мишки Макса в детском саду?
+                        <i class="ph ph-caret-down faq-chevron"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">У нас есть специальное закрытое сообщество для педагогов. Там вы найдёте готовые сценарии занятий, музыку для праздников и методические карточки. <a href="/teacher/">Подписка всего 260₽/мес</a>.</div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Нужно ли разрешение на использование песен на утренниках?
+                        <i class="ph ph-caret-down faq-chevron"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Мы поддерживаем творчество! Если вы используете наши материалы для занятий в группах или на праздниках — мы только рады. Для коммерческого использования (фестивали, платные шоу) свяжитесь с нами по почте <a href="mailto:ad@mishkamax.ru">ad@mishkamax.ru</a>.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Для брендов -->
+            <div class="faq-category reveal reveal-delay-4">
+                <div class="faq-category-title">
+                    <i class="ph-duotone ph-shield-check"></i> Для брендов и партнёров
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Какой охват у проекта Мишка Макс?
+                        <i class="ph ph-caret-down faq-chevron"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">На сегодняшний день наше сообщество насчитывает более <strong>326 000 подписчиков</strong>, а ежемесячное количество просмотров превышает <strong>2,7 миллиона</strong>. Аудитория — активные родители детей 1–5 лет.</div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Как заказать рекламу или коллаборацию?
+                        <i class="ph ph-caret-down faq-chevron"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Мы открыты к сотрудничеству с брендами, которые разделяют наши ценности. Напишите нам в Telegram <a href="https://t.me/mishka_max_manager" target="_blank" rel="noopener">@mishka_max_manager</a> или загляните в раздел <a href="/reklama">«Реклама»</a>.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Подвал -->
     <footer>
         <div class="footer-container">
@@ -1396,6 +1737,101 @@
                 isDragging = false;
             });
         }
+
+        // === SCROLL-REVEAL ===
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // === FAQ АККОРДЕОН ===
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.closest('.faq-item');
+                const isOpen = item.classList.contains('open');
+                // Закрыть все в той же категории
+                btn.closest('.faq-category').querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+                if (!isOpen) item.classList.add('open');
+            });
+        });
+    </script>
+
+    <!-- Schema.org: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Мишка Макс",
+      "url": "https://mishka-max.ru",
+      "logo": "https://mishka-max.ru/images/favicon.png",
+      "description": "Детский блогер Мишка Макс — безопасный проводник в мир знаний для детей 1–5 лет. Развивающий контент, поддержка эмоционального интеллекта малыша, безопасное развитие.",
+      "sameAs": [
+        "https://instagram.com/mishka_max_",
+        "https://tiktok.com/@mishka_max_",
+        "https://t.me/+7-oGjM-AgbcxNWQ6"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "ad@mishkamax.ru",
+        "contactType": "sales"
+      }
+    }
+    </script>
+
+    <!-- Schema.org: FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "На какой возраст рассчитан контент Мишки Макса?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Наши видео и песни идеально подходят для малышей от 1 до 5 лет. Мы уделяем особое внимание эмоциональному интеллекту малыша и его безопасному развитию."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Безопасен ли контент для психики ребёнка?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Абсолютно. Никаких резких звуков, агрессивного монтажа или неуместной рекламы. Только спокойный темп и позитивные ценности. Контент создаётся как для своего ребёнка."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как использовать материалы Мишки Макса в детском саду?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "У нас есть закрытое сообщество для педагогов с готовыми сценариями занятий, музыкой для праздников и методическими карточками. Подписка — 260₽/мес."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какой охват у проекта Мишка Макс?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Более 326 000 подписчиков и свыше 2,7 миллиона просмотров в месяц. Аудитория — активные родители детей 1–5 лет."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как заказать рекламу или коллаборацию?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Напишите в Telegram @mishka_max_manager или на почту ad@mishkamax.ru."
+          }
+        }
+      ]
+    }
     </script>
 </body>
 </html>
