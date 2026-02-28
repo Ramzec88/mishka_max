@@ -970,25 +970,31 @@
 
         /* === СЕКЦИЯ ЛЕГЕНДА === */
         .story {
-            padding: 5rem 2rem;
-            background: linear-gradient(160deg, #FFF4EC 0%, #FFF8F3 60%, #EEF8FF 100%);
+            padding: 8rem 2rem;
+            background: radial-gradient(circle at top left, #FFF4EC 0%, #FFF8F3 100%);
             position: relative;
             overflow: hidden;
         }
         .story::before {
-            content: '🐻';
+            content: '';
             position: absolute;
-            font-size: 18rem;
-            opacity: 0.04;
-            right: -2rem;
-            top: -2rem;
-            line-height: 1;
+            width: 400px;
+            height: 400px;
+            background: var(--kids-main);
+            filter: blur(80px);
+            opacity: 0.08;
+            top: -100px;
+            right: -100px;
+            border-radius: 50%;
             pointer-events: none;
         }
         .story-container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
-            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3rem;
         }
         .story-label {
             display: inline-block;
@@ -1000,61 +1006,68 @@
             text-transform: uppercase;
             padding: 0.35rem 1rem;
             border-radius: 50px;
-            margin-bottom: 1.5rem;
         }
-        .story-container h2 {
-            font-family: 'Comfortaa', sans-serif;
-            font-size: clamp(2rem, 5vw, 3rem);
-            font-weight: 700;
-            color: var(--kids-text);
-            margin-bottom: 2.5rem;
-        }
-        .story-quote {
-            background: #fff;
-            border-left: 4px solid var(--kids-main);
-            border-radius: 0 16px 16px 0;
-            padding: 2rem 2.5rem;
-            margin: 0 auto 2rem;
+        .story-content {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+            align-items: center;
             text-align: left;
-            box-shadow: 0 4px 24px rgba(255, 140, 66, 0.1);
         }
-        .story-quote p {
-            font-size: 1.1rem;
+        .story-text-main {
+            font-size: 1.15rem;
             line-height: 1.8;
             color: var(--kids-text);
+        }
+        .story-text-main p { margin-bottom: 1.5rem; }
+        .story-text-main p:last-child { margin-bottom: 0; }
+        .story-note {
+            background: #fff;
+            padding: 3rem;
+            border-radius: 40px;
+            box-shadow: 0 30px 60px rgba(255, 140, 66, 0.12);
+            position: relative;
+            transform: rotate(1deg);
+            border: 2px dashed rgba(255, 140, 66, 0.3);
+        }
+        .story-note::after {
+            content: '💝';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            font-size: 3rem;
+            filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1));
+        }
+        .story-note h3 {
+            font-family: 'Comfortaa', sans-serif;
+            color: var(--core-orange);
             margin-bottom: 1rem;
+            font-size: 1.6rem;
         }
-        .story-quote p:last-child { margin-bottom: 0; }
-        .story-quote strong { color: var(--kids-main); }
-        .story-accent {
-            font-size: 1.1rem;
-            color: var(--kids-text);
-            opacity: 0.75;
-            font-style: italic;
-            margin-top: 1.5rem;
-        }
-        .story-icons {
+        .story-badges {
             display: flex;
             justify-content: center;
-            gap: 2rem;
-            margin-top: 3rem;
+            gap: 1rem;
             flex-wrap: wrap;
+            margin-top: 2rem;
         }
-        .story-icon-item {
+        .badge-item {
+            background: var(--kids-bg);
+            padding: 0.75rem 1.2rem;
+            border-radius: 50px;
             display: flex;
-            flex-direction: column;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.6rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            transition: transform 0.3s;
         }
-        .story-icon-item ph-icon,
-        .story-icon-item i {
-            font-size: 2.2rem;
-            color: var(--kids-main);
-        }
-        .story-icon-item span {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--kids-text);
+        .badge-item:hover { transform: scale(1.05); }
+        .badge-item i { font-size: 1.4rem; color: var(--kids-main); }
+        .badge-item span { font-weight: 700; font-size: 0.9rem; color: var(--kids-text); }
+        @media (max-width: 900px) {
+            .story-content { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
+            .story-note { transform: none; padding: 2rem; }
+            .story-note::after { top: -15px; right: -10px; font-size: 2rem; }
         }
 
         /* === СЕКЦИЯ FAQ === */
@@ -1226,34 +1239,36 @@
     <!-- Легенда: Рождение Солнечного Медведя -->
     <section class="story" id="story">
         <div class="story-container">
-            <div class="story-label reveal">История создания</div>
-            <h2 class="reveal reveal-delay-1">Рождение Солнечного Медведя</h2>
+            <div class="story-label reveal">От сердца к сердцу</div>
 
-            <div class="story-quote reveal reveal-delay-2">
-                <p>Всё началось с одного вопроса: «А как объяснить малышу, почему солнышко греет, а дружба — это важно?»</p>
-                <p>Мишка Макс не появился в студии анимации. Он «родился» в тот момент, когда я, наблюдая за своим племянником, захотел создать для него самого доброго, честного и безопасного друга. Персонажа, который не просто развлекает яркой картинкой, а бережно берёт за руку и ведёт по миру цветов, звуков и первых важных открытий.</p>
-                <p>Макс — это воплощение детского любопытства. Он такой же, как наши дети: он учится радоваться дождю, делать добрые дела и делиться открытиями. Поэтому ему верят. Поэтому с ним растут более <strong>326 000 семей</strong> по всей стране.</p>
-                <p>Мы не просто создаём контент — мы создаём безопасное пространство, где каждый ребёнок чувствует себя любимым и понятым.</p>
-            </div>
+            <div class="story-content">
+                <div class="story-text-main reveal reveal-delay-1">
+                    <h2 style="font-family: 'Comfortaa', sans-serif; font-size: clamp(2rem, 5vw, 2.8rem); margin-bottom: 2rem; line-height: 1.2; color: var(--kids-text);">
+                        Рождение <span style="color: var(--core-orange);">Солнечного</span> Медведя
+                    </h2>
+                    <p>Всё началось с простого вопроса: <strong>«Как объяснить малышу важные вещи без скучных нотаций?»</strong></p>
+                    <p>Мишка Макс не создавался в маркетинговом агентстве. Он появился из желания одного дяди создать для своего племянника по-настоящему доброго и честного друга.</p>
+                    <p>Макс — это персонаж, который бережно берёт ребёнка за руку и ведёт по миру открытий. Без криков, без резкого монтажа — только тепло и польза.</p>
+                </div>
 
-            <p class="story-accent reveal reveal-delay-3">Мишка Макс — это «контент как для своего ребёнка».</p>
+                <div class="story-note reveal reveal-delay-2">
+                    <h3>Мишка Макс — это...</h3>
+                    <p style="font-size: 1.05rem; line-height: 1.7; opacity: 0.85;">«Контент как для своего ребёнка. Мы не просто рисуем мультики, мы создаём безопасную среду, где более <strong>326 000 семей</strong> чувствуют спокойствие за развитие своих детей».</p>
 
-            <div class="story-icons">
-                <div class="story-icon-item reveal reveal-delay-1">
-                    <i class="ph-duotone ph-heart" style="color: #FF5722;"></i>
-                    <span>Доброта</span>
-                </div>
-                <div class="story-icon-item reveal reveal-delay-2">
-                    <i class="ph-duotone ph-book-open" style="color: #FF8C42;"></i>
-                    <span>Обучение</span>
-                </div>
-                <div class="story-icon-item reveal reveal-delay-3">
-                    <i class="ph-duotone ph-shield-check" style="color: #52B8E8;"></i>
-                    <span>Безопасность</span>
-                </div>
-                <div class="story-icon-item reveal reveal-delay-4">
-                    <i class="ph-duotone ph-smiley" style="color: #8AD879;"></i>
-                    <span>Радость</span>
+                    <div class="story-badges">
+                        <div class="badge-item">
+                            <i class="ph-fill ph-heart"></i>
+                            <span>Доброта</span>
+                        </div>
+                        <div class="badge-item">
+                            <i class="ph-fill ph-graduation-cap"></i>
+                            <span>Обучение</span>
+                        </div>
+                        <div class="badge-item">
+                            <i class="ph-fill ph-shield-check"></i>
+                            <span>Безопасность</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
