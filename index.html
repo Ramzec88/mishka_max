@@ -409,9 +409,9 @@
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 40% 1fr;
             gap: 4rem;
-            align-items: center;
+            align-items: stretch;
         }
 
         .about-image {
@@ -423,8 +423,9 @@
 
         .about-image img {
             width: 100%;
-            max-width: 460px;
-            height: auto;
+            height: 100%;
+            object-fit: contain;
+            object-position: center bottom;
             display: block;
             filter: drop-shadow(0 20px 40px rgba(255, 140, 0, 0.2));
             animation: pulse 3s infinite;
@@ -948,6 +949,18 @@
             .about-container {
                 grid-template-columns: 1fr;
                 gap: 2rem;
+            }
+
+            .about-image {
+                width: 100%;
+                max-height: 360px;
+                order: -1;
+            }
+
+            .about-image img {
+                height: 100%;
+                max-height: 360px;
+                object-fit: contain;
             }
 
             .about-features {
