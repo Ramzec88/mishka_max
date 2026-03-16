@@ -247,8 +247,34 @@
             position: relative;
             z-index: 10;
             max-width: 1200px;
+            width: 100%;
             padding: 2rem;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            text-align: left;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-image {
+            flex-shrink: 0;
+            width: clamp(220px, 35vw, 480px);
+            animation: floatUp 3s ease-in-out infinite;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            filter: drop-shadow(0 20px 40px rgba(255, 140, 0, 0.25));
+        }
+
+        @keyframes floatUp {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-16px); }
         }
 
         .hero h1 {
@@ -300,7 +326,7 @@
 
         .hero-stats {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             gap: 3rem;
             flex-wrap: wrap;
             margin: 3rem 0;
@@ -935,6 +961,17 @@
 
             .hero-stats {
                 gap: 1.5rem;
+                justify-content: center;
+            }
+
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-image {
+                width: clamp(180px, 60vw, 300px);
+                order: -1;
             }
         }
 
@@ -1201,37 +1238,43 @@
     <!-- Главный экран -->
     <section class="hero">
         <div class="hero-content">
-            <h1>
-                <span class="word">Привет!</span> 
-                <span class="word">Я</span> 
-                <span class="word">Мишка Макс! 🐻</span>
-            </h1>
-            <p class="hero-subtitle">
-                Самый добрый медведь в интернете, который учит малышей добру, цветам, формам и радости! ✨
-            </p>
-            
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-number">326К+</span>
-                    <span class="stat-label">подписчиков</span>
+            <div class="hero-text">
+                <h1>
+                    <span class="word">Привет!</span>
+                    <span class="word">Я</span>
+                    <span class="word">Мишка Макс! 🐻</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Самый добрый медведь в интернете, который учит малышей добру, цветам, формам и радости! ✨
+                </p>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">326К+</span>
+                        <span class="stat-label">подписчиков</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">2.7М+</span>
+                        <span class="stat-label">просмотров/месяц</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">1-5</span>
+                        <span class="stat-label">лет возраст</span>
+                    </div>
                 </div>
-                <div class="stat">
-                    <span class="stat-number">2.7М+</span>
-                    <span class="stat-label">просмотров/месяц</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">1-5</span>
-                    <span class="stat-label">лет возраст</span>
+
+                <div class="cta-buttons">
+                    <a href="#platforms" class="btn btn-primary">
+                        <i class="ph ph-play-circle"></i> Смотреть видео
+                    </a>
+                    <a href="#partnership" class="btn btn-secondary">
+                        <i class="ph ph-handshake"></i> Стать партнёром
+                    </a>
                 </div>
             </div>
 
-            <div class="cta-buttons">
-                <a href="#platforms" class="btn btn-primary">
-                    <i class="ph ph-play-circle"></i> Смотреть видео
-                </a>
-                <a href="#partnership" class="btn btn-secondary">
-                    <i class="ph ph-handshake"></i> Стать партнёром
-                </a>
+            <div class="hero-image">
+                <img src="images/mishka-hero.png" alt="Мишка Макс">
             </div>
         </div>
     </section>
