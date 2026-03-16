@@ -410,7 +410,7 @@
             margin: 0 auto;
             display: grid;
             grid-template-columns: 40% 1fr;
-            gap: 4rem;
+            gap: 3rem;
             align-items: stretch;
         }
 
@@ -436,6 +436,10 @@
             50% { transform: scale(1.03); }
         }
 
+        .about-text {
+            min-width: 0;
+        }
+
         .about-text h2 {
             font-family: 'Comfortaa', sans-serif;
             font-size: clamp(2rem, 5vw, 3.5rem);
@@ -453,7 +457,7 @@
         .about-features {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 1.5rem;
+            gap: 1rem;
             margin-top: 2rem;
         }
 
