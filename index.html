@@ -96,7 +96,7 @@
             width: 100%;
             height: 100%;
             pointer-events: none;
-            z-index: 1;
+            z-index: 0;
             overflow: hidden;
         }
 
@@ -535,6 +535,10 @@
             border-radius: 30px;
             transition: transform 0.3s, box-shadow 0.3s;
             cursor: pointer;
+            text-decoration: none;
+            display: block;
+            position: relative;
+            z-index: 2;
         }
 
         .platform-card:hover {
@@ -545,7 +549,12 @@
         .platform-icon {
             font-size: 4rem;
             margin-bottom: 1rem;
+            line-height: 1;
         }
+
+        .platform-icon--instagram { color: #E1306C; }
+        .platform-icon--tiktok    { color: #010101; }
+        .platform-icon--telegram  { color: #0088CC; }
 
         .platform-name {
             font-family: 'Comfortaa', sans-serif;
@@ -1384,26 +1393,26 @@
             </p>
 
             <div class="platform-grid">
-                <div class="platform-card">
-                    <div class="platform-icon"><i class="ph ph-instagram-logo"></i></div>
+                <a class="platform-card" href="https://instagram.com/mishka_max" target="_blank" rel="noopener">
+                    <div class="platform-icon platform-icon--instagram"><i class="ph ph-instagram-logo"></i></div>
                     <div class="platform-name">Instagram</div>
                     <div class="platform-stats">Ежедневные Reels с Мишкой</div>
                     <span class="platform-followers">221К</span>
-                </div>
+                </a>
 
-                <div class="platform-card">
-                    <div class="platform-icon"><i class="ph ph-tiktok-logo"></i></div>
+                <a class="platform-card" href="https://tiktok.com/@mishka_max" target="_blank" rel="noopener">
+                    <div class="platform-icon platform-icon--tiktok"><i class="ph ph-tiktok-logo"></i></div>
                     <div class="platform-name">TikTok</div>
                     <div class="platform-stats">Короткие весёлые видео</div>
                     <span class="platform-followers">95К</span>
-                </div>
+                </a>
 
-                <div class="platform-card">
-                    <div class="platform-icon"><i class="ph ph-telegram-logo"></i></div>
+                <a class="platform-card" href="https://t.me/mishka_max" target="_blank" rel="noopener">
+                    <div class="platform-icon platform-icon--telegram"><i class="ph ph-telegram-logo"></i></div>
                     <div class="platform-name">Telegram</div>
                     <div class="platform-stats">Для воспитателей и родителей</div>
                     <span class="platform-followers">10.5К</span>
-                </div>
+                </a>
             </div>
         </div>
     </section>
