@@ -958,6 +958,35 @@
             opacity: 0.8;
         }
 
+        .footer-legal-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-legal-links a {
+            color: rgba(255, 255, 255, 0.75);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .footer-legal-links a:hover {
+            color: white;
+        }
+
+        .footer-meta-disclaimer {
+            font-size: 0.75rem;
+            opacity: 0.5;
+            margin-top: 0.75rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.5;
+        }
+
         /* Адаптивность */
         @media (max-width: 768px) {
             .nav-links {
@@ -1395,7 +1424,7 @@
             <div class="platform-grid">
                 <a class="platform-card" href="https://instagram.com/mishka_max" target="_blank" rel="noopener">
                     <div class="platform-icon platform-icon--instagram"><i class="ph ph-instagram-logo"></i></div>
-                    <div class="platform-name">Instagram</div>
+                    <div class="platform-name">Instagram*</div>
                     <div class="platform-stats">Ежедневные Reels с Мишкой</div>
                     <span class="platform-followers">221К</span>
                 </a>
@@ -1660,7 +1689,7 @@
                     <h3>Мишка Макс</h3>
                     <p>Добрый друг для каждого ребёнка. Обучаем, развиваем, вдохновляем! 🐻✨</p>
                     <div class="social-links">
-                        <a href="https://instagram.com/mishka_max_" class="social-link" target="_blank" rel="noopener"><i class="ph ph-instagram-logo"></i></a>
+                        <a href="https://instagram.com/mishka_max_" class="social-link" target="_blank" rel="noopener"><i class="ph ph-instagram-logo"></i></a><sup>*</sup>
                         <a href="https://tiktok.com/@mishka_max_" class="social-link" target="_blank" rel="noopener"><i class="ph ph-tiktok-logo"></i></a>
                         <a href="https://t.me/+7-oGjM-AgbcxNWQ6" class="social-link" target="_blank" rel="noopener"><i class="ph ph-telegram-logo"></i></a>
                     </div>
@@ -1698,7 +1727,12 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2025 Мишка Макс. Все права защищены. Сделано с ❤️ для детей</p>
+                <div class="footer-legal-links">
+                    <a href="/user-agreement.html">Пользовательское соглашение</a>
+                    <a href="/privacy-policy.html">Политика конфиденциальности</a>
+                </div>
+                <p>&copy; 2025–2026 Мишка Макс. Все права защищены.</p>
+                <p class="footer-meta-disclaimer">*Meta признана экстремистской организацией и запрещена в России, её продукты Instagram* и Facebook (Инстаграм и Фейсбук) также запрещены на территории РФ</p>
             </div>
         </div>
     </footer>
