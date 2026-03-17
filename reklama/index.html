@@ -51,10 +51,26 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
 
     <style>
+        /* Переопределение шрифтов для страницы /reklama */
+        :root {
+            --font-display: 'Nunito', sans-serif;
+            --font-body: 'Nunito', sans-serif;
+        }
+
+        h1, h2, h3, h4, h5, h6,
+        .section-title, .hero-title, .package-title,
+        .builder-group-title, .logo-text, .nav-link {
+            font-weight: 800;
+        }
+
+        body, p, li, span, div {
+            font-weight: 400;
+        }
+
         /* Instagram* Embed в кейсах */
         .case-image .instagram-media {
             margin: 0 auto !important;
