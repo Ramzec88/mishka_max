@@ -105,6 +105,99 @@
             font-weight: 400;
         }
 
+        /* === FAQ секция (аккордеон) === */
+        .reklama-faq {
+            padding: 5rem 2rem;
+            background: #FFF8F3;
+        }
+        .reklama-faq-container {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+        .reklama-faq-container h2 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 0.75rem;
+            color: #2C3E50;
+        }
+        .reklama-faq-subtitle {
+            text-align: center;
+            color: #2C3E50;
+            opacity: 0.65;
+            margin-bottom: 3rem;
+            font-size: 1.05rem;
+        }
+        .reklama-faq-category {
+            margin-bottom: 2.5rem;
+        }
+        .reklama-faq-category-title {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #FF8C42;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid rgba(255, 140, 66, 0.2);
+        }
+        .reklama-faq-item {
+            background: #fff;
+            border-radius: 16px;
+            margin-bottom: 0.75rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        .reklama-faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 1.1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+            font-family: 'Nunito', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #2C3E50;
+            gap: 1rem;
+        }
+        .reklama-faq-chevron {
+            flex-shrink: 0;
+            font-size: 1.2rem;
+            color: #FF8C42;
+            transition: transform 0.3s;
+        }
+        .reklama-faq-item.open .reklama-faq-chevron {
+            transform: rotate(180deg);
+        }
+        .reklama-faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease;
+        }
+        .reklama-faq-item.open .reklama-faq-answer {
+            max-height: 300px;
+        }
+        .reklama-faq-answer-inner {
+            padding: 0 1.5rem 1.25rem;
+            font-size: 0.97rem;
+            line-height: 1.7;
+            color: #2C3E50;
+            opacity: 0.85;
+        }
+        .reklama-faq-answer-inner a {
+            color: #FF8C42;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .reklama-faq-answer-inner a:hover { text-decoration: underline; }
+
         /* Instagram* Embed в кейсах */
         .case-image .instagram-media {
             margin: 0 auto !important;
@@ -1186,20 +1279,81 @@
     </div>
 
     <!-- FAQ Section -->
-    <section class="faq" id="faq" style="background: var(--color-bg); padding: 40px 24px;">
-        <div class="container" style="max-width: 800px;">
-            <h2 class="section-title">Вопросы о рекламе в блоге</h2>
-            <div class="faq-item" style="margin-bottom: 20px;">
-                <h3 style="font-size: 18px; margin-bottom: 8px;">Как купить рекламу у блогера официально?</h3>
-                <p style="color: var(--color-text-secondary);">Мы работаем официально. Возможна оплата по счету для юрлиц с предоставлением закрывающих документов (договор, акт) для вашей бухгалтерии.</p>
+    <section class="reklama-faq" id="faq">
+        <div class="reklama-faq-container">
+            <h2>Вопросы о рекламе в блоге</h2>
+            <p class="reklama-faq-subtitle">Всё, что вы хотели узнать о сотрудничестве</p>
+
+            <div class="reklama-faq-category">
+                <div class="reklama-faq-category-title">
+                    <i class="ph-duotone ph-currency-circle-dollar"></i> Оплата и документы
+                </div>
+                <div class="reklama-faq-item">
+                    <button class="reklama-faq-question">
+                        Как купить рекламу у блогера официально?
+                        <i class="ph ph-caret-down reklama-faq-chevron"></i>
+                    </button>
+                    <div class="reklama-faq-answer">
+                        <div class="reklama-faq-answer-inner">Мы работаем официально. Возможна оплата по счёту для юрлиц с предоставлением закрывающих документов (договор, акт) для вашей бухгалтерии.</div>
+                    </div>
+                </div>
+                <div class="reklama-faq-item">
+                    <button class="reklama-faq-question">
+                        Какие способы оплаты принимаете?
+                        <i class="ph ph-caret-down reklama-faq-chevron"></i>
+                    </button>
+                    <div class="reklama-faq-answer">
+                        <div class="reklama-faq-answer-inner">Принимаем оплату на расчётный счёт (для юрлиц и ИП), а также переводом для физлиц. Предоплата 50%, остаток — после выхода публикации.</div>
+                    </div>
+                </div>
             </div>
-            <div class="faq-item" style="margin-bottom: 20px;">
-                <h3 style="font-size: 18px; margin-bottom: 8px;">Делаете ли вы нативную рекламу для детских брендов?</h3>
-                <p style="color: var(--color-text-secondary);">Да, нативная интеграция — наш основной профиль. Мы вписываем продукт в сценарий роликов Reels и TikTok так, чтобы это не выглядело навязыванием.</p>
+
+            <div class="reklama-faq-category">
+                <div class="reklama-faq-category-title">
+                    <i class="ph-duotone ph-video-camera"></i> Форматы и производство
+                </div>
+                <div class="reklama-faq-item">
+                    <button class="reklama-faq-question">
+                        Делаете ли вы нативную рекламу для детских брендов?
+                        <i class="ph ph-caret-down reklama-faq-chevron"></i>
+                    </button>
+                    <div class="reklama-faq-answer">
+                        <div class="reklama-faq-answer-inner">Да, нативная интеграция — наш основной профиль. Мы вписываем продукт в сценарий роликов Reels и TikTok так, чтобы это не выглядело навязыванием.</div>
+                    </div>
+                </div>
+                <div class="reklama-faq-item">
+                    <button class="reklama-faq-question">
+                        Можно ли предоставить свои материалы для рекламы?
+                        <i class="ph ph-caret-down reklama-faq-chevron"></i>
+                    </button>
+                    <div class="reklama-faq-answer">
+                        <div class="reklama-faq-answer-inner">Да, мы принимаем готовые материалы и адаптируем их под стиль канала. Также полностью берём производство на себя — от сценария до монтажа.</div>
+                    </div>
+                </div>
             </div>
-            <div class="faq-item">
-                <h3 style="font-size: 18px; margin-bottom: 8px;">Какая статистика предоставляется после размещения?</h3>
-                <p style="color: var(--color-text-secondary);">Через 24 и 48 часов мы высылаем скриншоты охватов, переходов по ссылкам и реакций из официальной статистики Instagram* и TikTok.</p>
+
+            <div class="reklama-faq-category">
+                <div class="reklama-faq-category-title">
+                    <i class="ph-duotone ph-chart-bar"></i> Результаты и статистика
+                </div>
+                <div class="reklama-faq-item">
+                    <button class="reklama-faq-question">
+                        Какая статистика предоставляется после размещения?
+                        <i class="ph ph-caret-down reklama-faq-chevron"></i>
+                    </button>
+                    <div class="reklama-faq-answer">
+                        <div class="reklama-faq-answer-inner">Через 24 и 48 часов высылаем скриншоты охватов, переходов по ссылкам и реакций из официальной статистики Instagram* и TikTok.</div>
+                    </div>
+                </div>
+                <div class="reklama-faq-item">
+                    <button class="reklama-faq-question">
+                        Как быстро запустить рекламную кампанию?
+                        <i class="ph ph-caret-down reklama-faq-chevron"></i>
+                    </button>
+                    <div class="reklama-faq-answer">
+                        <div class="reklama-faq-answer-inner">Стандартный срок от заявки до публикации — <strong>48 часов</strong>. Напишите нам в <a href="https://t.me/mishka_max_manager" target="_blank" rel="noopener">Telegram</a> — обсудим детали и согласуем дату выхода.</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1861,6 +2015,17 @@
 
     <!-- Instagram* Embed Script -->
     <script async src="//www.instagram.com/embed.js"></script>
+
+    <script>
+        document.querySelectorAll('.reklama-faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.closest('.reklama-faq-item');
+                const isOpen = item.classList.contains('open');
+                btn.closest('.reklama-faq-category').querySelectorAll('.reklama-faq-item').forEach(i => i.classList.remove('open'));
+                if (!isOpen) item.classList.add('open');
+            });
+        });
+    </script>
 
 </body>
 </html>
