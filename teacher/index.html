@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <style>
         * {
             margin: 0;
@@ -90,7 +91,7 @@
         }
 
         .hero::before {
-            content: '📚';
+            content: '♪';
             position: absolute;
             font-size: 25rem;
             opacity: 0.03;
@@ -225,9 +226,11 @@
         }
 
         .hero-visual-icon {
-            font-size: 12rem;
+            font-size: 10rem;
             display: block;
             margin-bottom: 1rem;
+            color: var(--pro-terracotta);
+            line-height: 1;
         }
 
         .hero-visual-text {
@@ -283,9 +286,11 @@
         }
 
         .problem-icon {
-            font-size: 3rem;
+            font-size: 2.8rem;
             margin-bottom: 1rem;
             display: block;
+            color: var(--pro-terracotta);
+            line-height: 1;
         }
 
         .problem-title {
@@ -363,10 +368,14 @@
         }
 
         .comparison-icon {
-            font-size: 4rem;
+            font-size: 3.5rem;
             display: block;
             margin-bottom: 1rem;
+            line-height: 1;
         }
+
+        .comparison-column.without .comparison-icon { color: #aaa; }
+        .comparison-column.with .comparison-icon { color: var(--pro-terracotta); }
 
         .comparison-title {
             font-family: 'Fredoka', sans-serif;
@@ -396,10 +405,14 @@
         }
 
         .comparison-item-icon {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             flex-shrink: 0;
-            margin-top: 0.2rem;
+            margin-top: 0.15rem;
+            line-height: 1;
         }
+
+        .comparison-column.without .comparison-item-icon { color: #bbb; }
+        .comparison-column.with .comparison-item-icon { color: var(--pro-terracotta); }
 
         .comparison-item-text {
             font-size: 1rem;
@@ -449,9 +462,11 @@
         }
 
         .content-icon {
-            font-size: 3.5rem;
+            font-size: 3rem;
             margin-bottom: 1.5rem;
             display: block;
+            color: var(--pro-terracotta);
+            line-height: 1;
         }
 
         .content-title {
@@ -606,7 +621,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
+            color: white;
         }
 
         .testimonial-info {
@@ -868,16 +884,16 @@
 
                 <div class="hero-cta">
                     <a href="#pricing" class="btn btn-primary">
-                        <span>🎯</span> Подключить сейчас
+                        <i class="ph ph-arrow-right"></i> Подключить сейчас
                     </a>
                     <a href="#whats-inside" class="btn btn-secondary">
-                        <span>📚</span> Что внутри
+                        <i class="ph ph-books"></i> Что внутри
                     </a>
                 </div>
             </div>
 
             <div class="hero-visual">
-                <span class="hero-visual-icon">👩‍🏫</span>
+                <i class="ph ph-chalkboard-teacher hero-visual-icon"></i>
                 <p class="hero-visual-text">Уже 10 500+ воспитателей с нами!</p>
             </div>
         </div>
@@ -891,7 +907,7 @@
 
             <div class="problems-grid fade-in">
                 <div class="problem-card">
-                    <span class="problem-icon">⏰</span>
+                    <i class="ph ph-clock problem-icon"></i>
                     <h3 class="problem-title">Нехватка времени</h3>
                     <p class="problem-text">
                         Вечера уходят на поиск материалов, адаптацию сценариев и подготовку к занятиям вместо отдыха с семьёй.
@@ -899,7 +915,7 @@
                 </div>
 
                 <div class="problem-card">
-                    <span class="problem-icon">🔍</span>
+                    <i class="ph ph-magnifying-glass problem-icon"></i>
                     <h3 class="problem-title">Где искать идеи?</h3>
                     <p class="problem-text">
                         Интернет переполнен материалами, но найти качественный, соответствующий ФГОС контент — задача не из лёгких.
@@ -907,7 +923,7 @@
                 </div>
 
                 <div class="problem-card">
-                    <span class="problem-icon">🎭</span>
+                    <i class="ph ph-confetti problem-icon"></i>
                     <h3 class="problem-title">Праздники и утренники</h3>
                     <p class="problem-text">
                         Каждый праздник требует нового сценария. Хочется удивить детей и родителей, но идеи кончаются.
@@ -915,7 +931,7 @@
                 </div>
 
                 <div class="problem-card">
-                    <span class="problem-icon">📋</span>
+                    <i class="ph ph-clipboard-text problem-icon"></i>
                     <h3 class="problem-title">Документация</h3>
                     <p class="problem-text">
                         Помимо занятий нужно заполнять планы, отчёты, методические карты — на это тоже нужно время.
@@ -924,7 +940,7 @@
             </div>
 
             <div class="solution-highlight fade-in">
-                <h3>Мы решили эти проблемы раз и навсегда! 🎉</h3>
+                <h3>Мы решили эти проблемы раз и навсегда! <i class="ph ph-confetti" style="font-size:1.2em;vertical-align:middle;color:var(--pro-terracotta)"></i></h3>
                 <p>
                     Подписка Мишка Макс PRO — это ваш личный методический кабинет с готовыми материалами на каждый день.
                 </p>
@@ -941,28 +957,28 @@
             <div class="benefits-comparison fade-in">
                 <div class="comparison-column without">
                     <div class="comparison-header">
-                        <span class="comparison-icon">😓</span>
+                        <i class="ph ph-smiley-sad comparison-icon"></i>
                         <h3 class="comparison-title">БЕЗ подписки</h3>
                     </div>
                     <ul class="comparison-items">
                         <li class="comparison-item">
-                            <span class="comparison-item-icon">❌</span>
+                            <i class="ph ph-x-circle comparison-item-icon"></i>
                             <span class="comparison-item-text">3-4 часа вечером на поиск и адаптацию материалов</span>
                         </li>
                         <li class="comparison-item">
-                            <span class="comparison-item-icon">❌</span>
+                            <i class="ph ph-x-circle comparison-item-icon"></i>
                             <span class="comparison-item-text">Скачивание сценариев из сомнительных источников</span>
                         </li>
                         <li class="comparison-item">
-                            <span class="comparison-item-icon">❌</span>
+                            <i class="ph ph-x-circle comparison-item-icon"></i>
                             <span class="comparison-item-text">Переплата за каждый отдельный материал</span>
                         </li>
                         <li class="comparison-item">
-                            <span class="comparison-item-icon">❌</span>
+                            <i class="ph ph-x-circle comparison-item-icon"></i>
                             <span class="comparison-item-text">Постоянный стресс перед праздниками</span>
                         </li>
                         <li class="comparison-item">
-                            <span class="comparison-item-icon">❌</span>
+                            <i class="ph ph-x-circle comparison-item-icon"></i>
                             <span class="comparison-item-text">Отсутствие системы — каждый раз начинаете с нуля</span>
                         </li>
                     </ul>
@@ -970,28 +986,28 @@
 
                 <div class="comparison-column with">
                     <div class="comparison-header">
-                        <span class="comparison-icon">✨</span>
+                        <i class="ph ph-sparkle comparison-icon"></i>
                         <h3 class="comparison-title">С подпиской PRO</h3>
                     </div>
                     <ul class="comparison-items">
                         <li class="comparison-item">
-                            <span class="comparison-item-icon">✓</span>
+                            <i class="ph ph-check-circle comparison-item-icon"></i>
                             <span class="comparison-item-text">10-15 минут на выбор готового сценария — и готово!</span>
                         </li>
                         <li class="comparison-item">
-                            <span class="comparison-item-icon">✓</span>
+                            <i class="ph ph-check-circle comparison-item-icon"></i>
                             <span class="comparison-item-text">Все материалы проверены педагогами и соответствуют ФГОС</span>
                         </li>
                         <li class="comparison-item">
-                            <span class="comparison-item-icon">✓</span>
+                            <i class="ph ph-check-circle comparison-item-icon"></i>
                             <span class="comparison-item-text">Безлимитный доступ ко всей библиотеке за 260₽/мес</span>
                         </li>
                         <li class="comparison-item">
-                            <span class="comparison-item-icon">✓</span>
+                            <i class="ph ph-check-circle comparison-item-icon"></i>
                             <span class="comparison-item-text">Готовые сценарии праздников на весь год заранее</span>
                         </li>
                         <li class="comparison-item">
-                            <span class="comparison-item-icon">✓</span>
+                            <i class="ph ph-check-circle comparison-item-icon"></i>
                             <span class="comparison-item-text">Организованная база знаний — всё по темам и возрастам</span>
                         </li>
                     </ul>
@@ -1008,7 +1024,7 @@
 
             <div class="content-grid fade-in">
                 <div class="content-card">
-                    <span class="content-icon">🎭</span>
+                    <i class="ph ph-confetti content-icon"></i>
                     <h3 class="content-title">Сценарии праздников</h3>
                     <p class="content-description">
                         Готовые сценарии на все праздники года с диалогами, музыкой, играми и реквизитом.
@@ -1022,7 +1038,7 @@
                 </div>
 
                 <div class="content-card">
-                    <span class="content-icon">📚</span>
+                    <i class="ph ph-books content-icon"></i>
                     <h3 class="content-title">Конспекты занятий</h3>
                     <p class="content-description">
                         Подробные планы занятий по развитию речи, математике, окружающему миру для всех возрастов.
@@ -1036,7 +1052,7 @@
                 </div>
 
                 <div class="content-card">
-                    <span class="content-icon">🎨</span>
+                    <i class="ph ph-paint-brush-broad content-icon"></i>
                     <h3 class="content-title">Творческие мастер-классы</h3>
                     <p class="content-description">
                         Пошаговые инструкции для занятий по рисованию, лепке, аппликации с Мишкой Максом.
@@ -1050,7 +1066,7 @@
                 </div>
 
                 <div class="content-card">
-                    <span class="content-icon">🎵</span>
+                    <i class="ph ph-music-note content-icon"></i>
                     <h3 class="content-title">Музыкальные занятия</h3>
                     <p class="content-description">
                         Песни, танцы, музыкальные игры с нотами, текстами и описанием движений.
@@ -1064,7 +1080,7 @@
                 </div>
 
                 <div class="content-card">
-                    <span class="content-icon">🏃</span>
+                    <i class="ph ph-person-simple-run content-icon"></i>
                     <h3 class="content-title">Физкультура и игры</h3>
                     <p class="content-description">
                         Комплексы упражнений, подвижные игры, эстафеты для развития моторики и координации.
@@ -1078,7 +1094,7 @@
                 </div>
 
                 <div class="content-card">
-                    <span class="content-icon">📋</span>
+                    <i class="ph ph-clipboard-text content-icon"></i>
                     <h3 class="content-title">Шаблоны документов</h3>
                     <p class="content-description">
                         Готовые бланки планов, отчётов, методических разработок — просто заполните!
@@ -1140,7 +1156,7 @@
                         теперь просто открываю канал — и всё готово. Дети в восторге от занятий с Мишкой!
                     </p>
                     <div class="testimonial-author">
-                        <div class="testimonial-avatar">👩‍🏫</div>
+                        <div class="testimonial-avatar"><i class="ph ph-chalkboard-teacher"></i></div>
                         <div class="testimonial-info">
                             <div class="testimonial-name">Елена Смирнова</div>
                             <div class="testimonial-position">Воспитатель, стаж 8 лет, Москва</div>
@@ -1155,7 +1171,7 @@
                         родители были в восторге. Все материалы структурированные, понятные, сразу готовы к работе.
                     </p>
                     <div class="testimonial-author">
-                        <div class="testimonial-avatar">👩‍🏫</div>
+                        <div class="testimonial-avatar"><i class="ph ph-chalkboard-teacher"></i></div>
                         <div class="testimonial-info">
                             <div class="testimonial-name">Анна Петрова</div>
                             <div class="testimonial-position">Методист ДОУ №45, Санкт-Петербург</div>
@@ -1170,7 +1186,7 @@
                         Один сценарий праздника стоил бы дороже. А здесь целая библиотека и новинки каждую неделю!
                     </p>
                     <div class="testimonial-author">
-                        <div class="testimonial-avatar">👩‍🏫</div>
+                        <div class="testimonial-avatar"><i class="ph ph-chalkboard-teacher"></i></div>
                         <div class="testimonial-info">
                             <div class="testimonial-name">Ольга Васильева</div>
                             <div class="testimonial-position">Воспитатель, стаж 15 лет, Казань</div>
@@ -1209,7 +1225,7 @@
                 </ul>
 
                 <a href="https://t.me/mishkamax_pro_bot" class="btn btn-primary" style="font-size: 1.3rem; padding: 1.5rem 3rem;">
-                    <span>✨</span> Подключить прямо сейчас
+                    <i class="ph ph-sparkle"></i> Подключить прямо сейчас
                 </a>
             </div>
         </div>
@@ -1224,7 +1240,7 @@
                 а не в стрессе. Первая неделя — пробная!
             </p>
             <a href="https://t.me/mishkamax_pro_bot" class="btn btn-primary">
-                <span>🚀</span> Начать экономить время
+                <i class="ph ph-rocket-launch"></i> Начать экономить время
             </a>
         </div>
     </section>
@@ -1239,7 +1255,7 @@
                 <a href="mailto:pro@mishkamax.ru">Поддержка</a>
             </div>
             <div class="footer-copyright">
-                &copy; 2025 Мишка Макс PRO. Для воспитателей с любовью 💝
+                &copy; 2025 Мишка Макс PRO. Для воспитателей с любовью <i class="ph ph-heart" style="color:var(--pro-terracotta);vertical-align:middle"></i>
             </div>
         </div>
     </footer>
