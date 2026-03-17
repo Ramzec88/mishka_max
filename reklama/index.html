@@ -95,6 +95,11 @@
             margin: 0;
         }
 
+        /* Убираем встроенный h3 из стилей contact-form-wrapper */
+        .contact-form-wrapper h3 {
+            display: none;
+        }
+
         .contact-reply-note {
             text-align: center;
             font-size: 0.85rem;
@@ -1274,13 +1279,20 @@
                                     <div class="contact-method-detail">+7 915 468-01-66</div>
                                 </div>
                             </a>
+                            <a href="https://telega.in/catalog?filter%5Bsearch%5D=мишка+макс&filter%5Bexcept_black%5D=true&order%5Bsort%5D=rating&order%5Btype%5D=DESC" target="_blank" rel="noopener" class="contact-method">
+                                <i class="ph ph-storefront contact-icon-ph"></i>
+                                <div>
+                                    <div class="contact-method-title">Telega.in</div>
+                                    <div class="contact-method-detail">Каталог рекламы</div>
+                                </div>
+                            </a>
                         </div>
                     </div>
 
                     <!-- Правая колонка: форма -->
                     <div class="contact-col-right">
+                        <h3 class="contact-col-heading">Или оставьте заявку</h3>
                         <div class="contact-form-wrapper">
-                            <h3>Или оставьте заявку</h3>
                             <form class="contact-form" id="contactForm" action="https://formsubmit.co/9104171772a@gmail.com" method="POST">
                                 <input type="hidden" name="_subject" value="Новая заявка с сайта Мишка Макс">
                                 <input type="hidden" name="_captcha" value="false">
