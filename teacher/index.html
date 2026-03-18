@@ -241,144 +241,15 @@
         /* Hero visual */
         .hero-visual {
             position: relative;
-        }
-
-        .hero-mockup-card {
-            background: white;
-            border-radius: 24px;
-            box-shadow: 0 25px 60px rgba(0,0,0,0.12);
-            overflow: hidden;
-            position: relative;
-        }
-
-        .mockup-header {
-            background: var(--pro-terracotta);
-            padding: 1.5rem 2rem;
-            color: white;
-        }
-
-        .mockup-header-title {
-            font-size: 1.2rem;
-            font-weight: 800;
-            margin-bottom: 0.3rem;
-        }
-
-        .mockup-header-sub {
-            font-size: 0.85rem;
-            opacity: 0.85;
-        }
-
-        .mockup-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0.8rem;
-            padding: 1.2rem 2rem;
-            background: #f0ece8;
-        }
-
-        .mockup-stat {
-            background: white;
-            border-radius: 10px;
-            padding: 0.8rem;
             text-align: center;
         }
 
-        .mockup-stat-num {
-            font-size: 1.5rem;
-            font-weight: 900;
-            color: var(--pro-terracotta);
+        .hero-visual img {
+            max-width: 340px;
+            width: 100%;
             display: block;
-        }
-
-        .mockup-stat-label {
-            font-size: 0.7rem;
-            color: var(--pro-text);
-            opacity: 0.7;
-        }
-
-        .mockup-tabs {
-            display: flex;
-            gap: 0;
-            padding: 0 2rem;
-            background: #f0ece8;
-            border-bottom: 2px solid #e8e4e0;
-        }
-
-        .mockup-tab {
-            padding: 0.8rem 1rem;
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: var(--pro-text);
-            opacity: 0.6;
-            cursor: pointer;
-        }
-
-        .mockup-tab.active {
-            color: var(--pro-terracotta);
-            opacity: 1;
-            border-bottom: 2px solid var(--pro-terracotta);
-            margin-bottom: -2px;
-        }
-
-        .mockup-items {
-            padding: 1.2rem 2rem;
-        }
-
-        .mockup-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.9rem 1rem;
-            background: var(--pro-bg);
-            border-radius: 12px;
-            margin-bottom: 0.7rem;
-        }
-
-        .mockup-item-left {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-
-        .mockup-item-icon {
-            width: 36px;
-            height: 36px;
-            background: white;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.1rem;
-            color: var(--pro-terracotta);
-        }
-
-        .mockup-item-name {
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: var(--pro-text);
-        }
-
-        .mockup-item-sub {
-            font-size: 0.75rem;
-            color: var(--pro-text);
-            opacity: 0.6;
-        }
-
-        .mockup-item-count {
-            font-size: 1.1rem;
-            font-weight: 900;
-            color: var(--pro-terracotta);
-        }
-
-        .mockup-cta-btn {
-            margin: 0.5rem 2rem 1.5rem;
-            background: var(--pro-terracotta);
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            border-radius: 12px;
-            font-weight: 800;
-            font-size: 0.95rem;
+            margin: 0 auto;
+            filter: drop-shadow(0 24px 48px rgba(0,0,0,0.13));
         }
 
         /* ===== SECTION BASE ===== */
@@ -1110,64 +981,7 @@
         </div>
 
         <div class="hero-visual fade-in">
-            <div class="hero-mockup-card">
-                <div class="mockup-header">
-                    <div class="mockup-header-title">🐻 Кладовая педагога</div>
-                    <div class="mockup-header-sub">Мишка Макс • Материалы для занятий</div>
-                </div>
-                <div class="mockup-stats">
-                    <div class="mockup-stat">
-                        <span class="mockup-stat-num">4</span>
-                        <span class="mockup-stat-label">рубрики</span>
-                    </div>
-                    <div class="mockup-stat">
-                        <span class="mockup-stat-num">151</span>
-                        <span class="mockup-stat-label">материал</span>
-                    </div>
-                    <div class="mockup-stat">
-                        <span class="mockup-stat-num">34</span>
-                        <span class="mockup-stat-label">новинки</span>
-                    </div>
-                </div>
-                <div class="mockup-tabs">
-                    <div class="mockup-tab active">Рубрики</div>
-                    <div class="mockup-tab">Все материалы</div>
-                    <div class="mockup-tab">Новинки 🔥</div>
-                </div>
-                <div class="mockup-items">
-                    <div class="mockup-item">
-                        <div class="mockup-item-left">
-                            <div class="mockup-item-icon"><i class="ph ph-music-note"></i></div>
-                            <div>
-                                <div class="mockup-item-name">Песни</div>
-                                <div class="mockup-item-sub">Авторские и народные • аудио</div>
-                            </div>
-                        </div>
-                        <div class="mockup-item-count">126</div>
-                    </div>
-                    <div class="mockup-item">
-                        <div class="mockup-item-left">
-                            <div class="mockup-item-icon"><i class="ph ph-clipboard-text"></i></div>
-                            <div>
-                                <div class="mockup-item-name">Сценарии</div>
-                                <div class="mockup-item-sub">Праздники, занятия, утренники</div>
-                            </div>
-                        </div>
-                        <div class="mockup-item-count">19</div>
-                    </div>
-                    <div class="mockup-item">
-                        <div class="mockup-item-left">
-                            <div class="mockup-item-icon"><i class="ph ph-cards"></i></div>
-                            <div>
-                                <div class="mockup-item-name">Материалы</div>
-                                <div class="mockup-item-sub">Дидактика, карточки, шаблоны</div>
-                            </div>
-                        </div>
-                        <div class="mockup-item-count">4</div>
-                    </div>
-                </div>
-                <div class="mockup-cta-btn">🎓 Оформить подписку — 260 ₽/мес</div>
-            </div>
+            <img src="../images/mockup_Vosp_left.png" alt="Кладовая педагога — приложение для воспитателей">
         </div>
     </div>
 </section>
