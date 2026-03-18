@@ -506,7 +506,7 @@
             display: flex;
             align-items: center;
             gap: 2rem;
-            background: linear-gradient(135deg, #1a1250 0%, #2d1b69 50%, #0d3466 100%);
+            background: linear-gradient(135deg, #2D1F5E 0%, #1A123D 100%);
             border-radius: 24px;
             padding: 2rem 2.5rem;
             margin-top: 1rem;
@@ -520,12 +520,21 @@
             box-shadow: 0 25px 70px rgba(26, 18, 80, 0.4);
         }
         .stories-banner::before {
-            content: '✦ ✧ ✦';
+            content: '★ ☽ ★';
             position: absolute;
             top: 1rem;
             right: 12rem;
             color: rgba(255, 224, 102, 0.35);
             font-size: 1.2rem;
+            pointer-events: none;
+        }
+        .stories-banner::after {
+            content: '☆';
+            position: absolute;
+            bottom: 1rem;
+            left: 6rem;
+            color: rgba(164, 124, 197, 0.4);
+            font-size: 0.9rem;
             pointer-events: none;
         }
         .stories-banner__deco {
