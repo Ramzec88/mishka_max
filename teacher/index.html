@@ -3,30 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мишка Макс PRO — Для воспитателей и педагогов ДОУ</title>
-    <link rel="stylesheet" href="../fonts/fonts.css">
+    <title>Кладовая педагога — Песни и материалы для воспитателей и музыкальных руководителей ДОУ</title>
+    <meta name="description" content="Более 126 детских песен для занятий, физминуток и праздников. Сценарии утренников, дидактические материалы и ИИ-помощник для воспитателей и музыкальных руководителей ДОУ. Подписка 260₽/мес.">
+    <meta name="keywords" content="песни для детского сада, материалы для воспитателей, музыкальный руководитель ДОУ, сценарии утренников, физкультминутки для детей, дидактические материалы дошкольного образования, подписка для педагогов">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            /* Core бренда */
             --core-orange: #FF7A3D;
-            
-            /* PRO палитра - основная для страницы */
             --pro-terracotta: #D4876D;
             --pro-dust-blue: #7B9BA8;
             --pro-bg: #F5F1ED;
             --pro-text: #4A4844;
-            
-            /* KIDS - для акцентов */
-            --kids-main: #FF8C42;
-            --kids-sky: #52B8E8;
-            --kids-green: #8AD879;
+            --pro-light: #FFF8F5;
+            --white: #ffffff;
         }
 
         body {
@@ -36,10 +30,10 @@
             line-height: 1.6;
         }
 
-        /* Хедер */
+        /* ===== HEADER ===== */
         header {
             background: white;
-            padding: 1.5rem 2rem;
+            padding: 1.2rem 2rem;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
             position: sticky;
             top: 0;
@@ -47,7 +41,7 @@
         }
 
         nav {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
@@ -56,8 +50,8 @@
 
         .logo {
             font-family: 'Nunito', sans-serif;
-            font-size: 1.8rem;
-            font-weight: 700;
+            font-size: 1.6rem;
+            font-weight: 800;
             color: var(--core-orange);
             text-decoration: none;
             display: flex;
@@ -65,24 +59,35 @@
             gap: 0.5rem;
         }
 
-        .logo-bear {
-            font-size: 2rem;
-        }
-
         .nav-badge {
             background: var(--pro-terracotta);
             color: white;
-            padding: 0.3rem 0.8rem;
+            padding: 0.25rem 0.7rem;
             border-radius: 20px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 700;
-            margin-left: 0.5rem;
         }
 
-        /* Hero секция */
+        .nav-cta {
+            background: var(--pro-terracotta);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 10px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+
+        .nav-cta:hover {
+            background: var(--core-orange);
+            transform: translateY(-1px);
+        }
+
+        /* ===== HERO ===== */
         .hero {
-            background: linear-gradient(135deg, white 0%, var(--pro-bg) 100%);
-            padding: 4rem 2rem;
+            background: linear-gradient(135deg, white 0%, var(--pro-light) 100%);
+            padding: 5rem 2rem 4rem;
             position: relative;
             overflow: hidden;
         }
@@ -90,150 +95,310 @@
         .hero::before {
             content: '♪';
             position: absolute;
-            font-size: 25rem;
-            opacity: 0.03;
-            top: -5rem;
-            right: -5rem;
+            font-size: 30rem;
+            opacity: 0.025;
+            top: -8rem;
+            right: -4rem;
             transform: rotate(15deg);
+            pointer-events: none;
         }
 
         .hero-container {
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: 1.2fr 1fr;
+            grid-template-columns: 1.1fr 0.9fr;
             gap: 4rem;
             align-items: center;
             position: relative;
             z-index: 1;
         }
 
-        .hero-content h1 {
-            font-family: 'Nunito', sans-serif;
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            color: var(--pro-text);
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--pro-bg);
+            border: 1.5px solid var(--pro-terracotta);
+            color: var(--pro-terracotta);
+            padding: 0.4rem 1rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 700;
             margin-bottom: 1.5rem;
-            line-height: 1.2;
         }
 
-        .hero-content .highlight {
+        .hero h1 {
+            font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+            font-weight: 900;
+            color: var(--pro-text);
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 .highlight {
             color: var(--pro-terracotta);
             position: relative;
-            display: inline-block;
         }
 
-        .hero-content .highlight::after {
+        .hero h1 .highlight::after {
             content: '';
             position: absolute;
-            bottom: 0;
+            bottom: 2px;
             left: 0;
             width: 100%;
-            height: 8px;
+            height: 6px;
             background: var(--pro-terracotta);
-            opacity: 0.2;
-            border-radius: 4px;
+            opacity: 0.18;
+            border-radius: 3px;
         }
 
         .hero-subtitle {
-            font-size: 1.4rem;
-            margin-bottom: 2rem;
+            font-size: 1.15rem;
             color: var(--pro-text);
-            opacity: 0.9;
-        }
-
-        .hero-stats {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
+            opacity: 0.85;
             margin-bottom: 2.5rem;
+            line-height: 1.7;
         }
 
-        .hero-stat {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 15px;
-            border-left: 4px solid var(--pro-terracotta);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        .hero-counters {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
         }
 
-        .hero-stat-number {
-            font-family: 'Nunito', sans-serif;
-            font-size: 2.5rem;
-            color: var(--pro-terracotta);
+        .hero-counter {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 1rem;
             font-weight: 700;
-            display: block;
-            margin-bottom: 0.3rem;
+            color: var(--pro-text);
         }
 
-        .hero-stat-label {
-            font-size: 0.95rem;
-            color: var(--pro-text);
-            opacity: 0.8;
+        .hero-counter i {
+            color: var(--pro-terracotta);
+            font-size: 1.3rem;
+        }
+
+        .hero-counter span {
+            color: var(--pro-terracotta);
         }
 
         .hero-cta {
             display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 0.8rem;
+            align-items: flex-start;
         }
 
-        .btn {
-            padding: 1.2rem 2.5rem;
-            border-radius: 12px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            text-decoration: none;
-            transition: all 0.3s;
-            cursor: pointer;
-            border: none;
-            font-family: 'Nunito', sans-serif;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .btn-primary {
+        .btn-main {
             background: var(--pro-terracotta);
             color: white;
-            box-shadow: 0 8px 25px rgba(212, 135, 109, 0.3);
+            padding: 1.1rem 2.5rem;
+            border-radius: 14px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            transition: all 0.3s;
+            box-shadow: 0 8px 25px rgba(212, 135, 109, 0.35);
+            font-family: 'Nunito', sans-serif;
         }
 
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 35px rgba(212, 135, 109, 0.4);
+        .btn-main:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(212, 135, 109, 0.45);
+            background: #c97860;
         }
 
-        .btn-secondary {
-            background: white;
+        .btn-ghost {
+            color: var(--pro-dust-blue);
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: all 0.2s;
+            padding: 0.3rem 0;
+            border-bottom: 2px solid transparent;
+        }
+
+        .btn-ghost:hover {
+            border-bottom-color: var(--pro-dust-blue);
+        }
+
+        .cta-note {
+            font-size: 0.85rem;
             color: var(--pro-text);
-            border: 2px solid var(--pro-dust-blue);
+            opacity: 0.6;
         }
 
-        .btn-secondary:hover {
-            background: var(--pro-dust-blue);
+        /* Hero visual */
+        .hero-visual {
+            position: relative;
+        }
+
+        .hero-mockup-card {
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .mockup-header {
+            background: var(--pro-terracotta);
+            padding: 1.5rem 2rem;
             color: white;
         }
 
-        .hero-visual {
+        .mockup-header-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 0.3rem;
+        }
+
+        .mockup-header-sub {
+            font-size: 0.85rem;
+            opacity: 0.85;
+        }
+
+        .mockup-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.8rem;
+            padding: 1.2rem 2rem;
+            background: #f0ece8;
+        }
+
+        .mockup-stat {
+            background: white;
+            border-radius: 10px;
+            padding: 0.8rem;
             text-align: center;
         }
 
-        .hero-visual-mockup {
-            max-width: 320px;
-            width: 100%;
+        .mockup-stat-num {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--pro-terracotta);
             display: block;
-            margin: 0 auto 1rem;
-            drop-shadow: drop-shadow(0 20px 40px rgba(0,0,0,0.12));
-            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.12));
         }
 
-        .hero-visual-text {
-            font-family: 'Nunito', sans-serif;
-            font-size: 1.5rem;
+        .mockup-stat-label {
+            font-size: 0.7rem;
+            color: var(--pro-text);
+            opacity: 0.7;
+        }
+
+        .mockup-tabs {
+            display: flex;
+            gap: 0;
+            padding: 0 2rem;
+            background: #f0ece8;
+            border-bottom: 2px solid #e8e4e0;
+        }
+
+        .mockup-tab {
+            padding: 0.8rem 1rem;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--pro-text);
+            opacity: 0.6;
+            cursor: pointer;
+        }
+
+        .mockup-tab.active {
+            color: var(--pro-terracotta);
+            opacity: 1;
+            border-bottom: 2px solid var(--pro-terracotta);
+            margin-bottom: -2px;
+        }
+
+        .mockup-items {
+            padding: 1.2rem 2rem;
+        }
+
+        .mockup-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.9rem 1rem;
+            background: var(--pro-bg);
+            border-radius: 12px;
+            margin-bottom: 0.7rem;
+        }
+
+        .mockup-item-left {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .mockup-item-icon {
+            width: 36px;
+            height: 36px;
+            background: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
             color: var(--pro-terracotta);
         }
 
-        /* Проблемы педагогов */
+        .mockup-item-name {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--pro-text);
+        }
+
+        .mockup-item-sub {
+            font-size: 0.75rem;
+            color: var(--pro-text);
+            opacity: 0.6;
+        }
+
+        .mockup-item-count {
+            font-size: 1.1rem;
+            font-weight: 900;
+            color: var(--pro-terracotta);
+        }
+
+        .mockup-cta-btn {
+            margin: 0.5rem 2rem 1.5rem;
+            background: var(--pro-terracotta);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            border-radius: 12px;
+            font-weight: 800;
+            font-size: 0.95rem;
+        }
+
+        /* ===== SECTION BASE ===== */
+        .section-title {
+            font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+            font-weight: 900;
+            text-align: center;
+            color: var(--pro-text);
+            margin-bottom: 0.8rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--pro-text);
+            opacity: 0.75;
+            margin-bottom: 3rem;
+        }
+
+        /* ===== БОЛИ ===== */
         .problems {
             padding: 5rem 2rem;
             background: white;
@@ -244,27 +409,10 @@
             margin: 0 auto;
         }
 
-        .section-title {
-            font-family: 'Nunito', sans-serif;
-            font-size: clamp(2rem, 4vw, 3rem);
-            text-align: center;
-            color: var(--pro-text);
-            margin-bottom: 1rem;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            font-size: 1.2rem;
-            margin-bottom: 3rem;
-            color: var(--pro-text);
-            opacity: 0.8;
-        }
-
         .problems-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
         }
 
         .problem-card {
@@ -275,148 +423,34 @@
             transition: transform 0.3s;
         }
 
-        .problem-card:hover {
-            transform: translateY(-5px);
-        }
+        .problem-card:hover { transform: translateY(-4px); }
 
         .problem-icon {
-            font-size: 2.8rem;
-            margin-bottom: 1rem;
-            display: block;
+            font-size: 2.5rem;
             color: var(--pro-terracotta);
+            display: block;
+            margin-bottom: 1rem;
             line-height: 1;
         }
 
         .problem-title {
-            font-family: 'Nunito', sans-serif;
-            font-size: 1.4rem;
+            font-size: 1.25rem;
+            font-weight: 800;
             color: var(--pro-text);
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.6rem;
         }
 
         .problem-text {
-            font-size: 1rem;
+            font-size: 0.98rem;
             line-height: 1.7;
             color: var(--pro-text);
-            opacity: 0.85;
+            opacity: 0.8;
         }
 
-        .solution-highlight {
-            background: linear-gradient(135deg, var(--pro-terracotta), var(--core-orange));
-            color: white;
-            padding: 3rem 2rem;
-            border-radius: 25px;
-            text-align: center;
-            margin-top: 3rem;
-        }
-
-        .solution-highlight h3 {
-            font-family: 'Nunito', sans-serif;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .solution-highlight p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-        }
-
-        /* Инфографика пользы */
-        .benefits-infographic {
-            padding: 5rem 2rem;
-            background: var(--pro-bg);
-        }
-
-        .benefits-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .benefits-comparison {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            margin-top: 3rem;
-        }
-
-        .comparison-column {
-            background: white;
-            padding: 3rem 2.5rem;
-            border-radius: 25px;
-            position: relative;
-        }
-
-        .comparison-column.without {
-            border: 3px solid #E5E5E5;
-        }
-
-        .comparison-column.with {
-            border: 3px solid var(--pro-terracotta);
-            box-shadow: 0 15px 50px rgba(212, 135, 109, 0.15);
-        }
-
-        .comparison-header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .comparison-icon {
-            font-size: 3.5rem;
-            display: block;
-            margin-bottom: 1rem;
-            line-height: 1;
-        }
-
-        .comparison-column.without .comparison-icon { color: #aaa; }
-        .comparison-column.with .comparison-icon { color: var(--pro-terracotta); }
-
-        .comparison-title {
-            font-family: 'Nunito', sans-serif;
-            font-size: 1.8rem;
-            color: var(--pro-text);
-            margin-bottom: 0.5rem;
-        }
-
-        .comparison-column.with .comparison-title {
-            color: var(--pro-terracotta);
-        }
-
-        .comparison-items {
-            list-style: none;
-        }
-
-        .comparison-item {
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--pro-bg);
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-        }
-
-        .comparison-item:last-child {
-            border-bottom: none;
-        }
-
-        .comparison-item-icon {
-            font-size: 1.4rem;
-            flex-shrink: 0;
-            margin-top: 0.15rem;
-            line-height: 1;
-        }
-
-        .comparison-column.without .comparison-item-icon { color: #bbb; }
-        .comparison-column.with .comparison-item-icon { color: var(--pro-terracotta); }
-
-        .comparison-item-text {
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-
-        /* Что внутри */
+        /* ===== ЧТО ВНУТРИ ===== */
         .whats-inside {
             padding: 5rem 2rem;
-            background: white;
+            background: var(--pro-bg);
         }
 
         .whats-inside-container {
@@ -426,140 +460,317 @@
 
         .content-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
         }
 
         .content-card {
-            background: var(--pro-bg);
+            background: white;
             padding: 2.5rem;
             border-radius: 20px;
-            transition: all 0.3s;
             position: relative;
             overflow: hidden;
+            transition: all 0.3s;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
         }
 
         .content-card::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
+            top: 0; left: 0;
+            width: 100%; height: 5px;
             background: linear-gradient(90deg, var(--pro-terracotta), var(--pro-dust-blue));
         }
 
         .content-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-6px);
             box-shadow: 0 15px 40px rgba(0,0,0,0.1);
         }
 
         .content-icon {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            display: block;
+            font-size: 2.8rem;
             color: var(--pro-terracotta);
+            display: block;
+            margin-bottom: 1.2rem;
             line-height: 1;
         }
 
         .content-title {
-            font-family: 'Nunito', sans-serif;
-            font-size: 1.6rem;
+            font-size: 1.4rem;
+            font-weight: 800;
             color: var(--pro-text);
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
         }
 
         .content-description {
-            font-size: 1rem;
+            font-size: 0.97rem;
             line-height: 1.7;
             color: var(--pro-text);
-            opacity: 0.85;
-            margin-bottom: 1.5rem;
+            opacity: 0.82;
+            margin-bottom: 1.2rem;
         }
 
-        .content-examples {
-            list-style: none;
-        }
-
-        .content-examples li {
-            padding: 0.5rem 0;
-            font-size: 0.95rem;
+        .content-tags {
             display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .content-tag {
+            background: var(--pro-bg);
+            color: var(--pro-text);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 600;
+        }
+
+        .catalog-cta {
+            text-align: center;
+            padding: 2.5rem;
+            background: white;
+            border-radius: 20px;
+            border: 2px dashed var(--pro-terracotta);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .catalog-cta p {
+            font-size: 1.1rem;
+            color: var(--pro-text);
+            margin-bottom: 1.2rem;
+            font-weight: 600;
+        }
+
+        .btn-outline {
+            display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            color: var(--pro-text);
-            opacity: 0.8;
-        }
-
-        .content-examples li::before {
-            content: '✓';
+            border: 2px solid var(--pro-terracotta);
             color: var(--pro-terracotta);
-            font-weight: 900;
-            font-size: 1.1rem;
+            padding: 0.9rem 2rem;
+            border-radius: 12px;
+            font-weight: 800;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-family: 'Nunito', sans-serif;
         }
 
-        /* Статистика эффективности */
-        .statistics {
-            padding: 5rem 2rem;
-            background: linear-gradient(135deg, var(--pro-terracotta), var(--core-orange));
+        .btn-outline:hover {
+            background: var(--pro-terracotta);
             color: white;
         }
 
-        .statistics-container {
-            max-width: 1000px;
+        /* ===== ИИ-ПОМОЩНИК ===== */
+        .ai-section {
+            padding: 5rem 2rem;
+            background: white;
+        }
+
+        .ai-container {
+            max-width: 1200px;
             margin: 0 auto;
-            text-align: center;
         }
 
-        .statistics h2 {
-            font-family: 'Nunito', sans-serif;
-            font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: 1rem;
-        }
-
-        .statistics-subtitle {
-            font-size: 1.3rem;
-            margin-bottom: 3rem;
-            opacity: 0.95;
-        }
-
-        .stats-grid {
+        .ai-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
             margin-top: 3rem;
         }
 
-        .stat-box {
-            background: rgba(255, 255, 255, 0.15);
-            padding: 2.5rem 2rem;
+        .ai-features {
+            display: grid;
+            gap: 1.2rem;
+        }
+
+        .ai-feature {
+            display: flex;
+            gap: 1.2rem;
+            align-items: flex-start;
+            padding: 1.5rem;
+            background: var(--pro-bg);
+            border-radius: 16px;
+            transition: transform 0.2s;
+        }
+
+        .ai-feature:hover { transform: translateX(4px); }
+
+        .ai-feature-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--pro-terracotta);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 1.4rem;
+            color: white;
+        }
+
+        .ai-feature-title {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: var(--pro-text);
+            margin-bottom: 0.3rem;
+        }
+
+        .ai-feature-text {
+            font-size: 0.92rem;
+            color: var(--pro-text);
+            opacity: 0.75;
+            line-height: 1.6;
+        }
+
+        .ai-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(212,135,109,0.1);
+            border: 1.5px solid var(--pro-terracotta);
+            color: var(--pro-terracotta);
+            padding: 0.5rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-top: 1.5rem;
+        }
+
+        /* Chat mockup */
+        .chat-mockup {
+            background: var(--pro-bg);
+            border-radius: 24px;
+            padding: 2rem;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+        }
+
+        .chat-title {
+            font-size: 1rem;
+            font-weight: 800;
+            color: var(--pro-text);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .chat-bubble {
+            margin-bottom: 1rem;
+        }
+
+        .chat-bubble.user .bubble-content {
+            background: var(--pro-dust-blue);
+            color: white;
+            border-radius: 18px 18px 4px 18px;
+            margin-left: auto;
+            max-width: 85%;
+        }
+
+        .chat-bubble.bot .bubble-content {
+            background: white;
+            color: var(--pro-text);
+            border-radius: 18px 18px 18px 4px;
+            max-width: 90%;
+            border: 1.5px solid #e8e4e0;
+        }
+
+        .bubble-content {
+            padding: 1rem 1.2rem;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .bubble-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+            opacity: 0.6;
+            color: var(--pro-text);
+        }
+
+        .chat-bubble.user .bubble-label { text-align: right; }
+
+        /* ===== КАК РАБОТАЕТ ===== */
+        .how-it-works {
+            padding: 5rem 2rem;
+            background: var(--pro-bg);
+        }
+
+        .how-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .steps {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .step {
+            display: grid;
+            grid-template-columns: 72px 1fr;
+            gap: 2rem;
+            align-items: start;
+            background: white;
+            padding: 2rem;
             border-radius: 20px;
-            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
             transition: transform 0.3s;
         }
 
-        .stat-box:hover {
-            transform: scale(1.05);
+        .step:hover { transform: translateX(6px); }
+
+        .step-number {
+            width: 72px;
+            height: 72px;
+            background: var(--pro-terracotta);
+            color: white;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 900;
+            flex-shrink: 0;
         }
 
-        .stat-number {
-            font-family: 'Nunito', sans-serif;
-            font-size: 3.5rem;
-            font-weight: 700;
-            display: block;
+        .step-title {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--pro-text);
             margin-bottom: 0.5rem;
         }
 
-        .stat-label {
-            font-size: 1.1rem;
-            opacity: 0.95;
+        .step-text {
+            font-size: 0.98rem;
+            color: var(--pro-text);
+            opacity: 0.8;
+            line-height: 1.7;
         }
 
-        /* Отзывы */
+        .step-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: var(--pro-terracotta);
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .step-link:hover { border-bottom-color: var(--pro-terracotta); }
+
+        /* ===== ОТЗЫВЫ ===== */
         .testimonials {
             padding: 5rem 2rem;
-            background: var(--pro-bg);
+            background: white;
         }
 
         .testimonials-container {
@@ -569,36 +780,38 @@
 
         .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
             margin-top: 3rem;
         }
 
         .testimonial-card {
-            background: white;
+            background: var(--pro-bg);
             padding: 2.5rem;
             border-radius: 20px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.06);
             position: relative;
+            border-left: 4px solid var(--pro-terracotta);
         }
 
         .testimonial-quote {
             font-size: 4rem;
             color: var(--pro-terracotta);
-            opacity: 0.2;
+            opacity: 0.15;
             position: absolute;
             top: 1rem;
             left: 1.5rem;
             line-height: 1;
+            font-family: Georgia, serif;
         }
 
         .testimonial-text {
-            font-size: 1.05rem;
-            line-height: 1.7;
+            font-size: 1rem;
+            line-height: 1.75;
+            color: var(--pro-text);
             margin-bottom: 1.5rem;
             position: relative;
             z-index: 1;
-            font-style: italic;
+            padding-top: 1rem;
         }
 
         .testimonial-author {
@@ -608,684 +821,683 @@
         }
 
         .testimonial-avatar {
-            width: 50px;
-            height: 50px;
+            width: 44px;
+            height: 44px;
             background: var(--pro-terracotta);
-            border-radius: 50%;
+            color: white;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.6rem;
-            color: white;
-        }
-
-        .testimonial-info {
-            flex: 1;
+            font-size: 1.3rem;
+            flex-shrink: 0;
         }
 
         .testimonial-name {
-            font-weight: 700;
+            font-weight: 800;
             color: var(--pro-text);
-            margin-bottom: 0.2rem;
+            font-size: 0.98rem;
         }
 
         .testimonial-position {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: var(--pro-text);
-            opacity: 0.7;
+            opacity: 0.65;
         }
 
-        /* Тарифы */
+        /* ===== ЦЕНА ===== */
         .pricing {
             padding: 5rem 2rem;
-            background: white;
-        }
-
-        .pricing-container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .pricing-card {
-            background: linear-gradient(135deg, white, var(--pro-bg));
-            border: 3px solid var(--pro-terracotta);
-            border-radius: 30px;
-            padding: 3rem;
-            text-align: center;
-            box-shadow: 0 20px 60px rgba(212, 135, 109, 0.15);
+            background: linear-gradient(135deg, var(--pro-terracotta) 0%, var(--core-orange) 100%);
             position: relative;
             overflow: hidden;
         }
 
-        .pricing-badge {
+        .pricing::before {
+            content: '🎵';
             position: absolute;
-            top: 2rem;
-            right: -3rem;
-            background: var(--kids-green);
-            color: white;
-            padding: 0.5rem 4rem;
-            transform: rotate(45deg);
-            font-weight: 700;
-            font-size: 0.9rem;
+            font-size: 20rem;
+            opacity: 0.05;
+            bottom: -4rem;
+            left: -4rem;
+            pointer-events: none;
+        }
+
+        .pricing-container {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
         }
 
         .pricing-title {
-            font-family: 'Nunito', sans-serif;
-            font-size: 2.5rem;
-            color: var(--pro-text);
-            margin-bottom: 1rem;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 900;
+            color: white;
+            margin-bottom: 0.5rem;
         }
 
         .pricing-subtitle {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
+            color: rgba(255,255,255,0.85);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 28px;
+            padding: 3rem;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+        }
+
+        .pricing-name {
+            font-size: 1.3rem;
+            font-weight: 800;
             color: var(--pro-text);
-            opacity: 0.8;
+            margin-bottom: 0.3rem;
+        }
+
+        .pricing-price-row {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            gap: 0.3rem;
+            margin: 1.5rem 0 0.5rem;
         }
 
         .pricing-price {
-            font-family: 'Nunito', sans-serif;
-            font-size: 5rem;
-            color: var(--pro-terracotta);
+            font-size: 4rem;
             font-weight: 900;
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            margin-bottom: 1rem;
+            color: var(--pro-terracotta);
         }
 
-        .pricing-price .currency {
-            font-size: 2.5rem;
-            margin-top: 0.8rem;
+        .pricing-currency {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--pro-terracotta);
         }
 
         .pricing-period {
-            font-size: 1.3rem;
+            font-size: 1rem;
             color: var(--pro-text);
-            opacity: 0.7;
-            margin-bottom: 2.5rem;
+            opacity: 0.6;
+        }
+
+        .pricing-coffee {
+            font-size: 0.9rem;
+            color: var(--pro-text);
+            opacity: 0.55;
+            margin-bottom: 2rem;
+            font-style: italic;
         }
 
         .pricing-features {
             list-style: none;
-            margin-bottom: 2.5rem;
             text-align: left;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
+            margin-bottom: 2rem;
+            display: grid;
+            gap: 0.8rem;
         }
 
         .pricing-features li {
-            padding: 1rem;
-            font-size: 1.1rem;
             display: flex;
             align-items: center;
-            gap: 1rem;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+            gap: 0.8rem;
+            font-size: 1rem;
+            color: var(--pro-text);
         }
 
-        .pricing-features li:last-child {
-            border-bottom: none;
-        }
-
-        .pricing-features li::before {
-            content: '✓';
+        .pricing-features li i {
             color: var(--pro-terracotta);
-            font-weight: 900;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             flex-shrink: 0;
         }
 
-        /* CTA финальный */
-        .final-cta {
-            padding: 5rem 2rem;
-            background: linear-gradient(135deg, var(--pro-dust-blue), var(--pro-terracotta));
+        .pricing-btn {
+            display: block;
+            background: var(--pro-terracotta);
             color: white;
-            text-align: center;
-        }
-
-        .final-cta-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .final-cta h2 {
+            padding: 1.2rem;
+            border-radius: 14px;
+            font-weight: 900;
+            font-size: 1.15rem;
+            text-decoration: none;
+            transition: all 0.3s;
             font-family: 'Nunito', sans-serif;
-            font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: 1.5rem;
+            box-shadow: 0 8px 25px rgba(212,135,109,0.35);
+            margin-bottom: 0.8rem;
         }
 
-        .final-cta p {
-            font-size: 1.3rem;
-            margin-bottom: 2.5rem;
-            opacity: 0.95;
+        .pricing-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(212,135,109,0.45);
         }
 
-        .final-cta .btn-primary {
-            background: white;
-            color: var(--pro-terracotta);
-            font-size: 1.3rem;
-            padding: 1.5rem 3rem;
+        .pricing-catalog-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: var(--pro-dust-blue);
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 0.95rem;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s;
         }
 
-        .final-cta .btn-primary:hover {
-            transform: translateY(-3px) scale(1.02);
+        .pricing-catalog-link:hover { border-bottom-color: var(--pro-dust-blue); }
+
+        .pricing-note {
+            margin-top: 0.8rem;
+            font-size: 0.82rem;
+            color: var(--pro-text);
+            opacity: 0.5;
         }
 
-        /* Footer */
+        /* ===== FOOTER ===== */
         footer {
-            padding: 3rem 2rem 1.5rem;
             background: var(--pro-text);
-            color: white;
+            color: rgba(255,255,255,0.7);
+            padding: 2.5rem 2rem;
         }
 
         .footer-container {
             max-width: 1200px;
             margin: 0 auto;
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
 
         .footer-links {
             display: flex;
-            justify-content: center;
             gap: 2rem;
-            margin-bottom: 2rem;
             flex-wrap: wrap;
         }
 
         .footer-links a {
-            color: white;
+            color: rgba(255,255,255,0.65);
             text-decoration: none;
-            opacity: 0.8;
-            transition: opacity 0.3s;
+            font-size: 0.9rem;
+            transition: color 0.2s;
         }
 
-        .footer-links a:hover {
-            opacity: 1;
-        }
+        .footer-links a:hover { color: white; }
 
         .footer-copyright {
-            opacity: 0.6;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
-        /* Адаптивность */
-        @media (max-width: 968px) {
-            .hero-container {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .benefits-comparison {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-stats {
-                grid-template-columns: 1fr;
-            }
-
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Анимации при скролле */
+        /* ===== АНИМАЦИИ ===== */
         .fade-in {
             opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease-out;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
         }
 
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* ===== АДАПТИВ ===== */
+        @media (max-width: 768px) {
+            .hero-container { grid-template-columns: 1fr; gap: 2.5rem; }
+            .hero-visual { order: -1; }
+            .problems-grid { grid-template-columns: 1fr; }
+            .ai-grid { grid-template-columns: 1fr; }
+            .testimonials-grid { grid-template-columns: 1fr; }
+            .step { grid-template-columns: 1fr; }
+            .step-number { width: 52px; height: 52px; font-size: 1.5rem; border-radius: 14px; }
+            nav .nav-cta { display: none; }
+        }
     </style>
 </head>
 <body>
-    <!-- Хедер -->
-    <header>
-        <nav>
-            <a href="/" class="logo">
-                <span class="logo-bear">🐻</span>
-                Мишка Макс
-                <span class="nav-badge">PRO</span>
-            </a>
-        </nav>
-    </header>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1>
-                    Готовые песни для занятий, <span class="highlight">физминуток и праздников</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Более 100 песен для занятий и праздников, сценарии утренников и дидактические материалы — постоянно пополняемая библиотека для воспитателей
-                </p>
+<!-- HEADER -->
+<header>
+    <nav>
+        <a href="/" class="logo">
+            🐻 Мишка Макс
+            <span class="nav-badge">PRO</span>
+        </a>
+        <a href="https://t.me/mishkamax_pro_bot" class="nav-cta">
+            🎵 Получить доступ
+        </a>
+    </nav>
+</header>
 
-                <div class="hero-stats">
-                    <div class="hero-stat">
-                        <span class="hero-stat-number">260₽</span>
-                        <span class="hero-stat-label">в месяц — меньше чашки кофе в день</span>
-                    </div>
-                    <div class="hero-stat">
-                        <span class="hero-stat-number">150+</span>
-                        <span class="hero-stat-label">готовых сценариев и материалов</span>
-                    </div>
-                </div>
-
-                <div class="hero-cta">
-                    <a href="#pricing" class="btn btn-primary">
-                        <i class="ph ph-arrow-right"></i> Подключить сейчас
-                    </a>
-                    <a href="#whats-inside" class="btn btn-secondary">
-                        <i class="ph ph-books"></i> Что внутри
-                    </a>
-                </div>
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-container">
+        <div class="hero-content">
+            <div class="hero-tag">
+                <i class="ph ph-music-note"></i>
+                Для воспитателей и музыкальных руководителей ДОУ
             </div>
-
-            <div class="hero-visual">
-                <img src="../images/mockup_Vosp_left.png" alt="Мишка Макс PRO — приложение для воспитателей" class="hero-visual-mockup">
-                <p class="hero-visual-text">Уже 10 500+ воспитателей с нами!</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Проблемы -->
-    <section class="problems">
-        <div class="problems-container">
-            <h2 class="section-title">Знакомо?</h2>
-            <p class="section-subtitle">Эти проблемы мучают каждого воспитателя</p>
-
-            <div class="problems-grid fade-in">
-                <div class="problem-card">
-                    <i class="ph ph-clock problem-icon"></i>
-                    <h3 class="problem-title">Нехватка времени</h3>
-                    <p class="problem-text">
-                        Вечера уходят на поиск материалов, адаптацию сценариев и подготовку к занятиям вместо отдыха с семьёй.
-                    </p>
-                </div>
-
-                <div class="problem-card">
-                    <i class="ph ph-magnifying-glass problem-icon"></i>
-                    <h3 class="problem-title">Где искать идеи?</h3>
-                    <p class="problem-text">
-                        Интернет переполнен материалами, но найти качественный, соответствующий ФГОС контент — задача не из лёгких.
-                    </p>
-                </div>
-
-                <div class="problem-card">
-                    <i class="ph ph-confetti problem-icon"></i>
-                    <h3 class="problem-title">Праздники и утренники</h3>
-                    <p class="problem-text">
-                        Каждый праздник требует нового сценария. Хочется удивить детей и родителей, но идеи кончаются.
-                    </p>
-                </div>
-
-                <div class="problem-card">
-                    <i class="ph ph-clipboard-text problem-icon"></i>
-                    <h3 class="problem-title">Документация</h3>
-                    <p class="problem-text">
-                        Помимо занятий нужно заполнять планы, отчёты, методические карты — на это тоже нужно время.
-                    </p>
-                </div>
-            </div>
-
-            <div class="solution-highlight fade-in">
-                <h3>Мы решили эти проблемы раз и навсегда! <i class="ph ph-confetti" style="font-size:1.2em;vertical-align:middle;color:var(--pro-terracotta)"></i></h3>
-                <p>
-                    Подписка Мишка Макс PRO — это ваш личный методический кабинет с готовыми материалами на каждый день.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Инфографика сравнения -->
-    <section class="benefits-infographic">
-        <div class="benefits-container">
-            <h2 class="section-title">Ваша жизнь ДО и ПОСЛЕ подписки</h2>
-            <p class="section-subtitle">Почувствуйте разницу уже в первую неделю</p>
-
-            <div class="benefits-comparison fade-in">
-                <div class="comparison-column without">
-                    <div class="comparison-header">
-                        <i class="ph ph-smiley-sad comparison-icon"></i>
-                        <h3 class="comparison-title">БЕЗ подписки</h3>
-                    </div>
-                    <ul class="comparison-items">
-                        <li class="comparison-item">
-                            <i class="ph ph-x-circle comparison-item-icon"></i>
-                            <span class="comparison-item-text">3-4 часа вечером на поиск и адаптацию материалов</span>
-                        </li>
-                        <li class="comparison-item">
-                            <i class="ph ph-x-circle comparison-item-icon"></i>
-                            <span class="comparison-item-text">Скачивание сценариев из сомнительных источников</span>
-                        </li>
-                        <li class="comparison-item">
-                            <i class="ph ph-x-circle comparison-item-icon"></i>
-                            <span class="comparison-item-text">Переплата за каждый отдельный материал</span>
-                        </li>
-                        <li class="comparison-item">
-                            <i class="ph ph-x-circle comparison-item-icon"></i>
-                            <span class="comparison-item-text">Постоянный стресс перед праздниками</span>
-                        </li>
-                        <li class="comparison-item">
-                            <i class="ph ph-x-circle comparison-item-icon"></i>
-                            <span class="comparison-item-text">Отсутствие системы — каждый раз начинаете с нуля</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="comparison-column with">
-                    <div class="comparison-header">
-                        <i class="ph ph-sparkle comparison-icon"></i>
-                        <h3 class="comparison-title">С подпиской PRO</h3>
-                    </div>
-                    <ul class="comparison-items">
-                        <li class="comparison-item">
-                            <i class="ph ph-check-circle comparison-item-icon"></i>
-                            <span class="comparison-item-text">10-15 минут на выбор готового сценария — и готово!</span>
-                        </li>
-                        <li class="comparison-item">
-                            <i class="ph ph-check-circle comparison-item-icon"></i>
-                            <span class="comparison-item-text">Все материалы проверены педагогами и соответствуют ФГОС</span>
-                        </li>
-                        <li class="comparison-item">
-                            <i class="ph ph-check-circle comparison-item-icon"></i>
-                            <span class="comparison-item-text">Безлимитный доступ ко всей библиотеке за 260₽/мес</span>
-                        </li>
-                        <li class="comparison-item">
-                            <i class="ph ph-check-circle comparison-item-icon"></i>
-                            <span class="comparison-item-text">Готовые сценарии праздников на весь год заранее</span>
-                        </li>
-                        <li class="comparison-item">
-                            <i class="ph ph-check-circle comparison-item-icon"></i>
-                            <span class="comparison-item-text">Организованная база знаний — всё по темам и возрастам</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Что внутри -->
-    <section class="whats-inside" id="whats-inside">
-        <div class="whats-inside-container">
-            <h2 class="section-title">Что вы получите в закрытом канале</h2>
-            <p class="section-subtitle">Более 150 готовых материалов и новые каждую неделю!</p>
-
-            <div class="content-grid fade-in">
-                <div class="content-card">
-                    <i class="ph ph-confetti content-icon"></i>
-                    <h3 class="content-title">Сценарии праздников</h3>
-                    <p class="content-description">
-                        Готовые сценарии на все праздники года с диалогами, музыкой, играми и реквизитом.
-                    </p>
-                    <ul class="content-examples">
-                        <li>Новый год и Рождество</li>
-                        <li>8 Марта, 23 Февраля</li>
-                        <li>Выпускной в детском саду</li>
-                        <li>День знаний, Масленица</li>
-                    </ul>
-                </div>
-
-                <div class="content-card">
-                    <i class="ph ph-books content-icon"></i>
-                    <h3 class="content-title">Конспекты занятий</h3>
-                    <p class="content-description">
-                        Подробные планы занятий по развитию речи, математике, окружающему миру для всех возрастов.
-                    </p>
-                    <ul class="content-examples">
-                        <li>Младшая группа (1-3 года)</li>
-                        <li>Средняя группа (3-4 года)</li>
-                        <li>Старшая группа (4-5 лет)</li>
-                        <li>Подготовительная (5-6 лет)</li>
-                    </ul>
-                </div>
-
-                <div class="content-card">
-                    <i class="ph ph-paint-brush-broad content-icon"></i>
-                    <h3 class="content-title">Творческие мастер-классы</h3>
-                    <p class="content-description">
-                        Пошаговые инструкции для занятий по рисованию, лепке, аппликации с Мишкой Максом.
-                    </p>
-                    <ul class="content-examples">
-                        <li>Поделки к праздникам</li>
-                        <li>Сезонное творчество</li>
-                        <li>Работа с природными материалами</li>
-                        <li>Подарки для родителей</li>
-                    </ul>
-                </div>
-
-                <div class="content-card">
-                    <i class="ph ph-music-note content-icon"></i>
-                    <h3 class="content-title">Музыкальные занятия</h3>
-                    <p class="content-description">
-                        Песни, танцы, музыкальные игры с нотами, текстами и описанием движений.
-                    </p>
-                    <ul class="content-examples">
-                        <li>Утренняя гимнастика</li>
-                        <li>Хороводы и игры</li>
-                        <li>Танцы для утренников</li>
-                        <li>Песни про времена года</li>
-                    </ul>
-                </div>
-
-                <div class="content-card">
-                    <i class="ph ph-person-simple-run content-icon"></i>
-                    <h3 class="content-title">Физкультура и игры</h3>
-                    <p class="content-description">
-                        Комплексы упражнений, подвижные игры, эстафеты для развития моторики и координации.
-                    </p>
-                    <ul class="content-examples">
-                        <li>Комплексы утренней зарядки</li>
-                        <li>Подвижные игры на улице</li>
-                        <li>Спортивные праздники</li>
-                        <li>Игры на развитие ловкости</li>
-                    </ul>
-                </div>
-
-                <div class="content-card">
-                    <i class="ph ph-clipboard-text content-icon"></i>
-                    <h3 class="content-title">Шаблоны документов</h3>
-                    <p class="content-description">
-                        Готовые бланки планов, отчётов, методических разработок — просто заполните!
-                    </p>
-                    <ul class="content-examples">
-                        <li>Календарно-тематическое планирование</li>
-                        <li>Карты наблюдений</li>
-                        <li>Шаблоны отчётов</li>
-                        <li>Портфолио воспитателя</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Статистика -->
-    <section class="statistics">
-        <div class="statistics-container">
-            <h2>Подписка окупается с первой недели!</h2>
-            <p class="statistics-subtitle">
-                Вот что экономят наши подписчики
+            <h1>
+                Готовые песни для занятий,
+                <span class="highlight">физминуток и праздников</span>
+            </h1>
+            <p class="hero-subtitle">
+                Более 126 детских песен для занятий и праздников, сценарии утренников и дидактические материалы — постоянно пополняемая библиотека для работников дошкольного образования.
             </p>
-
-            <div class="stats-grid fade-in">
-                <div class="stat-box">
-                    <span class="stat-number">12ч</span>
-                    <span class="stat-label">сэкономленного времени в неделю</span>
+            <div class="hero-counters">
+                <div class="hero-counter">
+                    <i class="ph ph-music-notes"></i>
+                    <span>126+</span> песен и материалов
                 </div>
-
-                <div class="stat-box">
-                    <span class="stat-number">3000₽+</span>
-                    <span class="stat-label">экономия на покупке отдельных материалов</span>
+                <div class="hero-counter">
+                    <i class="ph ph-chalkboard-teacher"></i>
+                    <span>400+</span> работников ДОУ
                 </div>
+            </div>
+            <div class="hero-cta">
+                <a href="https://t.me/mishkamax_pro_bot" class="btn-main">
+                    <i class="ph ph-sparkle"></i>
+                    Получить доступ за 260₽/мес
+                </a>
+                <a href="https://t.me/helper_vospitatel_bot/content" target="_blank" class="btn-ghost">
+                    <i class="ph ph-device-mobile"></i>
+                    Посмотреть каталог материалов
+                </a>
+                <span class="cta-note">Отменить можно в любой момент</span>
+            </div>
+        </div>
 
-                <div class="stat-box">
-                    <span class="stat-number">0</span>
-                    <span class="stat-label">стресса перед праздниками</span>
+        <div class="hero-visual fade-in">
+            <div class="hero-mockup-card">
+                <div class="mockup-header">
+                    <div class="mockup-header-title">🐻 Кладовая педагога</div>
+                    <div class="mockup-header-sub">Мишка Макс • Материалы для занятий</div>
                 </div>
+                <div class="mockup-stats">
+                    <div class="mockup-stat">
+                        <span class="mockup-stat-num">4</span>
+                        <span class="mockup-stat-label">рубрики</span>
+                    </div>
+                    <div class="mockup-stat">
+                        <span class="mockup-stat-num">151</span>
+                        <span class="mockup-stat-label">материал</span>
+                    </div>
+                    <div class="mockup-stat">
+                        <span class="mockup-stat-num">34</span>
+                        <span class="mockup-stat-label">новинки</span>
+                    </div>
+                </div>
+                <div class="mockup-tabs">
+                    <div class="mockup-tab active">Рубрики</div>
+                    <div class="mockup-tab">Все материалы</div>
+                    <div class="mockup-tab">Новинки 🔥</div>
+                </div>
+                <div class="mockup-items">
+                    <div class="mockup-item">
+                        <div class="mockup-item-left">
+                            <div class="mockup-item-icon"><i class="ph ph-music-note"></i></div>
+                            <div>
+                                <div class="mockup-item-name">Песни</div>
+                                <div class="mockup-item-sub">Авторские и народные • аудио</div>
+                            </div>
+                        </div>
+                        <div class="mockup-item-count">126</div>
+                    </div>
+                    <div class="mockup-item">
+                        <div class="mockup-item-left">
+                            <div class="mockup-item-icon"><i class="ph ph-clipboard-text"></i></div>
+                            <div>
+                                <div class="mockup-item-name">Сценарии</div>
+                                <div class="mockup-item-sub">Праздники, занятия, утренники</div>
+                            </div>
+                        </div>
+                        <div class="mockup-item-count">19</div>
+                    </div>
+                    <div class="mockup-item">
+                        <div class="mockup-item-left">
+                            <div class="mockup-item-icon"><i class="ph ph-cards"></i></div>
+                            <div>
+                                <div class="mockup-item-name">Материалы</div>
+                                <div class="mockup-item-sub">Дидактика, карточки, шаблоны</div>
+                            </div>
+                        </div>
+                        <div class="mockup-item-count">4</div>
+                    </div>
+                </div>
+                <div class="mockup-cta-btn">🎓 Оформить подписку — 260 ₽/мес</div>
+            </div>
+        </div>
+    </div>
+</section>
 
-                <div class="stat-box">
-                    <span class="stat-number">100%</span>
-                    <span class="stat-label">уверенность в качестве материалов</span>
+<!-- БОЛИ -->
+<section class="problems">
+    <div class="problems-container">
+        <h2 class="section-title">Знакомо?</h2>
+        <p class="section-subtitle">Эти проблемы мучают каждого работника дошкольного образования</p>
+
+        <div class="problems-grid fade-in">
+            <div class="problem-card">
+                <i class="ph ph-clock problem-icon"></i>
+                <div class="problem-title">Нет времени искать песни</div>
+                <p class="problem-text">Вечера уходят на поиск подходящей песни или сценария вместо отдыха с семьёй. А завтра снова занятие.</p>
+            </div>
+            <div class="problem-card">
+                <i class="ph ph-confetti problem-icon"></i>
+                <div class="problem-title">Праздник на носу</div>
+                <p class="problem-text">Каждый утренник требует нового сценария, а идеи и время заканчиваются. Хочется удивить детей и родителей.</p>
+            </div>
+            <div class="problem-card">
+                <i class="ph ph-music-notes problem-icon"></i>
+                <div class="problem-title">Нужна музыка прямо сейчас</div>
+                <p class="problem-text">Физминутка, утренняя зарядка, тематическое занятие — а готового качественного под рукой нет. Особенно у музыкального руководителя.</p>
+            </div>
+            <div class="problem-card">
+                <i class="ph ph-shuffle problem-icon"></i>
+                <div class="problem-title">Хочется разнообразия</div>
+                <p class="problem-text">Одни и те же песни и игры надоедают детям. Нужно что-то новое и живое, но искать некогда.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ЧТО ВНУТРИ -->
+<section class="whats-inside" id="whats-inside">
+    <div class="whats-inside-container">
+        <h2 class="section-title">Что вы получаете в «Кладовой педагога»</h2>
+        <p class="section-subtitle">Библиотека материалов для воспитателей и музыкальных руководителей ДОУ</p>
+
+        <div class="content-grid fade-in">
+            <div class="content-card">
+                <i class="ph ph-music-note content-icon"></i>
+                <div class="content-title">Детские песни</div>
+                <p class="content-description">126+ песен для любого случая: занятия, физкультминутки, утренняя зарядка, обучающие песни, народные и авторские, песни к праздникам. Постоянно пополняется.</p>
+                <div class="content-tags">
+                    <span class="content-tag">Занятия</span>
+                    <span class="content-tag">Физминутки</span>
+                    <span class="content-tag">Праздники</span>
+                    <span class="content-tag">Зарядка</span>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <i class="ph ph-star content-icon"></i>
+                <div class="content-title">Сценарии праздников</div>
+                <p class="content-description">Готовые сценарии утренников и тематических занятий для ДОУ. Новый год, 8 марта, выпускной, День знаний и другие события — берите и проводите.</p>
+                <div class="content-tags">
+                    <span class="content-tag">Утренники</span>
+                    <span class="content-tag">Новый год</span>
+                    <span class="content-tag">Выпускной</span>
+                    <span class="content-tag">8 марта</span>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <i class="ph ph-cards content-icon"></i>
+                <div class="content-title">Дидактические материалы</div>
+                <p class="content-description">Карточки с упражнениями и игровые задания для занятий с детьми дошкольного возраста. Готово к использованию.</p>
+                <div class="content-tags">
+                    <span class="content-tag">Карточки</span>
+                    <span class="content-tag">Упражнения</span>
+                    <span class="content-tag">Игры</span>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <i class="ph ph-device-mobile content-icon"></i>
+                <div class="content-title">Мини-приложение с каталогом</div>
+                <p class="content-description">Удобный каталог всех материалов закрытого канала с поиском по рубрикам. Найдите нужное за 10 секунд — без листания ленты.</p>
+                <div class="content-tags">
+                    <span class="content-tag">Поиск</span>
+                    <span class="content-tag">Каталог</span>
+                    <span class="content-tag">Telegram</span>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Отзывы -->
-    <section class="testimonials">
-        <div class="testimonials-container">
-            <h2 class="section-title">Что говорят наши подписчики</h2>
-            <p class="section-subtitle">Реальные отзывы воспитателей со всей России</p>
+        <div class="catalog-cta">
+            <p>🔍 Не уверены — посмотрите сами. Каталог открыт для всех до оплаты:</p>
+            <a href="https://t.me/helper_vospitatel_bot/content" target="_blank" class="btn-outline">
+                <i class="ph ph-device-mobile"></i>
+                Открыть каталог материалов
+            </a>
+        </div>
+    </div>
+</section>
 
-            <div class="testimonials-grid fade-in">
-                <div class="testimonial-card">
-                    <span class="testimonial-quote">"</span>
-                    <p class="testimonial-text">
-                        Подписка окупилась за первую неделю! Раньше тратила вечера на поиск сценариев, 
-                        теперь просто открываю канал — и всё готово. Дети в восторге от занятий с Мишкой!
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar"><i class="ph ph-chalkboard-teacher"></i></div>
-                        <div class="testimonial-info">
-                            <div class="testimonial-name">Елена Смирнова</div>
-                            <div class="testimonial-position">Воспитатель, стаж 8 лет, Москва</div>
-                        </div>
+<!-- ИИ-ПОМОЩНИК -->
+<section class="ai-section">
+    <div class="ai-container">
+        <h2 class="section-title">Персональный ИИ-помощник — прямо в канале</h2>
+        <p class="section-subtitle">Не нашли нужное в библиотеке? Попросите бота создать под ваш запрос</p>
+
+        <div class="ai-grid fade-in">
+            <div class="ai-features">
+                <div class="ai-feature">
+                    <div class="ai-feature-icon"><i class="ph ph-clipboard-text"></i></div>
+                    <div>
+                        <div class="ai-feature-title">Сценарий занятия</div>
+                        <div class="ai-feature-text">По теме, возрасту и длительности — готовый план за 30 секунд</div>
+                    </div>
+                </div>
+                <div class="ai-feature">
+                    <div class="ai-feature-icon"><i class="ph ph-music-note"></i></div>
+                    <div>
+                        <div class="ai-feature-title">Текст песни или потешки</div>
+                        <div class="ai-feature-text">Под любой повод, тему или возрастную группу</div>
+                    </div>
+                </div>
+                <div class="ai-feature">
+                    <div class="ai-feature-icon"><i class="ph ph-person-simple-run"></i></div>
+                    <div>
+                        <div class="ai-feature-title">Игры с детьми</div>
+                        <div class="ai-feature-text">Подвижные, дидактические, речевые — под ваш запрос</div>
+                    </div>
+                </div>
+                <div class="ai-feature">
+                    <div class="ai-feature-icon"><i class="ph ph-star"></i></div>
+                    <div>
+                        <div class="ai-feature-title">Сценарий праздника</div>
+                        <div class="ai-feature-text">С учётом количества детей, возраста и формата мероприятия</div>
+                    </div>
+                </div>
+                <div class="ai-badge">
+                    <i class="ph ph-lightning"></i>
+                    10 запросов в месяц включено в подписку
+                </div>
+            </div>
+
+            <div class="chat-mockup">
+                <div class="chat-title">
+                    <i class="ph ph-robot" style="color: var(--pro-terracotta);"></i>
+                    Помощник воспитателя
+                </div>
+
+                <div class="chat-bubble user">
+                    <div class="bubble-label">Вы</div>
+                    <div class="bubble-content">
+                        Придумай сценарий физкультминутки про животных для детей 4–5 лет, 3 минуты
                     </div>
                 </div>
 
-                <div class="testimonial-card">
-                    <span class="testimonial-quote">"</span>
-                    <p class="testimonial-text">
-                        Сценарии праздников — это просто находка! Использовала новогодний утренник — 
-                        родители были в восторге. Все материалы структурированные, понятные, сразу готовы к работе.
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar"><i class="ph ph-chalkboard-teacher"></i></div>
-                        <div class="testimonial-info">
-                            <div class="testimonial-name">Анна Петрова</div>
-                            <div class="testimonial-position">Методист ДОУ №45, Санкт-Петербург</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <span class="testimonial-quote">"</span>
-                    <p class="testimonial-text">
-                        260 рублей в месяц — это смешная цена за такой объём материалов! 
-                        Один сценарий праздника стоил бы дороже. А здесь целая библиотека и новинки каждую неделю!
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar"><i class="ph ph-chalkboard-teacher"></i></div>
-                        <div class="testimonial-info">
-                            <div class="testimonial-name">Ольга Васильева</div>
-                            <div class="testimonial-position">Воспитатель, стаж 15 лет, Казань</div>
-                        </div>
+                <div class="chat-bubble bot">
+                    <div class="bubble-label">🤖 Помощник</div>
+                    <div class="bubble-content">
+                        <strong>Физкультминутка «Зверята»</strong> (3 мин, группа 4–5 лет)<br><br>
+                        🐰 «Зайка прыгает вот так» — прыжки на двух ногах (30 сек)<br>
+                        🐻 «Медведь идёт вразвалку» — ходьба с покачиванием (30 сек)<br>
+                        🦅 «Птица крылья расправляет» — руки в стороны, взмахи (30 сек)<br>
+                        🐍 «Змейка ползёт» — волнообразные движения руками (30 сек)...
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Тарифы -->
-    <section class="pricing" id="pricing">
-        <div class="pricing-container">
-            <h2 class="section-title">Простой и честный тариф</h2>
-            <p class="section-subtitle">Без скрытых платежей. Отменить можно в любой момент.</p>
+<!-- КАК РАБОТАЕТ -->
+<section class="how-it-works">
+    <div class="how-container">
+        <h2 class="section-title">Три шага до готовых материалов</h2>
+        <p class="section-subtitle">Просто и быстро — без лишних регистраций</p>
 
-            <div class="pricing-card fade-in">
-                <div class="pricing-badge">Популярно</div>
-                
-                <h3 class="pricing-title">Мишка Макс PRO</h3>
-                <p class="pricing-subtitle">Безлимитный доступ ко всем материалам</p>
-
-                <div class="pricing-price">
-                    <span class="currency">₽</span>260
+        <div class="steps fade-in">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div>
+                    <div class="step-title">Изучите содержание</div>
+                    <p class="step-text">Каталог всех материалов открыт до оплаты — посмотрите рубрики и убедитесь что это то, что нужно.</p>
+                    <a href="https://t.me/helper_vospitatel_bot/content" target="_blank" class="step-link">
+                        <i class="ph ph-device-mobile"></i>
+                        Открыть каталог →
+                    </a>
                 </div>
-                <div class="pricing-period">в месяц</div>
+            </div>
 
-                <ul class="pricing-features">
-                    <li>150+ готовых сценариев и конспектов</li>
-                    <li>Новые материалы каждую неделю</li>
-                    <li>Все праздники года</li>
-                    <li>Занятия для всех возрастных групп</li>
-                    <li>Шаблоны документов и планов</li>
-                    <li>Поддержка в чате 24/7</li>
-                    <li>Отмена подписки в любой момент</li>
-                </ul>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div>
+                    <div class="step-title">Оформите подписку</div>
+                    <p class="step-text">Оплата через Telegram за 260₽/мес. Без сложных регистраций и форм. Сразу после оплаты открывается доступ к закрытому каналу «Кладовая педагога» и мини-приложению с полным каталогом.</p>
+                </div>
+            </div>
 
-                <a href="https://t.me/mishkamax_pro_bot" class="btn btn-primary" style="font-size: 1.3rem; padding: 1.5rem 3rem;">
-                    <i class="ph ph-sparkle"></i> Подключить прямо сейчас
+            <div class="step">
+                <div class="step-number">3</div>
+                <div>
+                    <div class="step-title">Берите и используйте</div>
+                    <p class="step-text">Находите нужное через каталог за 10 секунд. Скачивайте, используйте на занятиях, запрашивайте у ИИ-помощника — всё уже готово.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ОТЗЫВЫ -->
+<section class="testimonials">
+    <div class="testimonials-container">
+        <h2 class="section-title">Что говорят коллеги</h2>
+        <p class="section-subtitle">Реальные отзывы работников дошкольного образования</p>
+
+        <div class="testimonials-grid fade-in">
+            <div class="testimonial-card">
+                <span class="testimonial-quote">"</span>
+                <p class="testimonial-text">Очень весёлая песня! Включила малышам 2 мл. группы — все сразу заёрзали на стульчиках и заплясали. Весёлые песни детям нравятся больше, чем грустные 😄</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar"><i class="ph ph-music-note"></i></div>
+                    <div>
+                        <div class="testimonial-name">Маргарита</div>
+                        <div class="testimonial-position">Музыкальный руководитель ДОУ</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <span class="testimonial-quote">"</span>
+                <p class="testimonial-text">Мои дети будут в восторге! Спасибо огромное за креативную подачу занятия! 🤩</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar"><i class="ph ph-chalkboard-teacher"></i></div>
+                    <div>
+                        <div class="testimonial-name">Елена</div>
+                        <div class="testimonial-position">Воспитатель ДОУ</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <span class="testimonial-quote">"</span>
+                <p class="testimonial-text">Мишка не только создал великолепную песню, но и устроил штурм мозга! Это круто 🙌</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar"><i class="ph ph-user"></i></div>
+                    <div>
+                        <div class="testimonial-name">Анна</div>
+                        <div class="testimonial-position">Работник дошкольного образования</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ЦЕНА -->
+<section class="pricing" id="pricing">
+    <div class="pricing-container">
+        <h2 class="pricing-title">Присоединяйтесь к 400+ работникам дошкольного образования</h2>
+        <p class="pricing-subtitle">Простой и честный тариф. Без скрытых платежей.</p>
+
+        <div class="pricing-card fade-in">
+            <div class="pricing-name">🐻 Кладовая педагога</div>
+
+            <div class="pricing-price-row">
+                <span class="pricing-currency">₽</span>
+                <span class="pricing-price">260</span>
+            </div>
+            <div class="pricing-period">в месяц</div>
+            <div class="pricing-coffee">меньше чашки кофе в день</div>
+
+            <ul class="pricing-features">
+                <li><i class="ph ph-check-circle-fill"></i> 126+ песен для занятий, физминуток и праздников</li>
+                <li><i class="ph ph-check-circle-fill"></i> Сценарии утренников и тематических занятий</li>
+                <li><i class="ph ph-check-circle-fill"></i> Дидактические карточки и упражнения</li>
+                <li><i class="ph ph-check-circle-fill"></i> Мини-приложение с каталогом и поиском</li>
+                <li><i class="ph ph-check-circle-fill"></i> ИИ-помощник — 10 запросов в месяц</li>
+                <li><i class="ph ph-check-circle-fill"></i> Постоянно пополняемая библиотека</li>
+            </ul>
+
+            <a href="https://t.me/mishkamax_pro_bot" class="pricing-btn">
+                🎵 Получить доступ за 260₽/мес
+            </a>
+
+            <div>
+                <a href="https://t.me/helper_vospitatel_bot/content" target="_blank" class="pricing-catalog-link">
+                    <i class="ph ph-device-mobile"></i>
+                    Сначала хочу посмотреть каталог →
                 </a>
             </div>
+            <div class="pricing-note">Отменить можно в любой момент · Доступ сразу после оплаты</div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Финальный CTA -->
-    <section class="final-cta">
-        <div class="final-cta-container">
-            <h2>Готовы экономить 12 часов в неделю?</h2>
-            <p>
-                Присоединяйтесь к 10 500+ воспитателям, которые уже работают с удовольствием, 
-                а не в стрессе. Первая неделя — пробная!
-            </p>
-            <a href="https://t.me/mishkamax_pro_bot" class="btn btn-primary">
-                <i class="ph ph-rocket-launch"></i> Начать экономить время
-            </a>
+<!-- FOOTER -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-links">
+            <a href="/">Главная</a>
+            <a href="#whats-inside">Что внутри</a>
+            <a href="#pricing">Подписка</a>
+            <a href="https://t.me/helper_vospitatel_bot/content" target="_blank">Каталог</a>
+            <a href="mailto:ad@mishkamax.ru">Поддержка</a>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-links">
-                <a href="/">Главная</a>
-                <a href="#whats-inside">Что внутри</a>
-                <a href="#pricing">Тарифы</a>
-                <a href="mailto:pro@mishkamax.ru">Поддержка</a>
-            </div>
-            <div class="footer-copyright">
-                &copy; 2025 Мишка Макс PRO. Для воспитателей с любовью <i class="ph ph-heart" style="color:var(--pro-terracotta);vertical-align:middle"></i>
-            </div>
+        <div class="footer-copyright">
+            © 2025 Мишка Макс PRO. Для педагогов с любовью ❤️
         </div>
-    </footer>
+    </div>
+</footer>
 
-    <script>
-        // Анимация при скролле
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
+<script>
+    // Анимация при скролле
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
         });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-        // Плавная прокрутка
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Плавная прокрутка
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
-    </script>
+    });
+</script>
+
 </body>
 </html>
