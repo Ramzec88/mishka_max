@@ -414,7 +414,8 @@
             grid-template-columns: 40% 1fr;
             grid-template-areas:
                 "image text"
-                "features features";
+                "features features"
+                "banner banner";
             gap: 2rem 3rem;
             align-items: start;
         }
@@ -497,6 +498,94 @@
         .feature p {
             font-size: 1rem;
             line-height: 1.6;
+        }
+
+        /* Баннер аудиосказок */
+        .stories-banner {
+            grid-area: banner;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            background: linear-gradient(135deg, #1a1250 0%, #2d1b69 50%, #0d3466 100%);
+            border-radius: 24px;
+            padding: 2rem 2.5rem;
+            margin-top: 1rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(26, 18, 80, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .stories-banner:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 25px 70px rgba(26, 18, 80, 0.4);
+        }
+        .stories-banner::before {
+            content: '✦ ✧ ✦';
+            position: absolute;
+            top: 1rem;
+            right: 12rem;
+            color: rgba(255, 224, 102, 0.35);
+            font-size: 1.2rem;
+            pointer-events: none;
+        }
+        .stories-banner__deco {
+            flex-shrink: 0;
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: #ffe066;
+        }
+        .stories-banner__label {
+            display: inline-block;
+            background: #ffe066;
+            color: #1a1250;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 0.2rem 0.7rem;
+            border-radius: 20px;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+        .stories-banner__text {
+            flex: 1;
+        }
+        .stories-banner__text h3 {
+            font-family: 'Comfortaa', sans-serif;
+            font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+            color: #fff;
+            margin-bottom: 0.4rem;
+        }
+        .stories-banner__text p {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 1rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+        .stories-banner__btn {
+            flex-shrink: 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #ffe066;
+            color: #1a1250;
+            font-family: 'Comfortaa', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 0.9rem 1.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            white-space: nowrap;
+        }
+        .stories-banner__btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(255, 224, 102, 0.45);
         }
 
         /* Платформы */
@@ -1001,7 +1090,8 @@
                 grid-template-areas:
                     "image"
                     "text"
-                    "features";
+                    "features"
+                    "banner";
                 gap: 1.5rem;
             }
 
@@ -1013,6 +1103,21 @@
 
             .about-features {
                 grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stories-banner {
+                flex-direction: column;
+                text-align: center;
+                padding: 1.5rem;
+            }
+
+            .stories-banner__deco {
+                display: none;
+            }
+
+            .stories-banner__btn {
+                width: 100%;
+                justify-content: center;
             }
 
             .hero-stats {
@@ -1411,6 +1516,21 @@
                     <h3>Безопасность</h3>
                     <p>100% детский контент без рекламы</p>
                 </div>
+            </div>
+
+            <!-- Баннер аудиосказок -->
+            <div class="stories-banner">
+                <div class="stories-banner__deco">
+                    <i class="ph ph-headphones"></i>
+                </div>
+                <div class="stories-banner__text">
+                    <span class="stories-banner__label">Новинка</span>
+                    <h3>Аудиосказки с Мишкой Максом</h3>
+                    <p>Добрые истории для малышей — включай и слушай вместе!</p>
+                </div>
+                <a href="/stories/" class="stories-banner__btn">
+                    Слушать сказки <i class="ph ph-arrow-right"></i>
+                </a>
             </div>
         </div>
     </section>
