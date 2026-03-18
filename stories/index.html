@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Мишка Макс — Волшебные Аудиосказки</title>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
 <style>
   :root {
     --sky: #1a1250;
@@ -452,7 +453,7 @@
     position: relative;
   }
   .plan.featured::before {
-    content: '⭐ Лучший выбор';
+    content: '★ Лучший выбор';
     position: absolute;
     top: -14px;
     left: 50%;
@@ -488,7 +489,7 @@
     gap: 0.5rem;
     align-items: flex-start;
   }
-  .plan-features li::before { content: '✦'; color: var(--mint); flex-shrink: 0; }
+  .plan-features li::before { content: '★'; color: var(--mint); flex-shrink: 0; }
 
   /* TESTIMONIALS */
   .reviews-bg {
@@ -616,7 +617,7 @@
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo">🐻 Мишка Макс</a>
+  <a href="#" class="nav-logo"><i class="ph ph-paw-print"></i> Мишка Макс</a>
   <ul class="nav-links">
     <li><a href="#how">Как это работает</a></li>
     <li><a href="#tales">Сказки</a></li>
@@ -643,12 +644,12 @@
     </p>
 
     <div class="hero-cta">
-      <a href="#tales" class="btn-primary">🎧 Послушать сказку</a>
+      <a href="#tales" class="btn-primary"><i class="ph ph-headphones"></i> Послушать сказку</a>
       <a href="#how" class="btn-ghost">Узнать подробнее</a>
     </div>
 
     <div class="bear-wrap">
-      <span class="bear-emoji">🐻</span>
+      <span class="bear-emoji"><i class="ph ph-paw-print"></i></span>
     </div>
 
     <!-- Soundwave -->
@@ -673,30 +674,30 @@
 <!-- HOW IT WORKS -->
 <section id="how" class="how-bg">
   <div class="container">
-    <p class="section-label">✦ Как это работает</p>
+    <p class="section-label"><i class="ph ph-star-four"></i> Как это работает</p>
     <h2 class="section-title">Магия в три шага</h2>
 
     <div class="steps">
       <div class="step">
-        <div class="step-icon">🌙</div>
+        <div class="step-icon"><i class="ph ph-moon" style="color:var(--lavender)"></i></div>
         <div class="step-num">Шаг 01</div>
         <h3>Выберите сказку</h3>
         <p>Подберите историю по теме — страх темноты, ревность к братику, первый день в садике и другие.</p>
       </div>
       <div class="step">
-        <div class="step-icon">🎧</div>
+        <div class="step-icon"><i class="ph ph-headphones" style="color:var(--mint)"></i></div>
         <div class="step-num">Шаг 02</div>
         <h3>Слушайте вместе</h3>
         <p>Уложите малыша и включите сказку. Мягкий голос Мишки Макса погрузит в уютный волшебный мир.</p>
       </div>
       <div class="step">
-        <div class="step-icon">💬</div>
+        <div class="step-icon"><i class="ph ph-chat-circle-dots" style="color:var(--rose)"></i></div>
         <div class="step-num">Шаг 03</div>
         <h3>Поговорите</h3>
         <p>После сказки — маленький разговор. Мы дадим вам вопросы-подсказки для разбора с ребёнком.</p>
       </div>
       <div class="step">
-        <div class="step-icon">🌟</div>
+        <div class="step-icon"><i class="ph ph-star" style="color:var(--star)"></i></div>
         <div class="step-num">Шаг 04</div>
         <h3>Наблюдайте рост</h3>
         <p>Постепенно эмоции ребёнка становятся богаче, страхи — меньше, а связь с вами — крепче.</p>
@@ -708,12 +709,12 @@
 <!-- TALES PREVIEW -->
 <section id="tales" class="tales-bg">
   <div class="container">
-    <p class="section-label">✦ Библиотека сказок</p>
+    <p class="section-label"><i class="ph ph-star-four"></i> Библиотека сказок</p>
     <h2 class="section-title">Сказки на все случаи<br>детской жизни</h2>
 
     <!-- Player Mockup -->
     <div class="player-wrap">
-      <div class="tale-emoji" style="font-size: 3rem;">🌙</div>
+      <div class="tale-emoji" style="font-size: 3rem;"><i class="ph ph-moon" style="color:var(--lavender)"></i></div>
       <div class="player-title">Мишка и тёмная комната</div>
       <div class="player-sub">Сказка о страхе темноты · 12 минут</div>
 
@@ -741,48 +742,48 @@
       </div>
 
       <div class="player-controls" style="margin-top: 1.5rem;">
-        <button class="ctrl-btn">⏮</button>
-        <button class="ctrl-btn">⏪</button>
-        <button class="play-btn">⏸</button>
-        <button class="ctrl-btn">⏩</button>
-        <button class="ctrl-btn">⏭</button>
+        <button class="ctrl-btn"><i class="ph ph-skip-back"></i></button>
+        <button class="ctrl-btn"><i class="ph ph-rewind"></i></button>
+        <button class="play-btn"><i class="ph ph-pause"></i></button>
+        <button class="ctrl-btn"><i class="ph ph-fast-forward"></i></button>
+        <button class="ctrl-btn"><i class="ph ph-skip-forward"></i></button>
       </div>
     </div>
 
     <!-- Tales Grid -->
     <div class="tales-grid" style="margin-top: 3rem;">
       <div class="tale-card">
-        <div class="tale-emoji">😨</div>
+        <div class="tale-emoji"><i class="ph ph-ghost" style="color:var(--lavender)"></i></div>
         <span class="tale-tag">Страхи</span>
         <div class="tale-title">Мишка и тёмная комната</div>
         <div class="tale-desc">Почему темнота — не страшная, а просто ночь, которая умеет спать.</div>
       </div>
       <div class="tale-card">
-        <div class="tale-emoji">👶</div>
+        <div class="tale-emoji"><i class="ph ph-heart" style="color:var(--rose)"></i></div>
         <span class="tale-tag">Ревность</span>
         <div class="tale-title">Новый маленький медвежонок</div>
         <div class="tale-desc">История о том, что любовь родителей не делится — она только умножается.</div>
       </div>
       <div class="tale-card">
-        <div class="tale-emoji">🏫</div>
+        <div class="tale-emoji"><i class="ph ph-building" style="color:var(--mint)"></i></div>
         <span class="tale-tag">Адаптация</span>
         <div class="tale-title">Первый день в Медвежьем садике</div>
         <div class="tale-desc">Мишка тоже боялся. И у него всё получилось — обязательно получится и у тебя.</div>
       </div>
       <div class="tale-card">
-        <div class="tale-emoji">😤</div>
+        <div class="tale-emoji"><i class="ph ph-lightning" style="color:var(--star)"></i></div>
         <span class="tale-tag">Злость</span>
         <div class="tale-title">Когда Мишка злится</div>
         <div class="tale-desc">Злиться — нормально. Сказка учит, как справиться с этим чувством без обид.</div>
       </div>
       <div class="tale-card">
-        <div class="tale-emoji">😢</div>
+        <div class="tale-emoji"><i class="ph ph-cloud-rain" style="color:var(--soft)"></i></div>
         <span class="tale-tag">Грусть</span>
         <div class="tale-title">Дождливый день Мишки</div>
         <div class="tale-desc">Иногда грустно без причины. И это тоже хорошо — грусть умеет заканчиваться.</div>
       </div>
       <div class="tale-card">
-        <div class="tale-emoji">💤</div>
+        <div class="tale-emoji"><i class="ph ph-moon-stars" style="color:var(--star)"></i></div>
         <span class="tale-tag">Сон</span>
         <div class="tale-title">Мишка идёт в ночь</div>
         <div class="tale-desc">Мягкая колыбельная-сказка для спокойного засыпания без капризов.</div>
@@ -798,7 +799,7 @@
 <!-- BENEFITS -->
 <section class="benefits-bg">
   <div class="container">
-    <p class="section-label">✦ Польза сказкотерапии</p>
+    <p class="section-label"><i class="ph ph-star-four"></i> Польза сказкотерапии</p>
     <h2 class="section-title">Почему сказка помогает<br>лучше объяснений?</h2>
     <p style="color: var(--soft); max-width: 580px; line-height: 1.7; margin-bottom: 1rem;">
       Детский мозг мыслит образами и историями. Через метафору ребёнок понимает и принимает то, что не воспринял бы в виде правил или нотаций.
@@ -806,22 +807,22 @@
 
     <div class="benefits-grid">
       <div class="benefit">
-        <div class="benefit-icon">🧠</div>
+        <div class="benefit-icon"><i class="ph ph-brain" style="color:var(--rose)"></i></div>
         <h3>Эмоциональный интеллект</h3>
         <p>Ребёнок учится называть и понимать свои чувства через героев сказки, а не через конфликт.</p>
       </div>
       <div class="benefit">
-        <div class="benefit-icon">🛡️</div>
+        <div class="benefit-icon"><i class="ph ph-shield-check" style="color:var(--mint)"></i></div>
         <h3>Преодоление страхов</h3>
         <p>Безопасная дистанция от проблемы через образ позволяет мозгу найти решение без тревоги.</p>
       </div>
       <div class="benefit">
-        <div class="benefit-icon">💞</div>
+        <div class="benefit-icon"><i class="ph ph-heart" style="color:var(--rose)"></i></div>
         <h3>Связь с родителем</h3>
         <p>Совместное прослушивание и разговор после — ценные минуты близости и доверия.</p>
       </div>
       <div class="benefit">
-        <div class="benefit-icon">😴</div>
+        <div class="benefit-icon"><i class="ph ph-moon" style="color:var(--star)"></i></div>
         <h3>Спокойный сон</h3>
         <p>Мягкий голос и музыкальный фон создают ритуал, который помогает расслабиться и уснуть.</p>
       </div>
@@ -832,13 +833,13 @@
 <!-- PRICING -->
 <section id="pricing" class="pricing-bg">
   <div class="container">
-    <p class="section-label">✦ Подписка</p>
+    <p class="section-label"><i class="ph ph-star-four"></i> Подписка</p>
     <h2 class="section-title">Выберите свой<br>волшебный абонемент</h2>
     <p style="color: var(--soft); margin-bottom: 1rem;">Первые 3 сказки — бесплатно. Без обязательств.</p>
 
     <div class="plans">
       <div class="plan">
-        <div class="plan-name">🌙 Лунный</div>
+        <div class="plan-name"><i class="ph ph-moon"></i> Лунный</div>
         <div class="plan-price">190 <span>₽/мес</span></div>
         <div class="plan-desc">Для знакомства с миром Мишки Макса</div>
         <ul class="plan-features">
@@ -850,7 +851,7 @@
       </div>
 
       <div class="plan featured">
-        <div class="plan-name">⭐ Звёздный</div>
+        <div class="plan-name"><i class="ph ph-star"></i> Звёздный</div>
         <div class="plan-price">390 <span>₽/мес</span></div>
         <div class="plan-desc">Полная библиотека для вдумчивых родителей</div>
         <ul class="plan-features">
@@ -860,11 +861,11 @@
           <li>Доступ к закрытому Telegram-каналу</li>
           <li>Рекомендации по возрасту</li>
         </ul>
-        <a href="#" class="btn-primary" style="display: block; text-align: center;">Выбрать ✨</a>
+        <a href="#" class="btn-primary" style="display: block; text-align: center;">Выбрать <i class="ph ph-sparkle"></i></a>
       </div>
 
       <div class="plan">
-        <div class="plan-name">🌞 Годовой</div>
+        <div class="plan-name"><i class="ph ph-sun"></i> Годовой</div>
         <div class="plan-price">2900 <span>₽/год</span></div>
         <div class="plan-desc">Экономия 2 месяца в подарок</div>
         <ul class="plan-features">
@@ -881,7 +882,7 @@
 <!-- TESTIMONIALS -->
 <section class="reviews-bg">
   <div class="container">
-    <p class="section-label">✦ Отзывы</p>
+    <p class="section-label"><i class="ph ph-star-four"></i> Отзывы</p>
     <h2 class="section-title">Что говорят родители</h2>
 
     <div class="reviews">
@@ -889,7 +890,7 @@
         <div class="review-stars">★★★★★</div>
         <div class="review-text">«Наша Маша боялась засыпать одна. После сказки "Мишка и тёмная комната" сама просит выключить свет. Это маленькое чудо.»</div>
         <div class="review-author">
-          <div class="avatar">👩</div>
+          <div class="avatar"><i class="ph ph-user-circle"></i></div>
           <div>
             <div class="author-name">Елена, мама Маши (3 года)</div>
             <div class="author-role">Подписчик Telegram-канала</div>
@@ -900,7 +901,7 @@
         <div class="review-stars">★★★★★</div>
         <div class="review-text">«Сын перестал закатывать истерики по утрам перед садиком. Слушали сказку несколько раз, и что-то в нём изменилось. Спасибо Мишке!»</div>
         <div class="review-author">
-          <div class="avatar">👨</div>
+          <div class="avatar"><i class="ph ph-user-circle"></i></div>
           <div>
             <div class="author-name">Дмитрий, папа Саши (4 года)</div>
             <div class="author-role">Подписчик Instagram</div>
@@ -911,7 +912,7 @@
         <div class="review-stars">★★★★★</div>
         <div class="review-text">«Как педагог-психолог могу сказать: сказкотерапевтический подход выстроен грамотно. Рекомендую всем родителям из нашей группы.»</div>
         <div class="review-author">
-          <div class="avatar">👩‍🏫</div>
+          <div class="avatar"><i class="ph ph-user-circle"></i></div>
           <div>
             <div class="author-name">Ирина, детский психолог</div>
             <div class="author-role">Подписчик для воспитателей</div>
@@ -925,7 +926,7 @@
 <!-- FINAL CTA -->
 <section class="cta-section">
   <div class="container">
-    <div style="font-size: 5rem; animation: float 4s ease-in-out infinite; display: inline-block;">🐻</div>
+    <div style="font-size: 5rem; animation: float 4s ease-in-out infinite; display: inline-block; color: var(--lavender);"><i class="ph ph-paw-print"></i></div>
     <h2 class="cta-title" style="margin-top: 1rem;">
       Подарите ребёнку<br>
       <span style="color: var(--star);">волшебный вечер</span>
@@ -934,7 +935,7 @@
       Начните прямо сейчас — первые три сказки бесплатно. Никаких карт и обязательств.
     </p>
     <a href="#pricing" class="btn-primary" style="font-size: 1.2rem; padding: 1.2rem 3rem;">
-      🎧 Слушать бесплатно
+      <i class="ph ph-headphones"></i> Слушать бесплатно
     </a>
     <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--lavender);">
       Уже 2 400+ семей слушают вместе с Мишкой Максом
@@ -944,7 +945,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">🐻 Мишка Макс</div>
+  <div class="footer-logo"><i class="ph ph-paw-print"></i> Мишка Макс</div>
   <p>Аудиосказки в духе сказкотерапии для детей 1–5 лет</p>
   <p style="margin-top: 0.75rem; font-size: 0.8rem; opacity: 0.5;">© 2024 Мишка Макс · Все права защищены</p>
 </footer>
@@ -973,7 +974,7 @@
   let playing = true;
   playBtn.addEventListener('click', () => {
     playing = !playing;
-    playBtn.textContent = playing ? '⏸' : '▶';
+    playBtn.innerHTML = playing ? '<i class="ph ph-pause"></i>' : '<i class="ph ph-play"></i>';
     document.querySelectorAll('.player-wrap .bar').forEach(b => {
       b.style.animationPlayState = playing ? 'running' : 'paused';
     });
