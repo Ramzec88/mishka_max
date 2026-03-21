@@ -665,10 +665,25 @@
         }
 
         .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
+            display: flex;
+            gap: 1.5rem;
             margin-top: 3rem;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding-bottom: 1rem;
+            -webkit-overflow-scrolling: touch;
+        }
+        .testimonials-grid::-webkit-scrollbar {
+            height: 6px;
+        }
+        .testimonials-grid::-webkit-scrollbar-track {
+            background: var(--pro-bg);
+            border-radius: 3px;
+        }
+        .testimonials-grid::-webkit-scrollbar-thumb {
+            background: var(--pro-terracotta);
+            border-radius: 3px;
+            opacity: 0.5;
         }
 
         .testimonial-card {
@@ -677,6 +692,9 @@
             border-radius: 20px;
             position: relative;
             border-left: 4px solid var(--pro-terracotta);
+            flex-shrink: 0;
+            width: 360px;
+            scroll-snap-align: start;
         }
 
         .testimonial-quote {
@@ -990,7 +1008,7 @@
             .hero-visual { order: -1; }
             .problems-grid { grid-template-columns: 1fr; }
             .ai-grid { grid-template-columns: 1fr; }
-            .testimonials-grid { grid-template-columns: 1fr; }
+            .testimonial-card { width: 300px; }
             .step { grid-template-columns: 1fr; }
             .step-number { width: 52px; height: 52px; font-size: 1.5rem; border-radius: 14px; }
             nav .nav-cta { display: none; }
@@ -1267,6 +1285,30 @@
         <p class="section-subtitle">Реальные отзывы работников дошкольного образования</p>
 
         <div class="testimonials-grid fade-in">
+            <div class="testimonial-card">
+                <span class="testimonial-quote">"</span>
+                <p class="testimonial-text">Впервые использовала на 8 марта 2 песенки. Учатся они настолько легко! Детям понравилось всё — от музыки до текста. Мне как музыкальному руководителю было очень приятно готовить детей с новым материалом 🤗</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar"><i class="ph ph-music-notes"></i></div>
+                    <div>
+                        <div class="testimonial-name">Кристина Айковна</div>
+                        <div class="testimonial-position">Музыкальный руководитель</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <span class="testimonial-quote">"</span>
+                <p class="testimonial-text">Хочу сказать спасибо за бота — это действительно очень нужная вещь. С его помощью подготовила сценарий выпускного, день театра и открытое занятие. И за интересные музыкальные игры и песенки — использую их в своей работе ❤️</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar"><i class="ph ph-star"></i></div>
+                    <div>
+                        <div class="testimonial-name">Ксения</div>
+                        <div class="testimonial-position">Работник дошкольного образования</div>
+                    </div>
+                </div>
+            </div>
+
             <div class="testimonial-card">
                 <span class="testimonial-quote">"</span>
                 <p class="testimonial-text">Очень весёлая песня! Включила малышам 2 мл. группы — все сразу заёрзали на стульчиках и заплясали. Весёлые песни детям нравятся больше, чем грустные 😄</p>
