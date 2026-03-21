@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DB4TTPYZYM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-DB4TTPYZYM');
+    </script>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
         (function(m,e,t,r,i,k,a){
@@ -15,21 +24,10 @@
     <noscript><div><img src="https://mc.yandex.ru/watch/105821243" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DB4TTPYZYM"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-DB4TTPYZYM');
-    </script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мишка Макс — Детские Истории и Приключения</title>
-    <meta name="description" content="Смотри новые серии, скачивай песенки и развивающие материалы для детей! Мультики, сценарии и материалы для занятий.">
-    <meta name="keywords" content="мишка макс, детский блогер, мультики для малышей, развивающие видео для детей, песенки для детей скачать, материалы для занятий">
-    <link rel="canonical" href="https://mishka-max.ru/me/">
+    <meta name="description" content="Мультики, песенки и развивающие материалы для детей 1–5 лет! Мишка Макс — добрый друг для малышей.">
 
     <!-- Open Graph / Social Media -->
     <meta property="og:title" content="Мишка Макс — Мультики и Материалы">
@@ -63,8 +61,9 @@
             --red-dark: #E63946;
             --yellow: #FFD23F;
             --orange: #FFA94D;
+            --green: #2ECC71;
+            --green-dark: #27AE60;
             --white: #FFFFFF;
-            --cloud-white: #F8F9FA;
             --text-dark: #2C3E50;
             --shadow: rgba(59, 130, 246, 0.2);
             --shadow-strong: rgba(59, 130, 246, 0.35);
@@ -92,7 +91,7 @@
             opacity: 0.9;
             z-index: 1;
             pointer-events: none;
-            box-shadow: 
+            box-shadow:
                 0 8px 32px rgba(255, 255, 255, 0.3),
                 inset 0 -4px 8px rgba(0, 0, 0, 0.05);
         }
@@ -293,7 +292,7 @@
             font-weight: 700;
             margin-bottom: 12px;
             line-height: 1.1;
-            text-shadow: 
+            text-shadow:
                 3px 3px 0 var(--white),
                 -1px -1px 0 var(--white),
                 1px -1px 0 var(--white),
@@ -343,6 +342,47 @@
             gap: 14px;
         }
 
+        /* Section labels */
+        .section-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 10px 0 4px;
+            animation: slideIn 0.6s ease-out backwards;
+        }
+
+        .section-label-content {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .section-label-icon {
+            width: 14px;
+            height: 14px;
+            fill: rgba(255,255,255,0.9);
+            flex-shrink: 0;
+            filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.2));
+        }
+
+        .section-label-text {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: rgba(255,255,255,0.9);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            white-space: nowrap;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+
+        .section-label-line {
+            flex: 1;
+            height: 1px;
+            background: rgba(255,255,255,0.4);
+            border-radius: 1px;
+        }
+
         .link-button {
             position: relative;
             background: var(--white);
@@ -352,7 +392,7 @@
             display: flex;
             align-items: center;
             gap: 18px;
-            box-shadow: 
+            box-shadow:
                 0 6px 24px var(--shadow),
                 0 2px 8px rgba(0, 0, 0, 0.08),
                 inset 0 1px 0 rgba(255,255,255,0.9);
@@ -394,7 +434,7 @@
 
         .link-button:hover {
             transform: translateY(-8px) scale(1.02) rotate(-1deg);
-            box-shadow: 
+            box-shadow:
                 0 16px 48px var(--shadow-strong),
                 0 4px 16px rgba(0, 0, 0, 0.12),
                 inset 0 1px 0 rgba(255,255,255,1);
@@ -420,7 +460,7 @@
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
-            box-shadow: 
+            box-shadow:
                 0 6px 16px rgba(82, 184, 232, 0.35),
                 inset 0 2px 4px rgba(255, 255, 255, 0.3);
             transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -428,7 +468,7 @@
 
         .link-button:hover .link-icon {
             transform: scale(1.15) rotate(-8deg);
-            box-shadow: 
+            box-shadow:
                 0 8px 24px rgba(82, 184, 232, 0.5),
                 inset 0 2px 4px rgba(255, 255, 255, 0.5);
         }
@@ -521,6 +561,84 @@
             fill: #D35400;
         }
 
+        /* Primary CTA (green) button */
+        .link-button.primary-cta {
+            background: linear-gradient(135deg, #3DD68C 0%, #27AE60 100%);
+            border: 4px solid var(--white);
+            box-shadow: 0 8px 32px rgba(39,174,96,0.45), 0 4px 12px rgba(0,0,0,0.15), inset 0 2px 4px rgba(255,255,255,0.4);
+        }
+
+        .link-button.primary-cta::before {
+            background: linear-gradient(135deg, #2ECC71 0%, #1E8449 100%);
+        }
+
+        .link-button.primary-cta .link-title,
+        .link-button.primary-cta .link-desc { color: var(--white); text-shadow: 1px 1px 3px rgba(0,0,0,0.25); }
+
+        .link-button.primary-cta .link-icon {
+            background: rgba(255,255,255,0.25);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1), inset 0 2px 4px rgba(255,255,255,0.3);
+        }
+
+        .link-button.primary-cta:hover {
+            transform: translateY(-10px) scale(1.03) rotate(-1deg);
+            box-shadow: 0 20px 56px rgba(39,174,96,0.6), 0 6px 20px rgba(0,0,0,0.2);
+            border-color: #A9F5C8;
+        }
+
+        .link-button.primary-cta:hover .link-title,
+        .link-button.primary-cta:hover .link-desc { color: var(--white); }
+
+        /* Partnership (dark) button */
+        .link-button.partnership {
+            background: linear-gradient(135deg, #2C3E50 0%, #1A252F 100%);
+            border: 3px solid rgba(255,255,255,0.2);
+            box-shadow: 0 6px 24px rgba(0,0,0,0.3), 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .link-button.partnership::before { background: linear-gradient(135deg, #3D5168 0%, #2C3E50 100%); }
+
+        .link-button.partnership .link-title { color: var(--yellow); text-shadow: 1px 1px 3px rgba(0,0,0,0.4); }
+        .link-button.partnership .link-desc { color: rgba(255,255,255,0.75); }
+
+        .link-button.partnership .link-icon {
+            background: linear-gradient(135deg, var(--yellow) 0%, var(--orange) 100%);
+            box-shadow: 0 6px 16px rgba(255,210,63,0.3);
+        }
+
+        .link-button.partnership .link-icon svg { fill: #2C3E50; }
+
+        .link-button.partnership .link-content { padding-right: 0; }
+
+        .title-wrapper {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 4px;
+        }
+
+        .link-button.partnership .link-title {
+            margin-bottom: 0;
+        }
+
+        .reach-badge.static-badge {
+            position: relative;
+            top: auto;
+            right: auto;
+            display: inline-block;
+            margin-bottom: 0;
+            white-space: nowrap;
+        }
+
+        .link-button.partnership:hover {
+            border-color: var(--yellow);
+            box-shadow: 0 16px 48px rgba(0,0,0,0.4), 0 4px 16px rgba(255,210,63,0.2);
+        }
+
+        .link-button.partnership:hover .link-title { color: var(--yellow); }
+        .link-button.partnership:hover .link-desc { color: rgba(255,255,255,0.9); }
+
         /* NEW Badge */
         .new-badge {
             position: absolute;
@@ -554,6 +672,136 @@
                 0 0 0 3px var(--white);
         }
 
+        /* Reach badge */
+        .reach-badge {
+            position: absolute;
+            top: 10px;
+            right: 14px;
+            background: linear-gradient(135deg, var(--yellow), var(--orange));
+            color: #2C3E50;
+            font-family: 'Fredoka', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 9px;
+            border-radius: 10px;
+            z-index: 2;
+            box-shadow: 0 3px 10px rgba(255,210,63,0.4);
+            letter-spacing: 0.3px;
+        }
+
+        /* Live dot */
+        .live-dot {
+            position: absolute;
+            top: 12px;
+            right: 16px;
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            border-radius: 50%;
+            z-index: 2;
+            animation: live-pulse 1.8s ease-in-out infinite;
+        }
+
+        @keyframes live-pulse {
+            0%, 100% { transform: scale(1); opacity: 1; box-shadow: 0 0 0 0 rgba(255,255,255,0.7); }
+            50% { transform: scale(1.2); opacity: 0.9; box-shadow: 0 0 0 6px rgba(255,255,255,0); }
+        }
+
+        /* Stories (Skazki) button */
+        .link-button.stories {
+            background: linear-gradient(135deg, #EDD9FF 0%, #C9A8E8 100%);
+            border: 3px solid rgba(255, 255, 255, 0.8);
+            box-shadow:
+                0 6px 24px rgba(160, 100, 220, 0.25),
+                0 2px 8px rgba(0, 0, 0, 0.08),
+                inset 0 1px 0 rgba(255, 255, 255, 0.9);
+        }
+
+        .link-button.stories::before {
+            background: linear-gradient(135deg, #D8AAFF 0%, #A87DD4 100%);
+        }
+
+        .link-button.stories .link-title {
+            color: #5B2D8E;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
+        }
+
+        .link-button.stories .link-desc {
+            color: #7A4BAA;
+        }
+
+        .link-button.stories .link-icon {
+            background: linear-gradient(135deg, #B085E0 0%, #8B5CF6 100%);
+            box-shadow:
+                0 6px 16px rgba(139, 92, 246, 0.35),
+                inset 0 2px 4px rgba(255, 255, 255, 0.3);
+        }
+
+        .link-button.stories:hover .link-title,
+        .link-button.stories:hover .link-desc {
+            color: var(--white);
+        }
+
+        .link-button.stories:hover {
+            border-color: #EDD9FF;
+            box-shadow:
+                0 16px 48px rgba(160, 100, 220, 0.4),
+                0 4px 16px rgba(0, 0, 0, 0.12),
+                inset 0 1px 0 rgba(255,255,255,1);
+        }
+
+        /* Social icon buttons row */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 12px;
+        }
+
+        .social-icon-btn {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.85);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow:
+                0 6px 20px var(--shadow),
+                0 2px 8px rgba(0, 0, 0, 0.08),
+                0 0 0 4px rgba(255, 255, 255, 0.5);
+            transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .social-icon-btn:hover {
+            transform: translateY(-6px) scale(1.12);
+            box-shadow:
+                0 14px 36px var(--shadow-strong),
+                0 4px 12px rgba(0, 0, 0, 0.12),
+                0 0 0 4px var(--yellow);
+        }
+
+        .social-icon-btn:active {
+            transform: scale(0.95);
+        }
+
+        .social-icon-btn svg {
+            width: 30px;
+            height: 30px;
+            fill: var(--sky-blue-dark);
+        }
+
+        /* Social hint */
+        .social-hint {
+            font-size: 12px;
+            color: rgba(255,255,255,0.8);
+            text-align: center;
+            font-weight: 700;
+            margin-top: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.15);
+        }
+
         /* Footer */
         .footer {
             text-align: center;
@@ -567,13 +815,29 @@
             to { opacity: 1; }
         }
 
+        .manager-contact {
+            text-align: center;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 12px;
+        }
+
+        .manager-contact a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+        }
+
+        .manager-contact a:hover {
+            text-decoration: underline;
+        }
+
         .footer-text {
             font-family: 'Fredoka', sans-serif;
             font-size: 18px;
             font-weight: 700;
             color: var(--white);
             margin-bottom: 16px;
-            text-shadow: 
+            text-shadow:
                 2px 2px 4px rgba(0, 0, 0, 0.2),
                 0 0 20px rgba(255, 255, 255, 0.3);
         }
@@ -630,6 +894,15 @@
             .link-button.featured:active {
                 transform: scale(0.96);
             }
+            .link-button.primary-cta:hover { transform: none; }
+            .link-button.partnership:hover { transform: none; }
+            .social-icon-btn:hover {
+                transform: none;
+                box-shadow: 0 6px 20px var(--shadow);
+            }
+            .social-icon-btn:active {
+                transform: scale(0.95);
+            }
         }
     </style>
 </head>
@@ -664,11 +937,57 @@
                 <span class="title-mishka">МИШКА</span>
                 <span class="title-max">МАКС</span>
             </h1>
-            <p class="subtitle">Добрые мультики 🎬, песенки 🎵 и развивающие материалы 📚</p>
+            <p class="subtitle">Мультики, песенки и развивашки для детей 1–5 лет 🐻</p>
         </header>
 
         <!-- Links -->
         <div class="links">
+
+            <!-- Для мам и малышей -->
+            <div class="section-label">
+                <div class="section-label-line"></div>
+                <div class="section-label-content">
+                    <svg class="section-label-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                    <span class="section-label-text">Для мам и малышей</span>
+                </div>
+                <div class="section-label-line"></div>
+            </div>
+
+            <a href="https://t.me/+7-oGjM-AgbcxNWQ6" class="link-button primary-cta" onclick="ym(105821243,'reachGoal','click_telegram')">
+                <div class="live-dot"></div>
+                <div class="link-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.03-1.99 1.27-5.62 3.72-.53.37-.1.56-.34.56-.21 0-.59-.07-.88-.13-.36-.07-.64-.11-.62-.24.02-.13.42-.27.62-.39 2.42-1.06 4.03-1.76 4.83-2.11 2.3-.96 2.78-.96 3.09-.96.07 0 .22.02.32.12.08.08.1.19.11.27-.01.06.01.24 0 .38z"/>
+                    </svg>
+                </div>
+                <div class="link-content">
+                    <div class="link-title">🐻 Территория Мишки Макса</div>
+                    <div class="link-desc">Главный канал для детей и родителей</div>
+                </div>
+            </a>
+
+            <a href="https://t.me/mishka_max_skazki" class="link-button stories" onclick="ym(105821243,'reachGoal','click_skazka')">
+                <div class="link-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zm0 13.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/>
+                    </svg>
+                </div>
+                <div class="link-content">
+                    <div class="link-title">СКАЗКИ МИШКИ МАКСА</div>
+                    <div class="link-desc">Аудиосказки и истории для малышей в Telegram</div>
+                </div>
+            </a>
+
+            <!-- Для воспитателей -->
+            <div class="section-label">
+                <div class="section-label-line"></div>
+                <div class="section-label-content">
+                    <svg class="section-label-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+                    <span class="section-label-text">Для воспитателей</span>
+                </div>
+                <div class="section-label-line"></div>
+            </div>
+
             <a href="https://t.me/mishka_max/245" class="link-button featured" onclick="ym(105821243,'reachGoal','click_kladovaya')">
                 <div class="link-icon">
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -677,60 +996,46 @@
                 </div>
                 <div class="link-content">
                     <div class="link-title">КЛАДОВАЯ ПЕДАГОГА</div>
-                    <div class="link-desc">Песенки, минусовки и полезные материалы для занятий</div>
+                    <div class="link-desc">Песенки, минусовки и полезные материалы · подписка 260₽/мес</div>
                 </div>
             </a>
 
-            <a href="https://t.me/+7-oGjM-AgbcxNWQ6" class="link-button" onclick="ym(105821243,'reachGoal','click_telegram')">
+            <!-- Смотреть везде -->
+            <div class="section-label">
+                <div class="section-label-line"></div>
+                <div class="section-label-content">
+                    <svg class="section-label-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"/></svg>
+                    <span class="section-label-text">Смотреть везде</span>
+                </div>
+                <div class="section-label-line"></div>
+            </div>
+
+            <a href="https://vk.com/mishka_max" class="link-button" onclick="ym(105821243,'reachGoal','click_vk')">
                 <div class="link-icon">
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.03-1.99 1.27-5.62 3.72-.53.37-.1.56-.34.56-.21 0-.59-.07-.88-.13-.36-.07-.64-.11-.62-.24.02-.13.42-.27.62-.39 2.42-1.06 4.03-1.76 4.83-2.11 2.3-.96 2.78-.96 3.09-.96.07 0 .22.02.32.12.08.08.1.19.11.27-.01.06.01.24 0 .38z"/>
+                        <path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.408 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.862-.523-2.049-1.727-1.033-1-1.49-1.135-1.744-1.135-.356 0-.458.102-.458.593v1.575c0 .424-.135.678-1.253.678-1.846 0-3.896-1.118-5.335-3.202C4.624 10.857 4.03 8.57 4.03 8.096c0-.254.102-.491.593-.491h1.744c.44 0 .61.203.78.677.863 2.49 2.303 4.675 2.896 4.675.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.204.17-.407.44-.407h2.744c.373 0 .508.203.508.643v3.473c0 .372.17.508.271.508.22 0 .407-.136.813-.542 1.254-1.406 2.151-3.574 2.151-3.574.119-.254.322-.491.763-.491h1.744c.525 0 .644.27.525.643-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0 .78.186.254.796.779 1.203 1.253.745.847 1.32 1.558 1.473 2.05.17.49-.085.745-.576.745z"/>
                     </svg>
                 </div>
                 <div class="link-content">
-                    <div class="link-title">TELEGRAM-КАНАЛ</div>
-                    <div class="link-desc">Самый уютный канал. Видео, новости и общение</div>
+                    <div class="link-title">ВКОНТАКТЕ</div>
+                    <div class="link-desc">Все серии и новости в ВК — без ограничений</div>
                 </div>
             </a>
 
-            <a href="https://instagram.com/mishka_max_" class="link-button" onclick="ym(105821243,'reachGoal','click_instagram')">
+            <a href="https://max.ru/mishka_max" class="link-button" onclick="ym(105821243,'reachGoal','click_max')">
+                <span class="new-badge">NEW</span>
                 <div class="link-icon">
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/>
+                        <path d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zM8 15l4-8 4 8H8zm2.5-2h3l-1.5-3-1.5 3z"/>
                     </svg>
                 </div>
                 <div class="link-content">
-                    <div class="link-title">INSTAGRAM* (ГЛАВНЫЙ БЛОГ)</div>
-                    <div class="link-desc">Нас здесь больше всего! Свежие рилс каждый день</div>
-                </div>
-            </a>
-
-            <a href="https://tiktok.com/@mishka_max_" class="link-button" onclick="ym(105821243,'reachGoal','click_tiktok')">
-                <div class="link-icon">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
-                    </svg>
-                </div>
-                <div class="link-content">
-                    <div class="link-title">TIKTOK</div>
-                    <div class="link-desc">Залипаем вместе! Самые смешные моменты</div>
-                </div>
-            </a>
-
-            <a href="https://youtube.com/@mishka_max?si=7SXOoxTl8nIRQ7YK" class="link-button" onclick="ym(105821243,'reachGoal','click_youtube')">
-                <div class="link-icon">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/>
-                    </svg>
-                </div>
-                <div class="link-content">
-                    <div class="link-title">YOUTUBE (СМОТРЕТЬ НА ТВ)</div>
-                    <div class="link-desc">Все серии подряд в хорошем качестве</div>
+                    <div class="link-title">МЕССЕНДЖЕР MAX</div>
+                    <div class="link-desc">Удобно смотреть и без блокировок</div>
                 </div>
             </a>
 
             <a href="https://dzen.ru/mishka_max" class="link-button" onclick="ym(105821243,'reachGoal','click_dzen')">
-                <span class="new-badge">NEW</span>
                 <div class="link-icon">
                     <svg viewBox="0 0 129 129" xmlns="http://www.w3.org/2000/svg">
                         <path d="M128.389 62.7804C128.389 62.1406 127.869 61.6108 127.229 61.5808C104.266 60.7111 90.2906 57.782 80.5136 48.0051C70.7167 38.2081 67.7976 24.2225 66.9279 1.20969C66.9079 0.569886 66.3781 0.0500488 65.7283 0.0500488H63.0491C62.4093 0.0500488 61.8795 0.569886 61.8495 1.20969C60.9797 24.2125 58.0607 38.2081 48.2637 48.0051C38.4768 57.792 24.5111 60.7111 1.54831 61.5808C0.908509 61.6008 0.388672 62.1306 0.388672 62.7804V65.4596C0.388672 66.0994 0.908509 66.6292 1.54831 66.6592C24.5111 67.529 38.4868 70.458 48.2637 80.235C58.0407 90.0119 60.9597 103.958 61.8395 126.88C61.8595 127.52 62.3893 128.04 63.0391 128.04H65.7283C66.3681 128.04 66.8979 127.52 66.9279 126.88C67.8076 103.958 70.7267 90.0119 80.5036 80.235C90.2906 70.448 104.256 67.529 127.219 66.6592C127.859 66.6392 128.379 66.1094 128.379 65.4596V62.7804H128.389Z"/>
@@ -738,26 +1043,71 @@
                 </div>
                 <div class="link-content">
                     <div class="link-title">ДЗЕН</div>
-                    <div class="link-desc">Читайте статьи и смотрите видео</div>
+                    <div class="link-desc">Статьи и видео для родителей</div>
                 </div>
             </a>
 
-            <a href="https://www.mishka-max.ru" class="link-button" onclick="ym(105821243,'reachGoal','click_website')">
+            <!-- Мы в соцсетях -->
+            <div class="section-label">
+                <div class="section-label-line"></div>
+                <div class="section-label-content">
+                    <svg class="section-label-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/></svg>
+                    <span class="section-label-text">Мы в соцсетях</span>
+                </div>
+                <div class="section-label-line"></div>
+            </div>
+
+            <div class="social-icons">
+                <a href="https://instagram.com/mishka_max_" class="social-icon-btn" onclick="ym(105821243,'reachGoal','click_instagram')" title="Instagram">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/>
+                    </svg>
+                </a>
+                <a href="https://tiktok.com/@mishka_max_" class="social-icon-btn" onclick="ym(105821243,'reachGoal','click_tiktok')" title="TikTok">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                    </svg>
+                </a>
+                <a href="https://youtube.com/@mishka_max?si=7SXOoxTl8nIRQ7YK" class="social-icon-btn" onclick="ym(105821243,'reachGoal','click_youtube')" title="YouTube">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/>
+                    </svg>
+                </a>
+            </div>
+            <p class="social-hint">254К · 104К · подпишись, чтобы не пропустить новые серии 🐾</p>
+
+            <!-- Для бизнеса -->
+            <div class="section-label">
+                <div class="section-label-line"></div>
+                <div class="section-label-content">
+                    <svg class="section-label-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
+                    <span class="section-label-text">Для бизнеса</span>
+                </div>
+                <div class="section-label-line"></div>
+            </div>
+
+            <a href="https://www.mishka-max.ru" class="link-button partnership" onclick="ym(105821243,'reachGoal','click_website')">
                 <div class="link-icon">
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                        <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
                     </svg>
                 </div>
                 <div class="link-content">
-                    <div class="link-title">СОТРУДНИЧЕСТВО</div>
-                    <div class="link-desc">Информация для рекламодателей и партнеров</div>
+                    <div class="title-wrapper">
+                        <div class="link-title">СОТРУДНИЧЕСТВО</div>
+                        <div class="reach-badge static-badge">374К+ подписчиков</div>
+                    </div>
+                    <div class="link-desc">Интеграции, партнёрства, медиакит</div>
                 </div>
             </a>
+
+            <p class="manager-contact">Написать менеджеру: <a href="https://t.me/mishka_max_manager" onclick="ym(105821243,'reachGoal','click_manager')">@mishka_max_manager</a></p>
+
         </div>
 
         <!-- Footer -->
         <footer class="footer">
-            <p class="footer-text">Подписывайся на все каналы! 🐻💛</p>
+            <p class="footer-text">Мишка Макс любит тебя! 🐻💛</p>
             <div class="paw-prints">🐾 🐾 🐾</div>
             <p class="disclaimer">* Meta / Facebook / Instagram — сервисы, предоставляемые организацией, признанной экстремистской</p>
         </footer>
