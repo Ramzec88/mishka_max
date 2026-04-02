@@ -401,6 +401,95 @@
             opacity: 0.8;
         }
 
+        /* ===== БАННЕР ВЫПУСКНОГО ===== */
+        .vypusknoj-banner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem 3rem;
+        }
+        .vypusknoj-banner__inner {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            background: linear-gradient(135deg, #2A6BB5 0%, #4A90D9 100%);
+            border-radius: 24px;
+            padding: 2rem 2.5rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(42, 107, 181, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+        }
+        .vypusknoj-banner__inner:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 25px 70px rgba(42, 107, 181, 0.4);
+        }
+        .vypusknoj-banner__inner::before {
+            content: '🎓 🎵 🎓';
+            position: absolute;
+            top: 1rem;
+            right: 12rem;
+            color: rgba(255, 255, 255, 0.2);
+            font-size: 1.2rem;
+            pointer-events: none;
+        }
+        .vypusknoj-banner__deco {
+            flex-shrink: 0;
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+        }
+        .vypusknoj-banner__label {
+            display: inline-block;
+            background: #fff;
+            color: #2A6BB5;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 0.2rem 0.7rem;
+            border-radius: 20px;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+        .vypusknoj-banner__text {
+            flex: 1;
+        }
+        .vypusknoj-banner__text h3 {
+            font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 0.4rem;
+        }
+        .vypusknoj-banner__text p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+        .vypusknoj-banner__btn {
+            flex-shrink: 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #fff;
+            color: #2A6BB5;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 0.9rem 1.8rem;
+            border-radius: 50px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            white-space: nowrap;
+        }
+        .vypusknoj-banner__inner:hover .vypusknoj-banner__btn {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.35);
+        }
+
         /* ===== ЧТО ВНУТРИ ===== */
         .whats-inside {
             padding: 5rem 2rem;
@@ -1173,6 +1262,19 @@
         </div>
     </div>
 </section>
+
+<!-- БАННЕР ВЫПУСКНОГО -->
+<div class="vypusknoj-banner">
+    <a href="/teacher/pesni-na-vypusknoj/" class="vypusknoj-banner__inner">
+        <div class="vypusknoj-banner__deco">🎓</div>
+        <div class="vypusknoj-banner__text">
+            <span class="vypusknoj-banner__label">Выпускной 2025–2026</span>
+            <h3>10 песен на выпускной в детском саду</h3>
+            <p>Готовый сборник с плюсами и минусами от Мишки Макса — берите и используйте без лишних поисков</p>
+        </div>
+        <span class="vypusknoj-banner__btn">Смотреть сборник →</span>
+    </a>
+</div>
 
 <!-- ЧТО ВНУТРИ -->
 <section class="whats-inside" id="whats-inside">
