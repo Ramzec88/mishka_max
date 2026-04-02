@@ -214,6 +214,49 @@
     margin-bottom: 36px;
   }
 
+  /* TRY BANNER */
+  .try-banner {
+    background: var(--brand-blue-light);
+    border: 1.5px solid #c3ddf7;
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin-bottom: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+  }
+  .try-banner__title {
+    font-weight: 800;
+    font-size: 1rem;
+    color: var(--text-main);
+    flex: 1 1 200px;
+  }
+  .try-banner__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .try-banner__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--brand-blue);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .try-banner__link:hover { opacity: 0.85; }
+  .try-banner__link.secondary {
+    background: #fff;
+    color: var(--brand-blue);
+    border: 1.5px solid var(--brand-blue);
+  }
+
   /* SONGS GRID */
   .songs-grid {
     display: grid;
@@ -580,6 +623,15 @@
 <div class="section-wide">
   <div class="section-title">Что входит в сборник</div>
   <p class="section-sub">10 песен на выпускной в детском саду — на каждый момент праздника</p>
+
+  <div class="try-banner">
+    <div class="try-banner__title">🎵 Послушайте перед покупкой</div>
+    <div class="try-banner__links">
+      <a href="https://max.ru/mishka_max/AZ1IY8VkEV8" class="try-banner__link" target="_blank" rel="noopener">Тизеры всех песен</a>
+      <a href="https://max.ru/c/-72626284781749/AZ1CBzsJd2o" class="try-banner__link secondary" target="_blank" rel="noopener">Скачать «Танец сына и мамы» бесплатно</a>
+    </div>
+  </div>
+
   <div class="songs-grid">
 
     <div class="song-card">
