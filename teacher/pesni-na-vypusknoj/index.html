@@ -2,6 +2,18 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105821243', 'ym');
+
+    ym(105821243, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/105821243" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Песни на выпускной в детском саду — сборник от Мишки Макса</title>
 <meta name="description" content="10 готовых песен на выпускной в детском саду: вальс, танец папы и дочки, песня воспитателям, частушки и другие. Плюсы, минусы, тексты. Скачать за 999₽ или получить по подписке за 360₽/мес.">
@@ -68,6 +80,25 @@
   }
   .nav-logo img { width: 36px; height: 36px; border-radius: 8px; }
   .nav-logo span { color: var(--brand-blue); }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .nav-link {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background 0.15s, color 0.15s;
+    white-space: nowrap;
+  }
+  .nav-link:hover { background: var(--bg-soft); color: var(--text-main); }
+  @media (max-width: 560px) {
+    .nav-links { display: none; }
+  }
   .nav-cta {
     background: var(--brand-blue);
     color: #fff;
@@ -596,6 +627,11 @@
     <img src="https://www.mishka-max.ru/images/logo.png" alt="Мишка Макс">
     Мишка <span>Макс</span>
   </a>
+  <nav class="nav-links">
+    <a href="#songs" class="nav-link">Состав сборника</a>
+    <a href="#price" class="nav-link">Цены</a>
+    <a href="https://www.mishka-max.ru/teacher/" class="nav-link">Кладовая педагога</a>
+  </nav>
   <a href="https://boosty.to/mishka_max" class="nav-cta">Получить сборник</a>
 </nav>
 
@@ -620,7 +656,7 @@
 </div>
 
 <!-- SONGS LIST -->
-<div class="section-wide">
+<div class="section-wide" id="songs">
   <div class="section-title">Что входит в сборник</div>
   <p class="section-sub">10 песен на выпускной в детском саду — на каждый момент праздника</p>
 
@@ -818,7 +854,7 @@
 </div>
 
 <!-- PRICING -->
-<div class="section-wide" style="padding-top: 0;">
+<div class="section-wide" id="price" style="padding-top: 0;">
   <div class="section-title">Как получить сборник</div>
   <p class="section-sub">Три варианта — выберите удобный</p>
   <div class="pricing-grid">
