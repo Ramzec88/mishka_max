@@ -17,6 +17,14 @@
         <priority>0.9</priority>
     </url>
 
+    <!-- Мультики и песенки -->
+    <url>
+        <loc>https://mishka-max.ru/video/</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
     <!-- Аудиосказки -->
     <url>
         <loc>https://mishka-max.ru/stories/</loc>
