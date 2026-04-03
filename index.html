@@ -1506,6 +1506,41 @@
             border: 0;
         }
 
+        .vk-facade {
+            cursor: pointer;
+        }
+
+        .vk-facade img {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+        }
+
+        .vk-play-btn {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            width: 72px;
+            height: 72px;
+            transition: transform 0.2s;
+            z-index: 2;
+        }
+
+        .vk-facade:hover .vk-play-btn {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .vk-facade iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            border: 0;
+        }
+
         .videos-cta {
             display: inline-flex;
             align-items: center;
@@ -1744,23 +1779,17 @@
             <p class="videos-subtitle">Смотрите развивающие видео онлайн бесплатно — прямо здесь</p>
 
             <div class="video-grid">
-                <div class="video-wrap">
-                    <iframe src="https://vk.com/video_ext.php?oid=-231573173&id=456239181&hd=2"
-                            title="Волшебный замок — Сказка о добрых словах | Мишка Макс"
-                            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-                            allowfullscreen loading="lazy"></iframe>
+                <div class="video-wrap vk-facade" data-vk="https://vk.com/video_ext.php?oid=-231573173&id=456239181&hd=2&autoplay=1">
+                    <img src="/images/mishka-hero.PNG" alt="Волшебный замок — Сказка о добрых словах | Мишка Макс">
+                    <button class="vk-play-btn" aria-label="Смотреть видео"><svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="40" fill="rgba(0,0,0,0.55)"/><polygon points="32,24 60,40 32,56" fill="white"/></svg></button>
                 </div>
-                <div class="video-wrap">
-                    <iframe src="https://vk.com/video_ext.php?oid=-231573173&id=456239177&hd=2"
-                            title="Энергичная зарядка с Мишкой Максом — весёлая разминка для детей"
-                            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-                            allowfullscreen loading="lazy"></iframe>
+                <div class="video-wrap vk-facade" data-vk="https://vk.com/video_ext.php?oid=-231573173&id=456239177&hd=2&autoplay=1">
+                    <img src="/images/mishka-hero.PNG" alt="Энергичная зарядка с Мишкой Максом">
+                    <button class="vk-play-btn" aria-label="Смотреть видео"><svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="40" fill="rgba(0,0,0,0.55)"/><polygon points="32,24 60,40 32,56" fill="white"/></svg></button>
                 </div>
-                <div class="video-wrap">
-                    <iframe src="https://vk.com/video_ext.php?oid=-231573173&id=456239173&hd=2"
-                            title="Учимся считать до 10 — счёт для детей в игровой форме с Мишкой Максом"
-                            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-                            allowfullscreen loading="lazy"></iframe>
+                <div class="video-wrap vk-facade" data-vk="https://vk.com/video_ext.php?oid=-231573173&id=456239173&hd=2&autoplay=1">
+                    <img src="/images/mishka-hero.PNG" alt="Учимся считать до 10 с Мишкой Максом">
+                    <button class="vk-play-btn" aria-label="Смотреть видео"><svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="40" fill="rgba(0,0,0,0.55)"/><polygon points="32,24 60,40 32,56" fill="white"/></svg></button>
                 </div>
             </div>
 
@@ -2076,6 +2105,19 @@
                 
                 setTimeout(() => heart.remove(), 2000);
             }
+        });
+
+        // VK видео — загрузка iframe только по клику (обход капчи)
+        document.querySelectorAll('.vk-facade').forEach(function(facade) {
+            facade.addEventListener('click', function() {
+                var iframe = document.createElement('iframe');
+                iframe.src = facade.dataset.vk;
+                iframe.allow = 'autoplay; encrypted-media; fullscreen; picture-in-picture';
+                iframe.allowFullscreen = true;
+                facade.innerHTML = '';
+                facade.appendChild(iframe);
+                facade.style.cursor = 'default';
+            });
         });
 
         // Плавная прокрутка к якорям
