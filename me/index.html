@@ -707,6 +707,94 @@
             50% { transform: scale(1.2); opacity: 0.9; box-shadow: 0 0 0 6px rgba(255,255,255,0); }
         }
 
+        /* Promo narrow button (hot offer) */
+        .promo-row {
+            display: flex;
+            justify-content: center;
+        }
+
+        .link-button.promo-narrow {
+            width: 50%;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 6px;
+            padding: 14px 16px 18px;
+            background: linear-gradient(135deg, #FF6B35 0%, #FF3B3B 60%, #CC0000 100%);
+            border: 3px solid rgba(255, 255, 255, 0.6);
+            box-shadow:
+                0 6px 28px rgba(255, 59, 59, 0.45),
+                0 2px 8px rgba(0, 0, 0, 0.12),
+                inset 0 1px 0 rgba(255, 255, 255, 0.35);
+        }
+
+        .link-button.promo-narrow::before {
+            background: linear-gradient(135deg, #FF8C42 0%, #FF4444 60%, #AA0000 100%);
+        }
+
+        .link-button.promo-narrow .link-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.25);
+            border-radius: 14px;
+            font-size: 22px;
+            box-shadow: none;
+        }
+
+        .link-button.promo-narrow .link-content {
+            padding: 0;
+        }
+
+        .link-button.promo-narrow .link-title {
+            color: var(--white);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.35);
+            font-size: 14px;
+            line-height: 1.2;
+        }
+
+        .link-button.promo-narrow .link-desc {
+            color: rgba(255, 255, 255, 0.9);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            font-size: 11px;
+        }
+
+        .link-button.promo-narrow:hover {
+            transform: translateY(-8px) scale(1.04) rotate(-1deg);
+            box-shadow:
+                0 18px 48px rgba(255, 59, 59, 0.6),
+                0 4px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .link-button.promo-narrow:hover .link-title,
+        .link-button.promo-narrow:hover .link-desc {
+            color: var(--white);
+        }
+
+        .price-badge {
+            position: absolute;
+            top: -10px;
+            right: -6px;
+            background: linear-gradient(135deg, #FFD700 0%, #FFA000 100%);
+            color: #2C3E50;
+            font-family: 'Fredoka', sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 10px;
+            z-index: 3;
+            box-shadow:
+                0 3px 10px rgba(255, 160, 0, 0.45),
+                0 0 0 2px rgba(255, 255, 255, 0.7);
+            text-shadow: none;
+            white-space: nowrap;
+            animation: pulse-badge 2s ease-in-out infinite;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 480px) {
+            .link-button.promo-narrow { width: 70%; }
+        }
+
         /* Stories (Skazki) button */
         .link-button.stories {
             background: linear-gradient(135deg, #EDD9FF 0%, #C9A8E8 100%);
@@ -942,6 +1030,17 @@
 
         <!-- Links -->
         <div class="links">
+
+            <div class="promo-row">
+                <a href="https://boosty.to/mishka_max/posts/cd8ce060-2eb2-4ac3-b075-c7f11b4e506f" class="link-button promo-narrow" onclick="ym(105821243,'reachGoal','click_vypusknoj')" target="_blank" rel="noopener">
+                    <span class="price-badge">599 ₽ · до 30.04</span>
+                    <div class="link-icon">🎓</div>
+                    <div class="link-content">
+                        <div class="link-title">🔥 Сценарий выпускного</div>
+                        <div class="link-desc">Готовый комплект</div>
+                    </div>
+                </a>
+            </div>
 
             <!-- Для мам и малышей -->
             <div class="section-label">
