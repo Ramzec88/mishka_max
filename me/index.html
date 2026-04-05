@@ -717,11 +717,7 @@
 
         .link-button.promo-narrow {
             width: 100%;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            gap: 6px;
-            padding: 14px 16px 18px;
+            padding: 20px 24px;
             background: linear-gradient(135deg, #FF6B35 0%, #FF3B3B 60%, #CC0000 100%);
             border: 3px solid rgba(255, 255, 255, 0.6);
             box-shadow:
@@ -735,16 +731,12 @@
         }
 
         .link-button.promo-narrow .link-icon {
-            width: 40px;
-            height: 40px;
             background: rgba(255, 255, 255, 0.25);
-            border-radius: 14px;
-            font-size: 22px;
-            box-shadow: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), inset 0 2px 4px rgba(255, 255, 255, 0.3);
         }
 
-        .link-button.promo-narrow .link-content {
-            padding: 0;
+        .link-button.promo-narrow .link-icon svg {
+            fill: var(--white);
         }
 
         .link-button.promo-narrow .link-title {
@@ -1033,10 +1025,12 @@
             <div class="promo-row">
                 <span class="price-badge">599 ₽ · до 30.04</span>
                 <a href="https://boosty.to/mishka_max/posts/cd8ce060-2eb2-4ac3-b075-c7f11b4e506f" class="link-button promo-narrow" onclick="ym(105821243,'reachGoal','click_vypusknoj')" target="_blank" rel="noopener">
-                    <div class="link-icon">🎓</div>
+                    <div class="link-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+                    </div>
                     <div class="link-content">
-                        <div class="link-title">🔥 Сценарий выпускного</div>
-                        <div class="link-desc">Готовый комплект</div>
+                        <div class="link-title">Сценарий выпускного</div>
+                        <div class="link-desc">Готовый комплект · 5 блоков · 16 треков · стихи для каждого · дипломы 🔥</div>
                     </div>
                 </a>
             </div>
