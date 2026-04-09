@@ -57,6 +57,14 @@
         <priority>0.7</priority>
     </url>
 
+    <!-- Публичная оферта -->
+    <url>
+        <loc>https://mishka-max.ru/oferta.html</loc>
+        <lastmod>2026-04-09</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
     <!-- Политика конфиденциальности -->
     <url>
         <loc>https://mishka-max.ru/privacy-policy.html</loc>
