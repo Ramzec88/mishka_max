@@ -961,14 +961,8 @@
         .image-banner-btn {
             display: block;
             width: 100%;
-            border-radius: 24px;
-            overflow: hidden;
             text-decoration: none;
-            box-shadow:
-                0 8px 32px rgba(255, 160, 0, 0.35),
-                0 2px 8px rgba(0, 0, 0, 0.1);
-            transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-            border: 3px solid rgba(255, 255, 255, 0.7);
+            transition: transform 0.3s ease;
             animation: slideIn 0.6s ease-out 0.05s backwards;
         }
 
@@ -979,25 +973,16 @@
         }
 
         .image-banner-btn:hover {
-            transform: translateY(-8px) scale(1.02) rotate(-1deg);
-            box-shadow:
-                0 18px 48px rgba(255, 160, 0, 0.5),
-                0 4px 16px rgba(0, 0, 0, 0.15);
-            border-color: var(--yellow);
+            transform: translateY(-6px) scale(1.02);
         }
 
         .image-banner-btn:active {
-            transform: translateY(-4px) scale(0.98);
+            transform: scale(0.98);
         }
 
         @media (hover: none) {
-            .image-banner-btn:hover {
-                transform: none;
-                box-shadow: 0 8px 32px rgba(255, 160, 0, 0.35);
-            }
-            .image-banner-btn:active {
-                transform: scale(0.96);
-            }
+            .image-banner-btn:hover { transform: none; }
+            .image-banner-btn:active { transform: scale(0.96); }
         }
 
         /* Responsive */
